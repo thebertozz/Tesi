@@ -1,0 +1,55 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introduzione}{4}{section*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Objective-C}{5}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Cenni storici}{5}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Caratteristiche del linguaggio}{7}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Sintassi}{7}{subsection.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}Gestione della memoria}{7}{subsection.1.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.3}Compilatore}{7}{subsection.1.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.4}Utilizzo in iOS e frameworks Cocoa}{7}{subsection.1.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Swift}{8}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Cenni storici}{8}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Caratteristiche}{8}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Sintassi}{8}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{8}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Compilatore}{8}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{8}{subsection.2.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{9}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Punti di forza e debolezze dell'Objective-C}{9}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{9}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{9}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{10}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{10}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusioni}{11}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Ringraziamenti}{12}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{13}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendice}{14}{section*.10}

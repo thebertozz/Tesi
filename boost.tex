@@ -1,0 +1,201 @@
+\subsubsection{Algorithm Library}
+È una libreria che contiene una collezione di algoritmi di ogni tipo.
+Le componenti presenti in questa libreria utilizzate dalle soluzioni ORM
+prese in esame sono:
+\begin{itemize}
+  \item String: questa libreria fornisce un'implementazione generica
+  agli algoritmi sulle stringhe che mancano nella STL;
+  \item {\tt any\_of}: contiene quattro varianti dell'algoritmo
+  {\tt any\_of}, che testa gli elementi di una sequenza e ritorna
+  {\tt true} se uno qualunque degli elementi ha una particolare
+  proprietà;
+  \item {\tt find}: trova il primo elemento di un dato tipo all'interno
+  di una sequenza.
+\end{itemize}
+
+\subsubsection{{\tt any}}
+Nella programmazione basata sui template a volte potrebbe essere utile
+un tipo ``generico'': variabili che sono solamente variabili, accettanti
+valori differenti da quelli offerti dai soli tipi $\Cpp$.
+Esistono tre categorie di tipi ``generici'':
+\begin{enumerate}
+  \item tipi generici per convertire liberamente un valore, per esempio
+  un intero in stringa; per supportare tale modalità di conversione la
+  libreria fornisce il {\tt lexical\_cast};
+  \item tipi che contengono valori di differenti tipi, ma non permettono
+  conversioni tra di essi; di fatto un modo sicuro per garantire la
+  conservazione del valore, senza che venga sporcato da operazioni che
+  introducono errore;
+  \item tipi indiscriminati che posso riferirsi a qualunque cosa,
+  mantenendo comunque un riferimento verso il tipo sottostante,
+  assicurando ogni forma di accesso ed interpretazione al programmatore.
+\end{enumerate}
+La classe {\tt any} supporta la copia di ogni tipologia di valore e la
+lettura sicura dei valori.
+Vengono inoltre fornite altre componenti ausiliarie, quali
+{\tt any\_function}, un adattatore generalizzato per funzioni, ed
+{\tt any\_iterator}, un adattatore generalizzato per iteratori.
+
+\subsubsection{Contenitori non ordinati}
+La libreria Boost fornisce classi di contenitori non ordinati:
+{\tt unordered\_set} e {\tt unordered\_multiset}.
+Queste classi sono utili per avere contenitori rapidi da scorrere.
+
+\subsubsection{{\tt enable\_if} e {\tt disable\_if}}
+{\tt enable\_if} e {\tt disable\_if} sono costrutti templatici
+utilizzati nella metaprogrammazione di template, per controllare (cioè
+abilitare o disabilitare) l'istanziazione di funzioni e classi
+templatiche, a seconda del verificarsi o meno di alcune condizioni sui
+parametri del template, controllate a tempo di compilazione.
+Per esempio è possibile definire funzioni templatiche che vengono
+abilitate se e solo se il tipo templatico corrisponde ad un insieme di
+tipi designati.
+
+\subsubsection{{\tt foreach}}
+Il costrutto {\tt foreach} della libreria Boost permette di
+automatizzare le funzionalità dell'algoritmo {\tt std::for\_each()}:
+dunque scorre le sequenze liberando il programmatore dall'utilizzo di
+iteratori e dalla scrittura di predicati appositi.
+Il costrutto {\tt foreach} non usa allocazione dinamica, puntatori a
+funzione, funzioni virtuali; non effettua chiamate non riconosciute
+dall'ottimizzatore del compilatore.
+Garantisce ottime prestazioni, separandosi di poco da quelle dei cicli
+scritti a mano.
+
+\subsubsection{{\tt function}}
+La libreria Boost.Function contiene una famiglia di classi templatiche,
+che sono di fatto \textit{wrapper} per oggetti funzione.
+Condivide funzionalità con i puntatori a funzione.
+Ogni oggetto funzione (o puntatore a funzione) può essere compatibile:
+cioè ogni argomento dell'interfaccia designata da \linebreak
+Boost.Function può essere convertita negli argomenti dell'oggetto
+funzione bersaglio.
+
+\subsubsection{{\tt iterator\_range}}
+È una classe che implementa l'incapsulamento di due iteratori, affinché
+corrispondano al concetto di \textit{Forward Range}.
+Se l'argomento templatico non è un modello di \textit{Forward Traversal
+Iterator}, è possibile comunque usare un sottoinsieme dell'interfaccia.
+
+\subsubsection{{\tt lexical\_cast}}
+A volte viene utile poter convertire tipi in stringhe e viceversa,
+soprattutto quando c'è una differenza tra la rappresentazione del valore
+all'interno del programma e quella all'esterno di esso (per esempio,
+come viene presentato un valore nel codice sorgente e come viene scritto
+nell'interfaccia grafica del programma).
+Le librerie standard $\Cpp$ offrono un buon numero di modalità per
+compiere questa conversione, che differiscono in semplicità d'uso,
+estendibilità e sicurezza.
+Le funzioni templatiche di {\tt lexical\_cast} offrono una modalità
+comoda e coerente per gestire conversioni comuni da e per tipi
+arbitrari, quando vengono rappresentati sotto forma testuale.
+Per conversioni più complesse gli sviluppatori della libreria Boost
+suggeriscono di utilizzare {\tt stringstream}; per conversioni numeriche
+suggeriscono invece un altro componente della libreria,
+{\tt numeric\_cast}.
+
+\subsubsection{{\tt multi\_index\_container}}
+È una classe che permette la costruzione di contenitori in grado di
+mantenere più indici, con ordinamento e semantiche di accesso diverse.
+Gli indici forniscono interfacce simili a quelle dei contenitori STL,
+rendendo il loro utilizzo familiare.
+Il concetto di ``multi-indice'' sulla stessa collezione di elementi è
+preso dai database relazionali, e permette l'implementazione di
+strutture dati complesse nello spirito delle tabelle relazionali ad
+indici multipli, dove insiemi e mappe non bastano.
+Viene fornita un'ampia gamma di indici, modellati come i loro
+corrispondenti nella STL: {\tt std::set}, {\tt std::list} e insiemi
+hash.
+
+\subsubsection{{\tt optional}}
+Questa classe templatica è un \textit{wrapper} per rappresentare oggetti
+opzionali (o ``\textit{nullable}'') che fino ad un certo momento possono
+non contenere un valore valido.
+Gli oggetti opzionali offrono molte funzionalità: possono essere
+utilizzati per il passaggio per valore e all'interno dei contenitori
+della STL.
+
+\subsubsection{Phoenix}
+Phoenix è una libreria che permette di utilizzare teniche aderenti al
+paradigma della programmazione funzionale.
+
+\subsubsection{Posix Time}
+Questa porzione della libreria Boost definisce un sistema di tempo non
+uniforme con risoluzione a nano/micro-secondi e proprietà di calcolo
+stabile.
+Questo sistema di tempo usa il calendario gregoriano per implementare
+la rappresentazione del tempo.
+Tramite funzioni apposite, è possibile convertire un tipo di dato
+temporale in stringhe di diverso formato.
+Le componenti principali sono:
+\begin{itemize}
+  \item {\tt ptime}: interfaccia principale per la manipolazione delle
+  porzioni di tempo;
+  \item {\tt time\_duration}: tipo base per la rappresentazione di una
+  lunghezza di tempo;
+  \item {\tt time\_period}: fornisce una rappresentazione diretta per la
+  rappresentazione di un range tra due tempi;
+  \item {\tt time\_iterator}: fornisce un meccanismo per iterare
+  attraverso il tempo; assomigliano agli iteratori bidirezionali.
+\end{itemize}
+
+\subsubsection{{\tt smart\_pointers}}
+Sono oggetti che memorizzano puntatori ad oggetti allocati dinamicamente
+(nell'heap). Si comportano come puntatori $\Cpp$ classici, tranne per il
+fatto che eliminano automaticamente l'oggetto puntato al momento
+opportuno. Sono particolarmente utili, poiché in caso di eccezioni
+assicurano una distruzione appropriata degli oggetti allocati
+dinamicamente. Possono essere usati anche per tenere traccia degli
+oggetti allocati dinamicamente, nel caso siano condivisi tra più
+proprietari.
+
+\subsubsection{Spirit}
+Spirit è una libreria C++ che fornisce funzionalità per il parsing.
+È object-oriented e ricorsiva discendente.
+Permette di scrivere grammatiche usando un formato simile a quello EBFN
+(\textit{Extended Backus Naur Form}) direttamente in $\Cpp$.
+Si basa sul tool di parsing Qi.
+
+\subsubsection{Thread}
+Questa libreria permette l'utilizzo di diversi thread di esecuzione,
+con dati condivisi.
+Fornisce metodi e classi per la gestione dei thread stessi, della loro
+interazione con gli altri per la sincronizzazione dei dati o per la
+gestione di copie separate di dati.
+Contiene diverse classi, tra le quali compare {\tt mutex}, usata per
+l'accesso sincronizzato a risorse condivise.
+
+\subsubsection{{\tt tuple}}
+Una tupla o (n-tupla) è una collezione di elementi a dimensione fissa.
+In un linguaggio di programmazione una tupla è un oggetto che contiene
+altri oggetti come elementi. Tali elementi possono essere di tipo uguale
+o diverso.
+Le tuple mostrano la loro importanza in diverse circostanze. Per esempio
+sono utili per definire funzioni che ritornano più di un valore.
+Per compensare l'assenza delle tuple nel $\Cpp$, la Boost Tuple Library 
+le implementa utilizzando i template.
+
+\subsubsection{{\tt type\_traits}}
+È una parte della libreria Boost contenente un insieme di specifiche
+classi \textit{traits}, ognuna delle quali incapsula una singola
+caratteristica dal sistema dei tipi $\Cpp$.
+Permettono per esempio di capire se un tipo è un puntatore, se ha un
+costruttore base, etc.
+
+Queste classi contengono un modello unico: ogni classe eredita dal tipo
+{\tt true\_type} se il tipo ha la proprietà specifica; altrimenti
+eredita da \linebreak {\tt false\_type}.
+{\tt type\_traits} contiene inoltre un insieme di classi capaci di
+modificare i qualificatori: per esempio è possibile rimuovere il
+qualificatore {\tt volatile} da un tipo.
+Ogni classe che esegue tali trasformazioni definisce un unico membro
+{\tt typedef} che rappresenta il risultato della trasformazione.
+Al suo interno contiene costrutti che vengono utilizzati esplicitamente
+nelle librerie prese in esame:
+\begin{itemize}
+  \item {\tt is\_base\_of <A, B>}: eredita da {\tt true\_type} se
+  {\tt A} compare in un qualunque punto dell'albero di derivazione di
+  {\tt B}; altrimenti, eredita da {\tt false\_type};
+  \item {\tt is\_enum <T>}: se {\tt T} è un tipo enumerazione, eredita da
+  {\tt true\_type}; altrimenti da {\tt false\_type}; 
+\end{itemize}
