@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  26 NOV 2016 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  10 DEC 2016 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -975,8 +975,9 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count314
 \@quotereset=\count315
-(./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux) (./capitolo1.aux
-) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux)
+(./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux)
+No file capitolo1.aux.
+(./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux)
 (./ringraziamenti.aux) (./biblio.aux) (./appendice.aux))
 \openout1 = `tesi.aux'.
 
@@ -1068,7 +1069,7 @@ Package biblatex Info: Reference segment=0 on input line 26.
 
 (./titolo.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 2.
- <logouni.png, id=104, 775.9389pt x 167.1846pt>
+ <logouni.png, id=108, 775.9389pt x 167.1846pt>
 File: logouni.png Graphic file (type png)
  <use logouni.png>
 Package pdftex.def Info: logouni.png used on input line 9.
@@ -1230,12 +1231,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]) [7]
+[6]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 23.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 30.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 30.
+ [7]
+[8] [9]) [10]
 \openout2 = `capitolo2.aux'.
 
  (./capitolo2.tex
 Capitolo 2.
-) [8
+) [11
 
 
 
@@ -1244,7 +1269,7 @@ Capitolo 2.
 
  (./capitolo3.tex
 Capitolo 3.
-) [9
+) [12
 
 
 
@@ -1253,21 +1278,21 @@ Capitolo 3.
 
  (./capitolo4.tex
 Capitolo 4.
-) [10
+) [13
 
 
 
 ]
 \openout2 = `conclusioni.aux'.
 
- (./conclusioni.tex) [11
+ (./conclusioni.tex) [14
 
 
 
 ]
 \openout2 = `ringraziamenti.aux'.
 
- (./ringraziamenti.tex) [12
+ (./ringraziamenti.tex) [15
 
 
 
@@ -1280,16 +1305,11 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 9.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 9.
-
 Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-) [13
+) [16
 
 
 
@@ -1297,7 +1317,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 ]
 \openout2 = `appendice.aux'.
 
- (./appendice.tex) [14
+ (./appendice.tex) [17
 
 
 
@@ -1311,41 +1331,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: E389C940500D5AD28D9B2231E6FE4437;1843.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                tesi
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 931C98D34E5F63C90DA7127919B887F2;1947.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19797 strings out of 493014
- 292988 string characters out of 6133350
- 744056 words of memory out of 5000000
- 22946 multiletter control sequences out of 15000+600000
+ 20360 strings out of 493014
+ 299325 string characters out of 6133350
+ 764678 words of memory out of 5000000
+ 23395 multiletter control sequences out of 15000+600000
  74691 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,47p,4228b,2918s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
-/lm/lmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (15 pages, 635176 bytes).
+ 41i,12n,60p,4228b,3406s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmtt12.pfb>
+Output written on tesi.pdf (18 pages, 656968 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 405 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 154 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 
