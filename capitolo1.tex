@@ -119,7 +119,7 @@ int eta = persona.eta;
 persona.eta = 22;
 \end{lstlisting}
 \newpage
-\subsection{Dichiarazione e definizione dei metodi}
+\subsubsection{Dichiarazione e definizione dei metodi}
 Come visto per la definizione dei setter, una dichiarazione di funzione (metodo) ha la seguente sintassi: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -144,6 +144,27 @@ Definizione del metodo appena dichiarato:
 	return eta;
 }
 \end{lstlisting}
+\subsubsection{Invio dei messaggi}
+In Objective-C, a differenza della maggior parte degli altri linguaggi, non si chiama direttamente un metodo, ma si "passa un messaggio" all'oggetto stesso: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+[persona calcolaEta:dataDiNascita];
+\end{lstlisting}
+Questo perchè il runtime del linguaggio mantiene traccia di tutti i metodi e delle funzioni che conosce; Ogni componente della lista ha due campi: il nome del metodo (conosciuto come il “selector” dello stesso) e la sua locazione in memoria.\\Quando un oggetto cerca di chiamare un metodo, il comportamento di questo linguaggio è il seguente: compilando il codice, il compilatore ha tradotto il codice della chiamata (ad esempio: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+[persona calcolaEta:dataDiNascita];
+\end{lstlisting}
+in \lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+objc_msgSend(persona, @selector(calcolaEta:),dataDiNascita);
+\end{lstlisting}
+\bigskip
+\bigskip
+La funzione objc\_msgSend() opera tramite un lookup dinamico: conoscendo il nome del metodo da ricercare scorre la lista per verificare la sua effettiva presenza e, se presente, lo esegue.\\ 
+Questo comportamento ha caratteristiche particolari: potremmo far puntare un certo selettore A, che prima puntava al codice per A, ad un codice per un certo B.\\ 
+Lo svantaggio è che il tempo di esecuzione è leggermente minore di una chiamata diretta alla parte di codice; si parla comunque di nano secondi di differenza.\\
+\\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che: \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
 \subsection{Gestione della memoria}
 Objective-C supporta due meccanismi per la gestione della memoria:\\
 -Garbage Collection (utilizzata solamente in Mac OS per questioni di performance) 

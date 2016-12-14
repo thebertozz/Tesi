@@ -16,44 +16,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Implementazione di una classe, i file .h e .m}{7}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}Dichiarazione e definizione dei metodi}{10}{subsection.1.2.2}
+\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{10}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Gestione della memoria}{10}{subsection.1.2.3}
+\contentsline {subsubsection}{Invio dei messaggi}{10}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Compilatore}{10}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.2}Gestione della memoria}{11}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Utilizzo in iOS e frameworks Cocoa}{10}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.3}Compilatore}{11}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Swift}{11}{chapter.2}
+\contentsline {subsection}{\numberline {1.2.4}Utilizzo in iOS e frameworks Cocoa}{11}{subsection.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Cenni storici}{11}{section.2.1}
+\contentsline {chapter}{\numberline {2}Swift}{12}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Caratteristiche}{11}{section.2.2}
+\contentsline {section}{\numberline {2.1}Cenni storici}{12}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Sintassi}{11}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.2}Caratteristiche}{12}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{11}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Sintassi}{12}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Compilatore}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{12}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{11}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.3}Compilatore}{12}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{12}{chapter.3}
+\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{12}{subsection.2.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Punti di forza e debolezze dell'Objective-C}{12}{section.3.1}
+\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{13}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{12}{section.3.2}
+\contentsline {section}{\numberline {3.1}Punti di forza e debolezze dell'Objective-C}{13}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{12}{section.3.3}
+\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{13}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{13}{chapter.4}
+\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{13}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{13}{section.4.1}
+\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{14}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{14}{section*.5}
+\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{14}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ringraziamenti}{15}{section*.7}
+\contentsline {chapter}{Conclusioni}{15}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{16}{section*.9}
+\contentsline {chapter}{Ringraziamenti}{16}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendice}{17}{section*.11}
+\contentsline {chapter}{Riferimenti bibliografici}{17}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendice}{18}{section*.13}
