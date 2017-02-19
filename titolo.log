@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  26 NOV 2016 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  19 FEB 2017 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -93,7 +93,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.9       \includegraphics
-                          [scale=0.52]{logouni.png}
+                          [scale=0.20]{logouni.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -109,8 +109,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
 Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -130,7 +130,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10     \end{figure}
+l.11     \end{figure}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -143,7 +143,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17     \begin{Large}
+l.18     \begin{Large}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -212,9 +212,9 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 22.
+(Font)              <7> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 22.
+(Font)              <5> on input line 23.
 Missing character: There is no T in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -234,114 +234,114 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25       \begin{huge}
+l.26       \begin{huge}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (62.20103pt too wide) in paragraph at lines 26--26
+Overfull \hbox (62.20103pt too wide) in paragraph at lines 27--27
  []\OT1/cmr/bx/n/10 Applicazioni 
  []
 
 
-Overfull \hbox (21.41655pt too wide) in paragraph at lines 26--26
+Overfull \hbox (21.41655pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 iOS: 
  []
 
 
-Overfull \hbox (24.59705pt too wide) in paragraph at lines 26--26
+Overfull \hbox (24.59705pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 anal- 
  []
 
 
-Overfull \hbox (10.92493pt too wide) in paragraph at lines 26--26
+Overfull \hbox (10.92493pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 isi 
  []
 
 
-Overfull \hbox (14.8541pt too wide) in paragraph at lines 26--26
+Overfull \hbox (14.8541pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 dei 
  []
 
 
-Overfull \hbox (16.61102pt too wide) in paragraph at lines 26--26
+Overfull \hbox (16.61102pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 lin- 
  []
 
 
-Overfull \hbox (32.42342pt too wide) in paragraph at lines 26--26
+Overfull \hbox (32.42342pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 guaggi 
  []
 
 
-Overfull \hbox (9.58328pt too wide) in paragraph at lines 26--26
+Overfull \hbox (9.58328pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 di 
  []
 
 
-Overfull \hbox (20.70824pt too wide) in paragraph at lines 26--26
+Overfull \hbox (20.70824pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 pro- 
  []
 
 
-Overfull \hbox (29.49289pt too wide) in paragraph at lines 26--26
+Overfull \hbox (29.49289pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 gram- 
  []
 
 
-Overfull \hbox (40.88866pt too wide) in paragraph at lines 26--26
+Overfull \hbox (40.88866pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 mazione 
  []
 
 
-Overfull \hbox (17.8888pt too wide) in paragraph at lines 26--26
+Overfull \hbox (17.8888pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 uti- 
  []
 
 
-Overfull \hbox (15.33325pt too wide) in paragraph at lines 26--26
+Overfull \hbox (15.33325pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 liz- 
  []
 
 
-Overfull \hbox (18.36794pt too wide) in paragraph at lines 26--26
+Overfull \hbox (18.36794pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 zati 
  []
 
 
-Overfull \hbox (5.27081pt too wide) in paragraph at lines 26--26
+Overfull \hbox (5.27081pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 e 
  []
 
 
-Overfull \hbox (39.35533pt too wide) in paragraph at lines 26--26
+Overfull \hbox (39.35533pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 sviluppi 
  []
 
 
-Overfull \hbox (13.73604pt too wide) in paragraph at lines 26--26
+Overfull \hbox (13.73604pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 fu- 
  []
 
 
-Overfull \hbox (18.79158pt too wide) in paragraph at lines 26--26
+Overfull \hbox (18.79158pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 turi 
  []
 
 
-Overfull \hbox (23.63875pt too wide) in paragraph at lines 26--26
+Overfull \hbox (23.63875pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 della 
  []
 
 
-Overfull \hbox (13.4166pt too wide) in paragraph at lines 26--26
+Overfull \hbox (13.4166pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 pi- 
  []
 
 
-Overfull \hbox (49.2983pt too wide) in paragraph at lines 26--26
+Overfull \hbox (49.2983pt too wide) in paragraph at lines 27--27
  \OT1/cmr/bx/n/10 attaforma 
  []
 
@@ -352,7 +352,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27       \end{huge}
+l.28       \end{huge}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -369,17 +369,17 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (41.9998pt too wide) in paragraph at lines 34--34
+Overfull \hbox (41.9998pt too wide) in paragraph at lines 35--35
 []\OT1/cmr/bx/n/10 Federico 
  []
 
 
-Overfull \hbox (34.79845pt too wide) in paragraph at lines 34--34
+Overfull \hbox (34.79845pt too wide) in paragraph at lines 35--35
 \OT1/cmr/bx/n/10 Bertoli  
  []
 
 ! Undefined control sequence.
-l.40 		    {\small
+l.41 		    {\small
                    Relatore:} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -399,7 +399,7 @@ Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
 <recently read> \small 
                        
-l.41 		    \textbf{\small{Prof. Roberto Alfieri}}
+l.42 		    \textbf{\small{Prof. Roberto Alfieri}}
                                                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -408,71 +408,45 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (25.05544pt too wide) in paragraph at lines 41--42
+Overfull \hbox (25.05544pt too wide) in paragraph at lines 42--43
 []\OT1/cmr/bx/n/10 Prof. 
  []
 
 
-Overfull \hbox (41.3123pt too wide) in paragraph at lines 41--42
+Overfull \hbox (41.3123pt too wide) in paragraph at lines 42--43
 \OT1/cmr/bx/n/10 Roberto 
  []
 
 
-Overfull \hbox (15.72214pt too wide) in paragraph at lines 41--42
+Overfull \hbox (15.72214pt too wide) in paragraph at lines 42--43
 \OT1/cmr/bx/n/10 Al- 
  []
 
 
-Overfull \hbox (19.5902pt too wide) in paragraph at lines 41--42
+Overfull \hbox (19.5902pt too wide) in paragraph at lines 42--43
 \OT1/cmr/bx/n/10 fieri  
  []
 
 ! Undefined control sequence.
-l.47 		    {\small
-                   Correlatore:} \\
+l.48 		    {\small
+                   - } \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no : in font nullfont!
+Missing character: There is no - in font nullfont!
 ! Undefined control sequence.
 <recently read> \small 
                        
-l.48 		    \textbf{\small{Dott. Laura Belli}}
-                                             
+l.49 		    \textbf{\small{}}
+                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (26.70819pt too wide) in paragraph at lines 48--49
- []\OT1/cmr/bx/n/10 Dott.
- []
-
-
-Overfull \hbox (29.22203pt too wide) in paragraph at lines 48--49
- \OT1/cmr/bx/n/10 Laura
- []
-
-
-Overfull \hbox (23.0346pt too wide) in paragraph at lines 48--49
- \OT1/cmr/bx/n/10 Belli
- []
 
 Missing character: There is no A in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -491,12 +465,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no 4 in font nullfont!
+Missing character: There is no 5 in font nullfont!
 Missing character: There is no / in font nullfont!
 Missing character: There is no 2 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no 5 in font nullfont!
+Missing character: There is no 6 in font nullfont!
 
 ! LaTeX Error: \begin{center} on input line 4 ended by \end{Large}.
 
@@ -504,7 +478,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55     \end{Large}
+l.56     \end{Large}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -517,7 +491,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \end{titlepage}
+l.60 \end{titlepage}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,

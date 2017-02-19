@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  14 DEC 2016 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  19 FEB 2017 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1068,54 +1068,50 @@ Package biblatex Info: Reference segment=0 on input line 26.
 
 (./titolo.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 2.
- <logouni.png, id=104, 775.9389pt x 167.1846pt>
+ <logouni.png, id=104, 830.10126pt x 751.80875pt>
 File: logouni.png Graphic file (type png)
- <use logouni.png>
+
+<use logouni.png>
 Package pdftex.def Info: logouni.png used on input line 9.
-(pdftex.def)             Requested size: 403.49054pt x 86.93648pt.
-
-Overfull \hbox (13.49054pt too wide) in paragraph at lines 9--10
- [][] 
- []
-
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 22.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
+(pdftex.def)             Requested size: 166.0173pt x 150.35909pt.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 23.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 22.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 23.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 22.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 23.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 22.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 23.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 22.
+(Font)              <17.28> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 22.
+(Font)              <12> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 22.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+(Font)              <10> on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 22.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 23.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1259,12 +1255,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--168
 
  []
 
-[10]) [11]
+[10] <immagini/ARC.jpg, id=299, 753.81625pt x 477.785pt>
+File: immagini/ARC.jpg Graphic file (type jpg)
+
+<use immagini/ARC.jpg>
+Package pdftex.def Info: immagini/ARC.jpg used on input line 174.
+(pdftex.def)             Requested size: 301.52116pt x 191.11061pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--178
+
+ []
+
+
+Overfull \hbox (16.25348pt too wide) in paragraph at lines 169--178
+\T1/lmr/m/n/12 E' l'ap-proc-cio mo-der-no e più uti-liz-za-to del-la ge-stio-ne
+ del-la me-mo-ria in Objective-
+ []
+
+[11]) [12pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.1.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.34 \include{capitolo1}
+                         <./immagini/ARC.jpg>]
 \openout2 = `capitolo2.aux'.
 
  (./capitolo2.tex
 Capitolo 2.
-) [12
+) [13
 
 
 
@@ -1273,7 +1297,7 @@ Capitolo 2.
 
  (./capitolo3.tex
 Capitolo 3.
-) [13
+) [14
 
 
 
@@ -1282,21 +1306,21 @@ Capitolo 3.
 
  (./capitolo4.tex
 Capitolo 4.
-) [14
+) [15
 
 
 
 ]
 \openout2 = `conclusioni.aux'.
 
- (./conclusioni.tex) [15
+ (./conclusioni.tex) [16
 
 
 
 ]
 \openout2 = `ringraziamenti.aux'.
 
- (./ringraziamenti.tex) [16
+ (./ringraziamenti.tex) [17
 
 
 
@@ -1313,7 +1337,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-) [17
+) [18
 
 
 
@@ -1321,7 +1345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 ]
 \openout2 = `appendice.aux'.
 
- (./appendice.tex) [18
+ (./appendice.tex) [19
 
 
 
@@ -1341,10 +1365,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20373 strings out of 493014
- 299498 string characters out of 6133350
+ 20384 strings out of 493014
+ 299644 string characters out of 6133350
  767038 words of memory out of 5000000
- 23398 multiletter control sequences out of 15000+600000
+ 23404 multiletter control sequences out of 15000+600000
  74691 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,60p,4228b,3406s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1359,10 +1383,10 @@ local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (19 pages, 659683 bytes).
+Output written on tesi.pdf (20 pages, 381936 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
- 162 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 
