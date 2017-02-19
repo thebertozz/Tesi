@@ -34,28 +34,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}Sintassi}{13}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{13}{subsection.2.2.2}
+\contentsline {subsubsection}{Implementazione di una classe}{13}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Compilatore}{13}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{15}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{13}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.3}Compilatore}{15}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{14}{chapter.3}
+\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{15}{subsection.2.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Punti di forza e debolezze dell'Objective-C}{14}{section.3.1}
+\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{16}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{14}{section.3.2}
+\contentsline {section}{\numberline {3.1}Punti di forza e debolezze di Objective-C}{16}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{14}{section.3.3}
+\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{16}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{15}{chapter.4}
+\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{16}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{15}{section.4.1}
+\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{17}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{16}{section*.7}
+\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{17}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ringraziamenti}{17}{section*.9}
+\contentsline {chapter}{Conclusioni}{18}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{18}{section*.11}
+\contentsline {chapter}{Ringraziamenti}{19}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendice}{19}{section*.13}
+\contentsline {chapter}{Riferimenti bibliografici}{20}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendice}{21}{section*.14}

@@ -1,10 +1,62 @@
 \chapter{Swift}
 
 \section{Cenni storici}
-TODO
+Lo sviluppo di Swift è iniziato nel 2010 da Chris Lattner, aiutato in seguito da molti altri programmatori. Swift ha preso idee "da Objective-C, Rust, Haskell, Ruby, Python, C\#, CLU, e molti altri".Il 2 giugno 2014 l'app per il WWDC è divenuta la prima app distribuita al pubblico scritta in Swift.\\Il 3 dicembre 2015 viene lanciato il sito swift.org ed il codice sorgente del linguaggio è pubblicato con licenza Apache 2.0 sul repository GitHub dell'azienda.\\Apple resta lo sviluppatore principale e ne rende disponibile anche una versione del compilatore per Linux (Creato appositamente per Ubuntu).\\Il 13 settembre 2016, durante la WWDC 2016, Apple ha presentato la terza versione del suo linguaggio di programmazione insieme ad un'applicazione per iPad, Swift Playgrounds, che permette, tramite una grafica semplice e intuitiva, di imparare a programmare con Swift, soprattutto orientato ai più giovani.
 \section{Caratteristiche}
 \subsection{Sintassi}
-TODO
+\subsubsection{Implementazione di una classe}
+In Swift, al contrario di molti altri linguaggi, non ci sono 2 file distinti per l'interfaccia e l'implementazione, ma uno solo con l'estensione .swift\\
+Esempio di creazione di una nuova classe:\\
+\begin{lstlisting}
+class Persona { 
+
+//dichiarazione delle properties
+
+	var nome: String? 
+	var cognome: String? 
+	var eta: Int?
+
+//costruttore personalizzato con parametri 
+
+	init(nome: String, cognome: String, eta: Int) {
+		self.nome = nome
+		self.cognome = cognome
+		self.eta = eta
+	}
+
+//dichiarazione dei metodi setter e getter 
+
+	func getNome() -> String {
+
+		return self.nome
+	}
+
+	func setNome(nome: String) {
+
+		self.nome = nome
+	}
+
+	func getCognome() -> String {
+
+		return self.cognome
+	}
+
+	func setCognome(cognome: String) {
+	
+		self.cognome = cognome
+	}
+
+	func getEta() -> Int {
+	
+		return eta
+	}
+
+	func setEta(eta: Int) {
+
+		self.eta = eta
+	}
+}
+\end{lstlisting}
 \subsection{Gestione della memoria}
 TODO
 \subsection{Compilatore}

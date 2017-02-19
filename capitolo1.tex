@@ -17,6 +17,11 @@ Esempio di file header (.h) di una classe:
 
 @interface Persona: NSObject ()
 
+//costruttore personalizzato con parametri 
+
+- (id)initConNome:(NSString *)unNome
+      cognome:(NSString *)unCognome;
+
 // dichiarazione delle properties private 
 
 @private
@@ -47,6 +52,18 @@ Esempio di file di implementazione (.m) di una classe:
 @implementation Persona
 
 //implementazione della classe dichiarata in Persona.h
+
+- (id)initConNome:(NSString *)unNome
+      cognome:(NSString *)unCognome {
+    
+    if( self = [super init] )
+    {
+        _nome = unNome;
+        _cognome = unCognome;
+    }
+    
+    return self;
+}
  
 -(NSString *) nome {
 	return _nome
