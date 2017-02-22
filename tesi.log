@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  22 FEB 2017 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  22 FEB 2017 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -976,8 +976,10 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count314
 \@quotereset=\count315
 (./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux) (./capitolo1.aux
-) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux)
-(./ringraziamenti.aux) (./biblio.aux) (./appendice.aux))
+)
+No file capitolo2.aux.
+(./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux) (./ringraziamenti.aux)
+(./biblio.aux) (./appendice.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -1297,12 +1299,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
 
 
-] [14]) [15]
+] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+[15]) [16]
 \openout2 = `capitolo3.aux'.
 
  (./capitolo3.tex
 Capitolo 3.
-) [16
+) [17
 
 
 
@@ -1311,21 +1323,21 @@ Capitolo 3.
 
  (./capitolo4.tex
 Capitolo 4.
-) [17
+) [18
 
 
 
 ]
 \openout2 = `conclusioni.aux'.
 
- (./conclusioni.tex) [18
+ (./conclusioni.tex) [19
 
 
 
 ]
 \openout2 = `ringraziamenti.aux'.
 
- (./ringraziamenti.tex) [19
+ (./ringraziamenti.tex) [20
 
 
 
@@ -1342,7 +1354,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-) [20
+) [21
 
 
 
@@ -1350,7 +1362,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 ]
 \openout2 = `appendice.aux'.
 
- (./appendice.tex) [21
+ (./appendice.tex) [22
 
 
 
@@ -1364,16 +1376,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 42392C94300B2A8E56E20A36E47EEFDF;1846.
+(rerunfilecheck)             Checksum: DA82A5C0EB43D404478D3A371A4B0AD4;1847.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20480 strings out of 493014
- 300994 string characters out of 6133350
- 778045 words of memory out of 5000000
- 23431 multiletter control sequences out of 15000+600000
+ 20563 strings out of 493014
+ 302132 string characters out of 6133350
+ 775670 words of memory out of 5000000
+ 23470 multiletter control sequences out of 15000+600000
  74691 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,60p,4228b,3439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1388,10 +1400,10 @@ local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (22 pages, 387983 bytes).
+Output written on tesi.pdf (23 pages, 394964 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
- 233 named destinations out of 1000 (max. 500000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 279 named destinations out of 1000 (max. 500000)
  211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

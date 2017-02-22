@@ -57,6 +57,64 @@ class Persona {
 	}
 }
 \end{lstlisting}
+\subsubsection{Dichiarazione e definizione dei metodi}
+In Swift, una dichiarazione di funzione (metodo) ha la seguente sintassi: 
+\begin{lstlisting}
+//Nell'ordine: func nomeMetodo(nomeArg1:tipoArg1) -> tipoDiRitorno
+
+func calcolaEta(dataDiNascita: NSDate) -> Int
+
+\end{lstlisting}
+Definizione del metodo appena dichiarato: 
+\begin{lstlisting}
+func calcolaEta(dataDiNascita: NSDate) -> Int
+
+	let oggi = Date()
+      
+    let componentiCalendario = Calendar.current.dateComponents([.year], from: dataDiNascita, to: oggi)                             			
+	
+	let eta = componentiCalendario.year!
+	
+	return eta;
+}
+\end{lstlisting}
+Le funzioni in Swift sono trattate come oggetti, ciò significa che una funzione può ritornare un'altra funzione: 
+\begin{lstlisting}
+func creaIncrementatore() -> ((Int) -> Int) {
+	
+	func aggiungiUno(numero: Int) -> Int {
+	
+		return 1 + numero 
+	
+	}
+	
+	return aggiungiUno
+}
+
+var incrementatore = creaIncrementatore()
+incrementatore(7)
+\end{lstlisting}
+\subsubsection{Closures}
+Le funzioni sono un caso speciale di "closure": il codice in una closure ha accesso a variabili e funzioni che sono disponibili nel suo scope, anche se viene eseguita in uno scope diverso. Una closure viene definita dalla sintassi \{ \}, utilizzando il separatore \"in\" per gli argomenti e il tipo di ritorno dal corpo:\\\\ 
+\begin{lstlisting}
+var numeri = [2,25,21,89,90]
+
+numeri.map({
+	(numero: Int) -> Int in 
+	let risultato = 3 * numero 
+	return risultato 
+})
+\end{lstlisting}
+Ci sono vari modi per scrivere le closure: quando il tipo è già conosciuto, come per esempio in una callback per un delegate, si possono omettere i tipi dei parametri, il tipo di ritorno o entrambi nel caso in cui ci sia un singolo statement, in quanto la closure ritorna implicitamente il valore di ritorno:
+\begin{lstlisting}
+let numeriInMap = numeri.map({ numero in 3 * numero })
+\end{lstlisting}
+Ci si può riferire ai parametri per numero invece che per nome, approccio utile specialmente in closure che richiedono poco codice; una closure passata come ultimo argomento di una funzione può essere scritta immediatamente dopo le parentesi, e se quest'ultima è l'unico argomento della funzione stessa si possono omettere le parentesi tonde: 
+\begin{lstlisting}
+//ordino i numeri in modo crescente
+
+let numeriOrdinati = numeri.sorted { $0 > $1 }
+\end{lstlisting}
 \subsection{Gestione della memoria}
 TODO
 \subsection{Compilatore}
