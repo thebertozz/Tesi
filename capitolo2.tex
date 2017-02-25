@@ -115,6 +115,149 @@ Ci si può riferire ai parametri per numero invece che per nome, approccio utile
 
 let numeriOrdinati = numeri.sorted { $0 > $1 }
 \end{lstlisting}
+\subsubsection{Enumerazioni}
+La sintassi enum è utilizzata per dichiarare le enumerazioni in Swift. La particolarità rispetto ad Objective-C è che quest'ultime possono contenere metodi: 
+\begin{lstlisting}
+enum TipologieDiCase {
+
+	case condominio, villa, indipendente, attico
+	
+	func descrizione() -> String {
+	
+		switch self {
+	
+		case .condominio:
+			return "Condominio"
+		case .villa :
+			return "Villa"
+		case .indipendente:
+			return "Casa indipendente"
+		case .attico
+			return "Attico"
+		default: 
+			return String(self.rawValue)
+		
+		}
+	}
+}
+
+let villa = TipologieDiCase.villa
+let descrizioneVilla = villa.descrizione()
+\end{lstlisting}
+\subsubsection{Protocolli ed estensioni}
+Un protocollo definisce un'interfaccia di metodi, variabili ed altri eventuali requisiti che definiscono una particolare funzionalità. Quest'ultimo può essere quindi adottato da una classe, struct o enum che ne forniranno l'implementazione:
+\begin{lstlisting}
+protocol ProtocolloDiNavigazioni {
+	
+	func navigaAlleImpostazioni(sender: CollectionView) 
+	func navigaAlDettaglioEvento(sender: UICollectionView)
+}
+
+class MenuPrincipale: UICollectionViewController, UICollectionViewDelegateFlowLayout: ProtocolloDiNavigazioni {
+
+	override func viewDidLoad() {
+        super.viewDidLoad()
+		collectionView?.delegate = self
+		collectionView?.dataSource = self
+	}
+	
+	...
+	
+	//MARK: CollectionViewDelegate 
+	
+	override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+		
+		switch indexPath {
+			
+			case 0: 
+				navigaAlleImpostazioni(self.collectionView)
+			case 1:
+				navigaAlDettaglioEvento(self.collectionView)
+		}
+	}	
+		
+	//MARK: Implementazione del protocollo 
+		
+	func navigaAlleImpostazioni(sender: UICollectionView) {
+        
+        appDelegate.gotoSettingsVC()
+    }
+    
+    func navigaAlDettaglioEvento(sender: UICollectionView) {
+        
+        appDelegate.gotoEventDetailVC()
+    }
+}
+\end{lstlisting}
+Le estensioni sono invece un modo per aggiungere funzionalità ad un tipo eisstente, come nuovi metodi e computed properties:
+\begin{lstlisting}
+//Estensione che aggiunge un effetto di blur ad una imageView
+
+extension UIImageView
+{
+    func aggiungiBlur()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        self.addSubview(blurEffectView)
+    }
+}
+
+let containerImmagine = UIImageView()
+containerImmagine.image = UIImage(named: "beer2beerlogo.jpg")
+containerImmagine.aggiungiBlur()
+\end{lstlisting}
+\subsubsection{Gestione degli errori}
+Gli errori vengono rappresentati utilizzando qualsiasi tipo che si conformi al protocollo Error; la parola chiave throws viene utilizzata per indicare che una funzione può ritornare un errore, utilizzando la parola chiave throw. Se si lancia un errore dall'interno di una funzione, quest'ultima ritorna immediatamente e l'errore viene gestito dalla funzione chiamante:
+\begin{lstlisting}
+enum ErroriStampante: Error {
+
+	case cartaEsaurita
+	case inchiostroEsaurito
+	case cassettoChiuso
+	
+}
+
+func invia(lavoro: Int, allaStampante nomeStampante: Stringa) throws -> String {
+	if nomeStampante = "Rusty old printer" {
+		
+		throw ErroriStampante.cassettoChiuso
+	}
+
+	return "Lavoro inviato alla stampante"
+}
+
+	do {
+	
+	let rispostaStampante = try invia(lavoro: 2303, allaStampante: "Sala meeting")
+	
+	print(rispostaStampante)
+	
+	} catch {
+		
+		print(error)
+	}
+	
+\end{lstlisting}
+Si possono inoltre utilizzare più blocchi catch per gestire errori specifici:
+\begin{lstlisting}
+	do {
+	
+		let rispostaStampante = try invia(lavoro: 2303, allaStampante: "Sala 	meeting")
+	
+		print(rispostaStampante)
+	
+		} catch ErroriStampante.cassettoChiuso {
+		
+			print("Aprire il cassetto")
+		}
+\end{lstlisting}
+Un altro modo per gestire gli errori è quello di utilizzare la parola chiave try? per convertire il risultato in un tipo optional: se la funzione lancia un errore, questo specifico errore è ignorato e la funzione ritorna nil; alternativamente il risultato è un optional contenente il valore ritornato dalla funzione:
+\begin{lstlisting}
+let foglioStampato = try? invia(lavoro: 1984, allaStampante: "Sala meeting")
+let erroreDiStampa = try? invia(lavoro: 1948, allaStampante: "Rusty old printer")
+\end{lstlisting}
 \subsection{Gestione della memoria}
 TODO
 \subsection{Compilatore}
