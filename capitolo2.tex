@@ -7,6 +7,7 @@ Lo sviluppo di Swift è iniziato nel 2010 da Chris Lattner, aiutato in seguito d
 \subsubsection{Implementazione di una classe}
 In Swift, al contrario di molti altri linguaggi, non ci sono 2 file distinti per l'interfaccia e l'implementazione, ma uno solo con l'estensione .swift\\
 Esempio di creazione di una nuova classe:\\
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 class Persona { 
 
@@ -59,6 +60,7 @@ class Persona {
 \end{lstlisting}
 \subsubsection{Dichiarazione e definizione dei metodi}
 In Swift, una dichiarazione di funzione (metodo) ha la seguente sintassi: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Nell'ordine: func nomeMetodo(nomeArg1:tipoArg1) -> tipoDiRitorno
 
@@ -66,6 +68,7 @@ func calcolaEta(dataDiNascita: NSDate) -> Int
 
 \end{lstlisting}
 Definizione del metodo appena dichiarato: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 func calcolaEta(dataDiNascita: NSDate) -> Int
 
@@ -79,6 +82,7 @@ func calcolaEta(dataDiNascita: NSDate) -> Int
 }
 \end{lstlisting}
 Le funzioni in Swift sono trattate come oggetti, ciò significa che una funzione può ritornare un'altra funzione: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 func creaIncrementatore() -> ((Int) -> Int) {
 	
@@ -96,6 +100,7 @@ incrementatore(7)
 \end{lstlisting}
 \subsubsection{Closures}
 Le funzioni sono un caso speciale di "closure": il codice in una closure ha accesso a variabili e funzioni che sono disponibili nel suo scope, anche se viene eseguita in uno scope diverso. Una closure viene definita dalla sintassi \{ \}, utilizzando il separatore \"in\" per gli argomenti e il tipo di ritorno dal corpo:\\\\ 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 var numeri = [2,25,21,89,90]
 
@@ -106,17 +111,20 @@ numeri.map({
 })
 \end{lstlisting}
 Ci sono vari modi per scrivere le closure: quando il tipo è già conosciuto, come per esempio in una callback per un delegate, si possono omettere i tipi dei parametri, il tipo di ritorno o entrambi nel caso in cui ci sia un singolo statement, in quanto la closure ritorna implicitamente il valore di ritorno:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 let numeriInMap = numeri.map({ numero in 3 * numero })
 \end{lstlisting}
 Ci si può riferire ai parametri per numero invece che per nome, approccio utile specialmente in closure che richiedono poco codice; una closure passata come ultimo argomento di una funzione può essere scritta immediatamente dopo le parentesi, e se quest'ultima è l'unico argomento della funzione stessa si possono omettere le parentesi tonde: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //ordino i numeri in modo crescente
 
 let numeriOrdinati = numeri.sorted { $0 > $1 }
 \end{lstlisting}
 \subsubsection{Enumerazioni}
-La sintassi enum è utilizzata per dichiarare le enumerazioni in Swift. La particolarità rispetto ad Objective-C è che quest'ultime possono contenere metodi: 
+La sintassi enum è utilizzata per dichiarare le enumerazioni in Swift. La particolarità rispetto ad Objective-C è che quest'ultime possono contenere metodi:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 enum TipologieDiCase {
 
@@ -146,6 +154,7 @@ let descrizioneVilla = villa.descrizione()
 \end{lstlisting}
 \subsubsection{Protocolli ed estensioni}
 Un protocollo definisce un'interfaccia di metodi, variabili ed altri eventuali requisiti che definiscono una particolare funzionalità. Quest'ultimo può essere quindi adottato da una classe, struct o enum che ne forniranno l'implementazione:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 protocol ProtocolloDiNavigazioni {
 	
@@ -190,6 +199,7 @@ class MenuPrincipale: UICollectionViewController, UICollectionViewDelegateFlowLa
 }
 \end{lstlisting}
 Le estensioni sono invece un modo per aggiungere funzionalità ad un tipo eisstente, come nuovi metodi e computed properties:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Estensione che aggiunge un effetto di blur ad una imageView
 
@@ -210,6 +220,7 @@ containerImmagine.aggiungiBlur()
 \end{lstlisting}
 \subsubsection{Gestione degli errori}
 Gli errori vengono rappresentati utilizzando qualsiasi tipo che si conformi al protocollo Error; la parola chiave throws viene utilizzata per indicare che una funzione può ritornare un errore, utilizzando la parola chiave throw. Se si lancia un errore dall'interno di una funzione, quest'ultima ritorna immediatamente e l'errore viene gestito dalla funzione chiamante:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 enum ErroriStampante: Error {
 
@@ -241,6 +252,7 @@ func invia(lavoro: Int, allaStampante nomeStampante: Stringa) throws -> String {
 	
 \end{lstlisting}
 Si possono inoltre utilizzare più blocchi catch per gestire errori specifici:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 	do {
 	
@@ -254,10 +266,110 @@ Si possono inoltre utilizzare più blocchi catch per gestire errori specifici:
 		}
 \end{lstlisting}
 Un altro modo per gestire gli errori è quello di utilizzare la parola chiave try? per convertire il risultato in un tipo optional: se la funzione lancia un errore, questo specifico errore è ignorato e la funzione ritorna nil; alternativamente il risultato è un optional contenente il valore ritornato dalla funzione:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 let foglioStampato = try? invia(lavoro: 1984, allaStampante: "Sala meeting")
 let erroreDiStampa = try? invia(lavoro: 1948, allaStampante: "Rusty old printer")
 \end{lstlisting}
+\subsubsection{Generics}
+Una funzione generica, più comunemente chiamata template, è così dichiarata:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines} 
+\begin{lstlisting}
+func creaArray<Elemento>(ripeti	elemento: Elemento, numeroDiVolte: Int) -> [Elemento] {
+
+	var risultato = [Elemento]()
+	
+	for _ in 0..< numeroDiVolte {
+		
+		risultato.append(elemento)
+	}
+	
+	return risultato
+}
+
+//chiamata alla funzione 
+
+creaArray(ripeti: "Tick tock", numeroDiVolte: 3)
+\end{lstlisting}
+Si possono creare generics di funzioni o di classi, enumerazioni e struct:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+//Reimplementazione del tipo optional della libreria standard di Swift
+
+enum OptionalValue<Wrapped> {
+
+	case none 
+	case some(Wrapped)
+}
+
+var possibileIntero: OptionalValue<Int> = .none
+possibileIntero = .some(100)
+\end{lstlisting}
+Si utilizza la parola chiave where prima del corpo per indicare una lista di requisiti, per esempio per indicare che il tipo deve conformarsi ad un protocol, per richiedere che due tipi siano uguali o per indicare che una classe deve avere una particolare superclasse: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+func elementiComuni<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool {
+	
+	where T.Iterator.Element: Equatable,
+		  T.Iterator.Element == U.Iterator.Element {
+		  
+		  	for lhsItem in lhs {
+		  	
+		  		for rhsItem in rhs {
+		  		
+		  			if lhsItem == rhsItem {
+		  				
+		  				return true
+		  			}
+		  		}
+		  	}
+		  }
+		  
+		  return false
+}
+
+//chiamata alla funzione 
+
+elementiComuni([1,2,3], [3])
+\end{lstlisting}
+\subsubsection{Tuples}
+Feature non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo status code 404 dell'HTTP con una tupla in questo modo:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let errore404http = (404, "Not found")
+\end{lstlisting}
+La tupla (404, "Not found") raggruppa insieme un tipo Int e uno String; si può creare qualsiasi permutazione di tipi. Per ottenere i singoli valori da una tupla, quest'ultima deve essere scomposta:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let (statusCode, statusMessage) = errore404http
+\end{lstlisting}
+Questo particolare tipo è utile come valore di ritorno dalle funzioni, per esempio una funzione che ha il compito di caricare una pagina web potrebbe usare la tupla sopra descritta per indicare il successo o il fallimento del caricamento, fornendo più informazioni rispetto ad un valore di ritorno singolo di un singolo tipo. 
+\subsubsection{Optionals}
+Questo tipo è un pilastro portante di Swift, in quanto viene utilizzato  in tutti i casi in cui il valore di ritorno potrebbe essere nullo (nil). La logica di funzionamento è la seguente: o c'è un tipo di ritorno, e quindi si utilizza l'unwrapping per accedere al valore, o non c'è valore alcuno.\\
+Il concetto di optional non esiste in C o Objective-C. Ciò che ci si avvicina di più è l'abilità di ritornare nil da un metodo che altrimenti ritornerebbe un oggetto, con nil a significare l'assenza di un oggetto valido.\\Questo però funziona solamente per gli oggetti (non structs, tipi C  o enumerativi); per questi i metodi Objective-C ritornano solamente un valore speciale (come per esempio NSNotFound). Questo implica che il chiamante dei metodi sappia che c'è uno speciale valore da verificare, l'approccio di Swift permette invece di indicare l'assenza di qualsiasi valore in assoluto, senza la necessità per speciali costanti.\\
+In questo esempio vediamo come gli optional possono essere utilizzati per gestire il caso di assenza di valore. Il tipo Int di Swift ha un costruttore che prova a convertire una String  in un valore di tipo Int; questa conversione può fallire e quindi viene utilizzato un tipo optional:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let possibileNumero = "123"
+let numeroConvertito = Int(possibileNumero)
+//numeroConvertito e' di tipo Int?, che si legge come "optional Int"
+\end{lstlisting} 
+Poichè il costruttore può fallire, questi ritorna un tipo optional Int, scritto Int?. Il punto di domanda indica che il valore contiene un tipo optional, il che significa che potrebbe contenere un valore Int, o nessun valore.\\
+Utilizzando la speciale parola chiave nil, si indica che un tipo optional non ha valore alcuno. nil non può essere utilizzato con constanti e variabili non optional.
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+var codiceRispostaServer: Int? = nil
+\end{lstlisting}
+Se si crea una variabile optional, alla quale non si assegna alcun valore, a quest'ultima viene automaticamente assegnato nil.\\Il nil di Swift non è però equivalente a quello di Objective-C: in quest ultimo, nil è un puntatore ad un oggetto che non esiste, in Swift non è invece un puntatore, è l'assenza di valore alcuno. Optionals di qualunque tipo possono essere settati a nil, non solamente oggetti.\\
+Per verificare la presenza di valore in un tipo optional è possibile usare lo statement if in questo modo: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+if numeroConvertito != nil {
+
+	//numero convertito contiene un valore
+}
+\end{lstlisting}
+Alternativamente è possibile utilizzare il simbolo !, letto come \"forced unwrapping\"  del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime. 
 \subsection{Gestione della memoria}
 TODO
 \subsection{Compilatore}
