@@ -381,8 +381,6 @@ if let numero = Int(possibileNumero) {
 \end{lstlisting}
 Questo codice può essere letto come: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, assegna alla nuova costante chiamata numero il valore contenuto nell'optional. Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore. In uno statement si possono concatenare più optional binding separati da virgola, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
 Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard. 
-\subsection{Gestione della memoria}
-TODO
 \subsection{Compilatore e libreria standard}
 \subsubsection{Architettura del compilatore}
 Il compilatore di Swift è composto dai seguenti componenti principali:

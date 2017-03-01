@@ -182,16 +182,6 @@ La funzione objc\_msgSend() opera tramite un lookup dinamico: conoscendo il nome
 Questo comportamento ha caratteristiche particolari: potremmo far puntare un certo selettore A, che prima puntava al codice per A, ad un codice per un certo B.\\ 
 Lo svantaggio è che il tempo di esecuzione è leggermente minore di una chiamata diretta alla parte di codice; si parla comunque di nano secondi di differenza.\\
 \\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che: \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
-\subsection{Gestione della memoria}
-Objective-C supporta due meccanismi per la gestione della memoria:\\
-\\-MMR (Manual retain-release), dove lo sviluppatore gestisce esplicitamente la memoria, tenendo traccia degli oggetti instanziati. E' implementato tramite un modello chiamato Reference Counting, fornito dalla classe NSObject in congiunzione all'ambiente di runtime; è il metodo più obsoleto e più dispendioso in termini di tempo di sviluppo in quanto è un approccio prettamente manuale.\\
-\\-ARC (Automatic reference counting), che utilizza lo stesso sistema di tracciamento degli oggetti di MMR, ma aggiunge automaticamente chiamate ai metodi di gestione della memoria a tempo di compilazione. Questo sistema permette di assicurare che gli oggetti abbiano vita il tempo necessario per il loro utilizzo e non oltre, poichè il compilatore genera in automatico anche i metodi di dealloc appropriati.\\E' l'approccio moderno e più utilizzato della gestione della memoria in Objective-C.
-\begin{figure}
-      \centering
-      \includegraphics[scale=0.40]{immagini/ARC.jpg}
-            \vspace{0.8cm}
-            \caption{\textit{Confronto tra MMC ed ARC relativo al tempo di creazione dei cicli di retain-release degli oggetti}}
-    \end{figure}
 \subsection{Compilatore}
 L'IDE di Apple, Xcode, utilizza clang. Quest'ultimo è un compilatore front end per C, C++, Objective-C, Objective-C++, OpenMP, OpenCL e CUDA, basato sul compilatore LLVM (Low Level Virtual Machine).\\
 LLVM in origine doveva utilizzare il front end di GCC, ma dopo aver riscontrato problemi di integrazione e di sviluppo l'azienda ha deciso di crearne uno proprio (clang) reso open-source nel Giugno 2007. 

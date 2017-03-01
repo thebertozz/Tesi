@@ -20,57 +20,53 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Invio dei messaggi}{10}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}Gestione della memoria}{11}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.2}Compilatore}{11}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Compilatore}{12}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.3}Utilizzo in iOS e frameworks Cocoa}{11}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Utilizzo in iOS e frameworks Cocoa}{12}{subsection.1.2.4}
+\contentsline {chapter}{\numberline {2}Swift}{12}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Swift}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Cenni storici}{12}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Cenni storici}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Caratteristiche}{12}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Caratteristiche}{13}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Sintassi}{12}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Sintassi}{13}{subsection.2.2.1}
+\contentsline {subsubsection}{Implementazione di una classe}{12}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Implementazione di una classe}{13}{section*.7}
+\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{14}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{15}{section*.8}
+\contentsline {subsubsection}{Closures}{14}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Closures}{15}{section*.9}
+\contentsline {subsubsection}{Enumerazioni}{15}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Enumerazioni}{16}{section*.10}
+\contentsline {subsubsection}{Protocolli ed estensioni}{16}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Protocolli ed estensioni}{17}{section*.11}
+\contentsline {subsubsection}{Gestione degli errori}{17}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Gestione degli errori}{18}{section*.12}
+\contentsline {subsubsection}{Generics}{19}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Generics}{20}{section*.13}
+\contentsline {subsubsection}{Tuples}{20}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tuples}{21}{section*.14}
+\contentsline {subsubsection}{Optionals}{20}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Optionals}{21}{section*.15}
+\contentsline {subsection}{\numberline {2.2.2}Compilatore e libreria standard}{22}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{23}{subsection.2.2.2}
+\contentsline {subsubsection}{Architettura del compilatore}{22}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Compilatore e libreria standard}{23}{subsection.2.2.3}
+\contentsline {subsubsection}{Libreria standard Swift}{23}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Architettura del compilatore}{23}{section*.16}
+\contentsline {subsubsection}{Whole module optimization}{23}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Libreria standard Swift}{24}{section*.17}
+\contentsline {subsection}{\numberline {2.2.3}Utilizzo in iOS e frameworks Cocoa}{26}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Whole module optimization}{25}{section*.18}
+\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{27}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{27}{subsection.2.2.4}
+\contentsline {section}{\numberline {3.1}Punti di forza e debolezze di Objective-C}{27}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{28}{chapter.3}
+\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{27}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Punti di forza e debolezze di Objective-C}{28}{section.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{28}{section.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Confronto delle performance }{28}{section.3.3}
+\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{27}{section.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{29}{chapter.4}
 \defcounter {refsection}{0}\relax 
