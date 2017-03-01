@@ -52,28 +52,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Optionals}{21}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{22}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Gestione della memoria}{23}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Compilatore}{23}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Compilatore e libreria standard}{23}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{23}{subsection.2.2.4}
+\contentsline {subsubsection}{Architettura del compilatore}{23}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{24}{chapter.3}
+\contentsline {subsubsection}{Libreria standard Swift}{24}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Punti di forza e debolezze di Objective-C}{24}{section.3.1}
+\contentsline {subsubsection}{Whole module optimization}{25}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{24}{section.3.2}
+\contentsline {subsection}{\numberline {2.2.4}Utilizzo in iOS e frameworks Cocoa}{27}{subsection.2.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Confronto delle performance e gestione della memoria}{24}{section.3.3}
+\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi (trovare un titolo adeguato)}{28}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{25}{chapter.4}
+\contentsline {section}{\numberline {3.1}Punti di forza e debolezze di Objective-C}{28}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{25}{section.4.1}
+\contentsline {section}{\numberline {3.2}Punti di forza e debolezze di Swift}{28}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{26}{section*.16}
+\contentsline {section}{\numberline {3.3}Confronto delle performance }{28}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ringraziamenti}{27}{section*.18}
+\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{29}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{28}{section*.20}
+\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{29}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendice}{29}{section*.22}
+\contentsline {chapter}{Conclusioni}{30}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Ringraziamenti}{31}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{32}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendice}{33}{section*.25}

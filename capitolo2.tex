@@ -369,10 +369,101 @@ if numeroConvertito != nil {
 	//numero convertito contiene un valore
 }
 \end{lstlisting}
-Alternativamente è possibile utilizzare il simbolo !, letto come \"forced unwrapping\"  del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime. 
+Alternativamente è possibile utilizzare il simbolo !, letto come \"forced unwrapping\"  del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime.
+Viene utilizzata molto più frequentemente la sintassi dell'optional binding, per verificare se una certa variabile optional contiene un valore e, se presente, assegnarlo ad una costante o variabile temporanea. Si utilizza con gli statement if e while:
+\begin{lstlisting}
+if let numero = Int(possibileNumero) {
+	//se entro nel blocco significa che possibileNumero 
+	//contiene un intero poiche' la conversione ad Int va a buon fine
+} else {
+	//possibileNumero non e' stato convertito ad Int
+}
+\end{lstlisting}
+Questo codice può essere letto come: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, assegna alla nuova costante chiamata numero il valore contenuto nell'optional. Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore. In uno statement si possono concatenare più optional binding separati da virgola, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
+Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard. 
 \subsection{Gestione della memoria}
 TODO
-\subsection{Compilatore}
-TODO
+\subsection{Compilatore e libreria standard}
+Compiler Architecture
+As a whole, the Swift compiler is principally responsible for translating Swift source code into efficient, executable machine code. However, the Swift compiler front-end also supports a number of other tools, including IDE integration with syntax coloring, code completion, and other conveniences. This document provides a high-level description of the major components of the Swift compiler:
+
+\subsubsection{Architettura del compilatore}
+Il compilatore di Swift è composto dai seguenti componenti principali:
+\begin{itemize}
+\item Parser: il parser è un semplice parser ricorsivo discendente con un lexer codificato a mano. Il parser è il responsabile della generazione dell'albero di sintassi astratta senza alcuna informazione semantica o di tipo, e genera errori in caso di problemi grammaticali nel sorgente.
+\item Analizzatore semantico: trasforma l'albero generato dal parser in un albero ben formato e con controllo sui tipi. Questo analisi include la type inference e in caso di successo, indica che è sicuro generare il codice dall'albero creato
+\item Clang importer: Importa i moduli di Clang e mappa le API C o Objective-C nelle rispettive API Swift. Gli alberi risultanti vengono utilizzati dall'analizzatore semantico.
+\item Generatore SIL: SIL è l'acronimo di Swift Intermediate Language, ovvero un linguaggio intermedio di alto livello, specifico per l'analisi e l'ottimizzazione del codice. Questa fase trasforma l'albero di sintassi astratta creato dall'analizzatore in un cosiddetto SIL "grezzo".
+\item Trasformazioni SIL: Questo strumento esegue ulteriori diagnostiche che influenzano la correttezza del programma (come ad esempio l'uso di variabili non inizializzate). Il risultato finale di queste trasformazioni è SIL "canonico".
+\item Ottimizzazioni SIL: Questa fase esegue ulteriori ottimizzazioni specifiche di alto livello, quali Automatic Reference Counting per la gestione della memoria, devirtualizzazione e specializzazione dei tipi generics.
+\item Generazione IR LLVM: IR significa Intermediate Representation. Questa fase passa dal SIL al LLVM IR, e a questo punto LLVM può continuare ad ottimizare il codice e generare il codice macchina.
+\end{itemize}
+\subsubsection{Libreria standard Swift}
+La libreria standard Swift comprende un certo numero di tipi di dati, protocolli e funzioni, compresi i tipi fondamentali (ad esempio, int, double), collezioni (per esempio, Array, dizionario) insieme ai protocolli che li descrivono e gli algoritmi che operano su di essi, i caratteri e stringhe, e le primitive di basso livello (ad esempio, UnsafeMutablePointer).\\
+Il repository della libreria standard viene ulteriormente suddiviso:
+\begin{itemize}
+\item Nucleo principale: include la definizione di tutti i tipi, protocolli e funzioni.
+\item Runtime: Il runtime di supporto è il componente che risiede nel mezzo tra il compilatore e il nucleo della libreria standard. E' il responsabile dell'implementazione delle features dinamiche del linguaggio, come il casting  (ad esempio per gli operatori as! ed as?) o i metadata dei tipi (per supportare i generics e la reflection) e la gestione della memoria (allocazione degli oggetti, reference counting). Differentemente dalle altre librerie di alto livello, il runtime è scritto quasi esclusivamente in linguaggio C++ o Objective-C.
+\item Overlays per SDK: componenti specifici per le piattaforme Apple, forniscono modifiche ed aggiunte specifiche per Swift ai framework Objective-C, per migliorare la loro interoperabilità. 
+\end{itemize}
+\subsubsection{Whole module optimization}
+Con la versione 3.0 di Swift è stata introdotta una modalità di ottimizzazione del compilatore che, dipendentemente dal progetto, permette miglioramenti delle performance significativi.\\
+Funzionamento del compilatore senza WMO:
+Un modulo è un set di files Swift, ed ogni modulo viene compilato in una singola unità di distribuzione (un framework o un eseguibile). Nella compilazione a file singolo il compilatore è invocato separatamente per ogni file nel modulo: 
+\begin{figure}
+      \centering
+      \includegraphics[scale=0.80]{immagini/single-file.png}
+            \vspace{0.8cm}
+            \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione per ogni singolo file}}
+    \end{figure}
+Dopo la lettura ed il parsing del singolo file, il compilatore ottimizza il codice, genera il codice macchina e scrive un file oggetto. Successivamente il linker unisce tutti i file oggetto e genera la libreria condivisa o l'eseguibile.\\
+Questa compilazione singola limita le ottimizzazione inter funzione, come l'inlining o la specializzazione dei generics alle le funzioni chiamate all'interno dello stesso file. Come esempio, assumiamo che un file di un modulo, chiamato utils.swift, contenga una struttura dati generica chiamata Container<T>, con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
+\begin{lstlisting}
+//main.swift:
+
+func add (c1: Container<Int>, c2: Container<Int>) -> Int {
+  return c1.getElement() + c2.getElement()
+}
+\end{lstlisting}
+\begin{lstlisting}
+//utils.swift:
+
+struct Container<T> {
+  var element: T
+
+  func getElement() -> T {
+    return element
+  }
+}
+\end{lstlisting}
+Quando il compilatore ottimizza il file main.swift non conosce come la funzione getElement sia implementata, conosce solo il fatto che è presente; viene quindi generata una chiamata al suddetto metodo.\\
+Analogamente, quando il compilatore ottimizza il file utils.swift non conosce per quale tipo concreto il metodo viene chiamato, quindi può generare solamente una versione generica della funzione, rendendo il codice più lento rispetto ad uno ottimizzato per un tipo concreto.\\
+Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.
+Funzionamento del compilatore con WMO:\\
+Con l'ottimizzazione per l'intero modulo il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
+\begin{figure}
+      \centering
+      \includegraphics[scale=0.80]{immagini/wmo.png}
+            \vspace{0.8cm}
+            \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione whole module optimization}}
+\end{figure}
+Questo porta due notevoli vantaggi: il compilatore vede le implementazioni di tutte le funzioni del modulo, e può quindi procedere con le ottimizzazioni specifiche; specializzare una funzione significa che il compilatore crea una nuova versione del metodo specifica per il contesto della chiamata. Ad esempio, il compilatore può ottimizzare le funzioni di tipo generics per i tipi concreti.\\
+Nell'esempio, il compilatore crea una versione della struct Container specifica per i tipi Int: 
+\begin{lstlisting}
+struct Container {
+  var element: Int
+
+  func getElement() -> Int {
+    return element
+  }
+}
+\end{lstlisting}
+Può quindi procedere all'inlining del metodo specializzato getElement all'interno della funzione add:
+\begin{lstlisting}
+func add (c1: Container<Int>, c2: Container<Int>) -> Int {
+  return c1.element + c2.element
+}
+\end{lstlisting}
+Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina
 \subsection{Utilizzo in iOS e frameworks Cocoa}
 TODO
