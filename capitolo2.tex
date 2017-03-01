@@ -405,7 +405,7 @@ Il repository della libreria standard viene ulteriormente suddiviso:
 Con la versione 3.0 di Swift è stata introdotta una modalità di ottimizzazione del compilatore che, dipendentemente dal progetto, permette miglioramenti delle performance significativi.\\
 Funzionamento del compilatore senza WMO:
 Un modulo è un set di files Swift, ed ogni modulo viene compilato in una singola unità di distribuzione (un framework o un eseguibile). Nella compilazione a file singolo il compilatore è invocato separatamente per ogni file nel modulo: 
-\begin{figure}
+\begin{figure}[H]
       \centering
       \includegraphics[scale=0.80]{immagini/single-file.png}
             \vspace{0.8cm}
@@ -436,7 +436,7 @@ Analogamente, quando il compilatore ottimizza il file utils.swift non conosce pe
 Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.
 Funzionamento del compilatore con WMO:\\
 Con l'ottimizzazione per l'intero modulo il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
-\begin{figure}
+\begin{figure}[H]
       \centering
       \includegraphics[scale=0.80]{immagini/wmo.png}
             \vspace{0.8cm}
@@ -459,6 +459,12 @@ func add (c1: Container<Int>, c2: Container<Int>) -> Int {
   return c1.element + c2.element
 }
 \end{lstlisting}
-Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina
+Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'inlining tra più file sono solo esempi delle otimizzazioni che il compilatore può apportare con l'approccio WMO, un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di reference counting ridondanti. Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche, con questa informazione può eliminare le cosiddette funzioni inutilizzate, ovvero quelle che non vengono mai chiamate ed usate. Potrebbe essere fuorviante il fatto che non vengano mai chiamate e quindi ci si può domandare perchè un programmatore debba scrivere una funzione che non viene mai chiamata, la ragione sta nel fatto che alcune funzioni possono diventare inutilizzate come side-effect derivante dalle altre ottimizzazioni. Riprendendo l'esempio, possiamo assumere che  la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'inlining della funzione getElement, la funzione non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore decide di non fare l'inline della funzione, può comunque rimuovere la versione generica di getElement, poichè la funzione add utilizza solamente la versione specializzata.
+\subsubsection{Tempo di compilazione}
+Con l'ottimizzazione a file singolo il driver del compilatore inizia la compilazione epr ogni file in un processo separato, processo che può essere eseguito in parallelo. Inoltre files non modificati dall'ultima compilazione possono essere riutilizzati senza ricompilare (compilazione incrementale); tutto ciò porta ad un tempo di compilazione notevolmente rapido.\\
+Come visto precedentemente la compilazione si divide in più fasi: parsing, check dei tipi, ottimizzazioni del linguaggio intermedio (SIL), backend LLVM.\\
+Il parsing e il check di tipi è veloce nel più dei casi; l'ottimizzazione del SIL tipicamente richiede un terzo del tempo totale di compilazione, gli altri due terzi sono impegnati dal backend LLVM che opera ottimizzazioni di basso livello e genera il codice.\\
+Con WMO, dopo aver effettuato le ottimizzazioni sull'intero modulo nella fase di ottimizzazione del SIL, il modulo è separato di nuovo in parti multiple. I processi di LLVM processano le parti in thread multipli e inoltre evitano il reprocessing delle parti che non sono cambiate rispetto all'ultima build.
+In conclusione WMO è un modo veloce ed efficace per ottenere ottime prestazioni, senza l'obbligo di gestire il codice Swift in vari file in un modulo. Se le ottimizzazioni, come descritto precedentemente, riescono ad essere efficaci per buona parte del codice, si riescono ottenere incrementi prestazionali fino a cinque volte rispetto alla compilazione a file singolo. 
 \subsection{Utilizzo in iOS e frameworks Cocoa}
 TODO

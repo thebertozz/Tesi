@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  1 MAR 2017 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  1 MAR 2017 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -975,9 +975,11 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count314
 \@quotereset=\count315
-(./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux) (./capitolo1.aux
-) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux)
-(./ringraziamenti.aux) (./biblio.aux) (./appendice.aux))
+(./tesi.aux
+No file titolo.aux.
+(./dedica.aux) (./introduzione.aux) (./capitolo1.aux) (./capitolo2.aux)
+(./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux) (./ringraziamenti.aux)
+(./biblio.aux) (./appendice.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -1068,7 +1070,7 @@ Package biblatex Info: Reference segment=0 on input line 25.
 
 (./titolo.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 2.
- <logouni.png, id=104, 830.10126pt x 751.80875pt>
+ <logouni.png, id=96, 830.10126pt x 751.80875pt>
 File: logouni.png Graphic file (type png)
 
 <use logouni.png>
@@ -1131,17 +1133,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 11.
- [1
-
-
-])
+)
 \tf@toc=\write6
 \openout6 = `tesi.toc'.
 
- [2]
+ [1
+
+
+]
 \openout2 = `dedica.aux'.
 
- (./dedica.tex) [3
+ (./dedica.tex) [2
 
 ]
 \openout2 = `introduzione.aux'.
@@ -1166,7 +1168,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-) [4
+) [3
 
 
 
@@ -1215,7 +1217,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[5
+[4
 
 
 
@@ -1226,7 +1228,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[5]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1249,13 +1251,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 22.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 22.
- [7]
-[8] [9]
+ [6]
+[7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 181--185
 
  []
 
-[10]) [11]
+[9]) [10]
 \openout2 = `capitolo2.aux'.
 
  (./capitolo2.tex
@@ -1265,11 +1267,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-[12
+[11
 
 
 
-] [13]
+] [12]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
@@ -1279,19 +1281,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[14] [15] [16] [17] [18] [19] [20] [21]
+[13] [14] [15] [16] [17] [18] [19] [20]
 Overfull \hbox (49.37108pt too wide) in paragraph at lines 382--384
 \T1/lmr/m/n/12 Questo co-di-ce può es-se-re let-to co-me: se l'op-tio-nal Int r
 i-tor-na-to da Int(possibileNumero)
  []
 
-[22]
+[21]
 Overfull \hbox (2.449pt too wide) in paragraph at lines 402--403
 \T1/lmr/m/n/12 sco-no mo-di-fi-che ed ag-giun-te spe-ci-fi-che per Swift ai fra
 -mework Objective-
  []
 
-<immagini/single-file.png, id=671, 321.2pt x 334.24875pt>
+<immagini/single-file.png, id=656, 321.2pt x 334.24875pt>
 File: immagini/single-file.png Graphic file (type png)
 
 <use immagini/single-file.png>
@@ -1303,14 +1305,14 @@ Underfull \hbox (badness 1038) in paragraph at lines 412--412
  com-pi-la-to-re in mo-da-li-tà di
  []
 
-[23] [24pdfTeX warning (ext4): destination with the same identifier (name{figur
+[22] [23pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.422 \end{lstlisting}
-                       <./immagini/single-file.png>]
-<immagini/wmo.png, id=690, 321.2pt x 216.81pt>
+l.421 }
+        <./immagini/single-file.png>]
+<immagini/wmo.png, id=672, 321.2pt x 216.81pt>
 File: immagini/wmo.png Graphic file (type png)
  <use immagini/wmo.png>
 Package pdftex.def Info: immagini/wmo.png used on input line 441.
@@ -1321,34 +1323,34 @@ Underfull \hbox (badness 1038) in paragraph at lines 443--443
  com-pi-la-to-re in mo-da-li-tà di
  []
 
-[25]) [26pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.2.2}) has been already used, duplicate ignored
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.34 \include{capitolo2}
-                         <./immagini/wmo.png>]
+l.447 \begin{lstlisting}
+                         <./immagini/wmo.png>] [25]) [26]
 \openout2 = `capitolo3.aux'.
 
  (./capitolo3.tex
 Capitolo 3.
-<immagini/ARC.jpg, id=723, 753.81625pt x 477.785pt>
+<immagini/ARC.jpg, id=713, 753.81625pt x 477.785pt>
 File: immagini/ARC.jpg Graphic file (type jpg)
  <use immagini/ARC.jpg>
 Package pdftex.def Info: immagini/ARC.jpg used on input line 13.
 (pdftex.def)             Requested size: 301.52116pt x 191.11061pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 8--35
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--35
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Overfull \hbox (16.25348pt too wide) in paragraph at lines 8--35
+Overfull \hbox (16.25348pt too wide) in paragraph at lines 8--16
 \T1/lmr/m/n/12 E' l'ap-proc-cio mo-der-no e più uti-liz-za-to del-la ge-stio-ne
  del-la me-mo-ria in Objective-
  []
@@ -1357,8 +1359,8 @@ Overfull \hbox (16.25348pt too wide) in paragraph at lines 8--35
 
 
 
-] [28pdfTeX warning (ext4): destination with the same identifier (name{figure.3
-.1}) has been already used, duplicate ignored
+]) [28pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1420,48 +1422,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 (./appendice.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
-
-
-Package rerunfilecheck Warning: File `tesi.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tesi.out':
-(rerunfilecheck)             Before: 692DD93FDAF1DC65070E901A1E9336E1;1843
-(rerunfilecheck)             After:  312016C9966C3A6C915499563A717352;1712.
+Package rerunfilecheck Info: File `tesi.out' has not changed.
+(rerunfilecheck)             Checksum: 45BD368760C387C4CFCBE63A47976109;1712.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21046 strings out of 493014
- 309385 string characters out of 6133350
- 780038 words of memory out of 5000000
- 23699 multiletter control sequences out of 15000+600000
- 74691 words of font info for 74 fonts, out of 8000000 for 9000
+ 21039 strings out of 493014
+ 309284 string characters out of 6133350
+ 777672 words of memory out of 5000000
+ 23696 multiletter control sequences out of 15000+600000
+ 71661 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,12n,60p,4228b,3441s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.2.2.4} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
-xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (34 pages, 442888 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tesi.pdf (34 pages, 426724 bytes).
 PDF statistics:
- 910 PDF objects out of 1000 (max. 8388607)
- 850 compressed objects within 9 object streams
- 529 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 837 compressed objects within 9 object streams
+ 528 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
