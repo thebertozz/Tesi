@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  4 MAR 2017 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  5 MAR 2017 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,17 +1175,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  (./capitolo1.tex
 Capitolo 1.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 13.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 12.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 13.
- [4
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 12.
 
-
-
-]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1194,13 +1190,17 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
+) [4
+
+
+
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 25.
+(Font)              <7> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 25.
+(Font)              <5> on input line 24.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 25.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 24.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1209,7 +1209,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
 
  []
 
@@ -1219,7 +1219,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--188
  (./capitolo2.tex
 Capitolo 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--13
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
@@ -1228,23 +1228,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
 
 ] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
-[12] [13] [14] [15] [16] [17] [18] [19]
-Overfull \hbox (49.37108pt too wide) in paragraph at lines 384--386
+[12] [13] [14] [15] [16] [17] [18]
+Overfull \hbox (49.37108pt too wide) in paragraph at lines 381--383
 \T1/lmr/m/n/12 Questo co-di-ce può es-se-re let-to co-me: se l'op-tio-nal Int r
 i-tor-na-to da Int(possibileNumero)
  []
 
-[20]
-Overfull \hbox (2.449pt too wide) in paragraph at lines 404--405
+[19] [20]
+Overfull \hbox (2.449pt too wide) in paragraph at lines 401--402
 \T1/lmr/m/n/12 sco-no mo-di-fi-che ed ag-giun-te spe-ci-fi-che per Swift ai fra
 -mework Objective-
  []
@@ -1253,10 +1253,10 @@ Overfull \hbox (2.449pt too wide) in paragraph at lines 404--405
 File: immagini/single-file.png Graphic file (type png)
 
 <use immagini/single-file.png>
-Package pdftex.def Info: immagini/single-file.png used on input line 412.
+Package pdftex.def Info: immagini/single-file.png used on input line 409.
 (pdftex.def)             Requested size: 256.96034pt x 267.39935pt.
 
-Underfull \hbox (badness 1038) in paragraph at lines 414--414
+Underfull \hbox (badness 1038) in paragraph at lines 411--411
 []\T1/lmr/m/n/12 Figura 2.1: []\T1/lmr/m/it/12 Visualizzazione del la-vo-ro del
  com-pi-la-to-re in mo-da-li-tà di
  []
@@ -1266,15 +1266,15 @@ e.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.423 }
-        <./immagini/single-file.png>]
-<immagini/wmo.png, id=648, 321.2pt x 216.81pt>
+l.428   func 
+             getElement() -> T { <./immagini/single-file.png>]
+<immagini/wmo.png, id=654, 321.2pt x 216.81pt>
 File: immagini/wmo.png Graphic file (type png)
  <use immagini/wmo.png>
-Package pdftex.def Info: immagini/wmo.png used on input line 443.
+Package pdftex.def Info: immagini/wmo.png used on input line 440.
 (pdftex.def)             Requested size: 256.96034pt x 173.44823pt.
 
-Underfull \hbox (badness 1038) in paragraph at lines 445--445
+Underfull \hbox (badness 1038) in paragraph at lines 442--442
 []\T1/lmr/m/n/12 Figura 2.2: []\T1/lmr/m/it/12 Visualizzazione del la-vo-ro del
  com-pi-la-to-re in mo-da-li-tà di
  []
@@ -1284,74 +1284,78 @@ Underfull \hbox (badness 1038) in paragraph at lines 445--445
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.449 \begin{lstlisting}
-                         <./immagini/wmo.png>] [24]) [25]
+l.446 \begin{lstlisting}
+                         <./immagini/wmo.png>] [24]) [25] [26]
 \openout2 = `capitolo3.aux'.
 
  (./capitolo3.tex
 Capitolo 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
-
- []
-
-[26
+[27
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 17--20
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
 
-[27] <immagini/ARC.jpg, id=702, 753.81625pt x 477.785pt>
-File: immagini/ARC.jpg Graphic file (type jpg)
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
-<use immagini/ARC.jpg>
-Package pdftex.def Info: immagini/ARC.jpg used on input line 28.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+<immagini/ARC.jpg, id=707, 753.81625pt x 477.785pt>
+File: immagini/ARC.jpg Graphic file (type jpg)
+ <use immagini/ARC.jpg>
+Package pdftex.def Info: immagini/ARC.jpg used on input line 34.
 (pdftex.def)             Requested size: 301.52116pt x 191.11061pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--37
 
  []
 
 
-Overfull \hbox (16.25348pt too wide) in paragraph at lines 23--31
+Overfull \hbox (16.25348pt too wide) in paragraph at lines 29--37
 \T1/lmr/m/n/12 E' l'ap-proc-cio mo-der-no e più uti-liz-za-to del-la ge-stio-ne
  del-la me-mo-ria in Objective-
  []
 
-[28]) [29pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.3.1}) has been already used, duplicate ignored
+[29] [30pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.35 \include{capitolo3}
-                         <./immagini/ARC.jpg>]
+l.40 \subsubsection
+                   {Performance} <./immagini/ARC.jpg>]) [31]
 \openout2 = `capitolo4.aux'.
 
  (./capitolo4.tex
 Capitolo 4.
-) [30
+) [32
 
 
 
 ]
 \openout2 = `conclusioni.aux'.
 
- (./conclusioni.tex) [31
+ (./conclusioni.tex) [33
 
 
 
 ]
 \openout2 = `ringraziamenti.aux'.
 
- (./ringraziamenti.tex) [32
+ (./ringraziamenti.tex) [34
 
 
 
@@ -1368,7 +1372,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-) [33
+) [35
 
 
 
@@ -1376,7 +1380,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 ]
 \openout2 = `appendice.aux'.
 
- (./appendice.tex) [34
+ (./appendice.tex) [36
 
 
 
@@ -1396,34 +1400,43 @@ Package rerunfilecheck Warning: File `tesi.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `tesi.out':
-(rerunfilecheck)             Before: E320BB2646904B10471399743B164A4D;1338
-(rerunfilecheck)             After:  79ABB9398B60F53B148D6F2AA65ABB3D;1295.
+(rerunfilecheck)             Before: 0C7F1CC26C216BF2AC1CC661E2968BC5;1295
+(rerunfilecheck)             After:  A2028A20F3BF07F4A7F8E2D6E1A909CA;1295.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21041 strings out of 493014
- 309292 string characters out of 6133350
- 780038 words of memory out of 5000000
+ 21050 strings out of 493014
+ 309383 string characters out of 6133350
+ 777038 words of memory out of 5000000
  23693 multiletter control sequences out of 15000+600000
  71661 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,12n,60p,1778b,3441s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (35 pages, 427797 bytes).
+ 43i,12n,60p,1778b,3515s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.35} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.33} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.31} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tesi.pdf (37 pages, 431144 bytes).
 PDF statistics:
- 887 PDF objects out of 1000 (max. 8388607)
- 827 compressed objects within 9 object streams
- 531 named destinations out of 1000 (max. 500000)
+ 906 PDF objects out of 1000 (max. 8388607)
+ 844 compressed objects within 9 object streams
+ 540 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
