@@ -80,7 +80,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Gestione della memoria}{31}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Performance}{32}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Performance}{32}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Aggiunta di un elemento ad un array}{33}{section*.20}
 \defcounter {refsection}{0}\relax 

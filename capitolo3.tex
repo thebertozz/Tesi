@@ -37,7 +37,7 @@ Esistono due modalità di gestione della memoria:\\
     \end{figure}
 Il comportamento di ARC è però differente tra i due linguaggi:\\
 In Swift il supporto è completo rispetto ai percorsi di codice procedurali ed object oriented; Objective-C invece supporta ARC solamente nell'utilizzo delle API Cocoa ed il codice object-oriented, questo significa che sarà ancora compito del programmatore gestire la memoria quando vengono utilizzate API come Core Graphics e altre di basso livello disponibili in iOS, creando il rischio di memory leaks.
-\subsection{Performance}
+\section{Performance}
 Tester indipendenti hanno confrontato le performance dei due linguaggi su strutture dati standard quali Array/NSArray, Dictionary/NSDictionary e Set; i risultati sono molto variabili rispetto all'operazione effettuata sulla struttura dati.\\
 L'approcio utilizzato prevede la preinizializzazione delle strutture dati con un numero fisso di elementi; è stata effettuata solamente una operazione sulla struttura dati, quindi è stata creata una nuova struttura con un nuovo stato iniziale ed è stata eseguita nuovamente l'operazione.\\ Sono stati considerati 500 stati differenti per ogni struttura dati, e le performance sono state calcolate su 10 iterazioni.\\L'asse X mostra il numero di elementi nella struttura dati, l'asse Y il tempo medio di esecuzione dell'operazione.
 \subsubsection{Aggiunta di un elemento ad un array}
