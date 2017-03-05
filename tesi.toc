@@ -4,92 +4,118 @@
 \defcounter {refsection}{0}\relax 
 \select@language {italian}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Introduzione}{3}{section*.2}
+\contentsline {chapter}{Introduzione}{4}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Objective-C}{4}{chapter.1}
+\contentsline {chapter}{\numberline {1}Objective-C}{5}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Caratteristiche del linguaggio}{4}{section.1.1}
+\contentsline {section}{\numberline {1.1}Caratteristiche del linguaggio}{5}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.1}Sintassi}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Sintassi}{5}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Implementazione di una classe, i file .h e .m}{4}{section*.4}
+\contentsline {subsubsection}{Implementazione di una classe, i file .h e .m}{5}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{8}{section*.5}
+\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{9}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Invio dei messaggi}{8}{section*.6}
+\contentsline {subsubsection}{Invio dei messaggi}{9}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.2}Compilatore}{9}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.2}Compilatore}{10}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.3}Utilizzo in iOS e frameworks Cocoa}{9}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.3}Utilizzo in iOS e frameworks Cocoa}{10}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Swift}{10}{chapter.2}
+\contentsline {chapter}{\numberline {2}Swift}{11}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Caratteristiche}{10}{section.2.1}
+\contentsline {section}{\numberline {2.1}Caratteristiche}{11}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Sintassi}{10}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Sintassi}{11}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Implementazione di una classe}{10}{section*.7}
+\contentsline {subsubsection}{Implementazione di una classe}{11}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{11}{section*.8}
+\contentsline {subsubsection}{Dichiarazione e definizione dei metodi}{12}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Closures}{12}{section*.9}
+\contentsline {subsubsection}{Closures}{13}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Enumerazioni}{13}{section*.10}
+\contentsline {subsubsection}{Enumerazioni}{14}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Protocolli ed estensioni}{14}{section*.11}
+\contentsline {subsubsection}{Protocolli ed estensioni}{15}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Gestione degli errori}{15}{section*.12}
+\contentsline {subsubsection}{Gestione degli errori}{16}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Generics}{16}{section*.13}
+\contentsline {subsubsection}{Generics}{17}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tuples}{18}{section*.14}
+\contentsline {subsubsection}{Tuples}{19}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Optionals}{18}{section*.15}
+\contentsline {subsubsection}{Optionals}{19}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Compilatore e libreria standard}{20}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Compilatore e libreria standard}{21}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Architettura del compilatore}{20}{section*.16}
+\contentsline {subsubsection}{Architettura del compilatore}{21}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Libreria standard Swift}{21}{section*.17}
+\contentsline {subsubsection}{Libreria standard Swift}{22}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Whole module optimization}{21}{section*.18}
+\contentsline {subsubsection}{Whole module optimization}{22}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tempo di compilazione}{24}{section*.19}
+\contentsline {subsubsection}{Tempo di compilazione}{25}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Utilizzo in iOS e frameworks Cocoa}{25}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Utilizzo in iOS e frameworks Cocoa}{26}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi}{27}{chapter.3}
+\contentsline {chapter}{\numberline {3}Confronto tra i linguaggi}{28}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Sintassi}{27}{section*.20}
+\contentsline {subsection}{\numberline {3.0.1}Sintassi}{28}{subsection.3.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Manutenzione del codice sorgente}{27}{section*.21}
+\contentsline {subsection}{\numberline {3.0.2}Manutenzione del codice sorgente}{28}{subsection.3.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tooling}{27}{section*.22}
+\contentsline {subsection}{\numberline {3.0.3}Tooling}{29}{subsection.3.0.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Runtime}{28}{section*.23}
+\contentsline {subsection}{\numberline {3.0.4}Runtime}{29}{subsection.3.0.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Sicurezza}{28}{section*.24}
+\contentsline {subsection}{\numberline {3.0.5}Sicurezza}{29}{subsection.3.0.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tempi di scrittura del codice}{28}{section*.25}
+\contentsline {subsection}{\numberline {3.0.6}Tempi di scrittura del codice}{29}{subsection.3.0.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Namespaces nei progetti open source}{29}{section*.26}
+\contentsline {subsection}{\numberline {3.0.7}Namespaces nei progetti open source}{30}{subsection.3.0.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Librerie dinamiche}{29}{section*.27}
+\contentsline {subsection}{\numberline {3.0.8}Librerie dinamiche}{30}{subsection.3.0.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Open Sourcing}{29}{section*.28}
+\contentsline {subsection}{\numberline {3.0.9}Open Sourcing}{31}{subsection.3.0.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Gestione della memoria}{30}{section.3.1}
+\contentsline {section}{\numberline {3.1}Gestione della memoria}{31}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Performance}{31}{section*.29}
+\contentsline {subsection}{\numberline {3.1.1}Performance}{32}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{32}{chapter.4}
+\contentsline {subsubsection}{Aggiunta di un elemento ad un array}{33}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{32}{section.4.1}
+\contentsline {subsubsection}{Rimozione di un elemento in un array}{34}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{33}{section*.30}
+\contentsline {subsubsection}{Lettura di un elemento in un array}{35}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ringraziamenti}{34}{section*.32}
+\contentsline {subsubsection}{Ricerca di un elemento in un array}{36}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{35}{section*.34}
+\contentsline {subsubsection}{Aggiornamento di un elemento in un array}{37}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendice}{36}{section*.36}
+\contentsline {subsubsection}{Aggiunta di un elemento ad un dizionario}{38}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ricerca di un elemento in un dizionario}{39}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Rimozione di un elemento da un dizionario}{40}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Lettura di un elemento da un dizionario}{41}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Aggiornamento di un elemento di un dizionario}{42}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Aggiunta di un elemento ad un set}{43}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ricerca di un elemento in un set}{44}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Rimozione di un elemento da un set}{45}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Conclusioni sulle performance}{45}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{47}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{47}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusioni}{48}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Ringraziamenti}{49}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{50}{section*.38}
