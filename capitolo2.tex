@@ -66,6 +66,7 @@ Una dichiarazione di funzione (metodo) ha la seguente sintassi:
 func calcolaEta(dataDiNascita: NSDate) -> Int
 
 \end{lstlisting}
+\newpage
 Definizione del metodo appena dichiarato: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -98,7 +99,7 @@ var incrementatore = creaIncrementatore()
 incrementatore(7)
 \end{lstlisting}
 \subsubsection{Closures}
-Le funzioni sono un caso speciale di "closure": il codice in una closure ha accesso a variabili e funzioni che sono disponibili nel suo scope, anche se viene eseguita in uno scope diverso. Una closure viene definita dalla sintassi \{ \}, utilizzando il separatore \"in\" per gli argomenti e il tipo di ritorno dal corpo:\\\\ 
+Le funzioni sono un caso speciale di "\textit{closure}": il codice in una \textit{closure} ha accesso a variabili e funzioni che sono disponibili nel suo scope, anche se viene eseguita in uno scope diverso. Una \textit{closure} viene definita dalla sintassi \{ \}, utilizzando il separatore \textit{in} per gli argomenti e il tipo di ritorno dal corpo:\\\\ 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 var numeri = [2,25,21,89,90]
@@ -109,7 +110,7 @@ numeri.map({
 	return risultato 
 })
 \end{lstlisting}
-Esistono varie modalità per scrivere le closure: quando il tipo è già conosciuto, come per esempio in una callback per un delegate, si possono omettere i tipi dei parametri e il tipo di ritorno o entrambi nel caso in cui ci sia un singolo statement, in quanto la closure ritorna implicitamente il valore di ritorno:
+Esistono varie modalità per scrivere le \textit{closure}: quando il tipo è già conosciuto, come per esempio in una \textit{callback} per un \textit{delegate}, si possono omettere i tipi dei parametri e il tipo di ritorno (o entrambi) nel caso in cui ci sia un singolo statement, in quanto la \textit{closure} ritorna implicitamente il valore di ritorno:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 let numeriInMap = numeri.map({ numero in 3 * numero })
@@ -197,7 +198,7 @@ class MenuPrincipale: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 }
 \end{lstlisting}
-Le estensioni sono invece un modo per aggiungere funzionalità ad un tipo esistente, come nuovi metodi e computed properties:
+Le estensioni sono invece un modo per aggiungere funzionalità ad un tipo esistente, come nuovi metodi e \textit{computed properties}:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Estensione che aggiunge un effetto di blur ad una imageView
@@ -368,7 +369,7 @@ if numeroConvertito != nil {
 	//numero convertito contiene un valore
 }
 \end{lstlisting}
-Alternativamente è possibile utilizzare il simbolo !, indicato come \"forced unwrapping\" del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime.
+Alternativamente è possibile utilizzare il simbolo !, indicato come \textit{forced unwrapping} del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime.
 Viene utilizzata molto più frequentemente la sintassi dell'optional binding, per verificare se una certa variabile optional contiene un valore e, se presente, assegnarlo ad una costante o variabile temporanea. Viene utilizzato con gli statement if e while:
 \begin{lstlisting}
 if let numero = Int(possibileNumero) {
@@ -384,12 +385,12 @@ Le costanti e le variabili create tramite l'optional binding in uno statement if
 \subsubsection{Architettura del compilatore}
 Il compilatore di Swift è composto dai seguenti componenti principali:
 \begin{itemize}
-\item Parser: il parser è un parser ricorsivo discendente con un lexer codificato a mano. Il parser è il responsabile della generazione dell'albero di sintassi astratta senza alcuna informazione semantica o di tipo, e genera errori in caso di problemi grammaticali nel sorgente.
+\item Parser: è il componente responsabile della generazione dell'albero di sintassi astratta senza alcuna informazione semantica o di tipo, e genera errori in caso di problemi grammaticali nel sorgente.
 \item Analizzatore semantico: trasforma l'albero generato dal parser in un albero ben formato e con controllo sui tipi. Questa analisi include la type inference e, in caso di successo, indica che è sicuro generare il codice dall'albero appena creato.
-\item Clang importer: Importa i moduli di Clang e mappa le API C o Objective-C nelle rispettive API Swift. Gli alberi risultanti vengono utilizzati dall'analizzatore semantico.
+\item Clang importer: importa i moduli di Clang e mappa le API C o Objective-C nelle rispettive API Swift. Gli alberi risultanti vengono utilizzati dall'analizzatore semantico.
 \item Generatore SIL: SIL è l'acronimo di Swift Intermediate Language, ovvero un linguaggio intermedio di alto livello, specifico per l'analisi e l'ottimizzazione del codice. Questa fase trasforma l'albero di sintassi astratta creato dall'analizzatore in un cosiddetto SIL "grezzo".
-\item Trasformazioni SIL: Questo strumento esegue ulteriori diagnostiche che influenzano la correttezza del programma (come ad esempio l'uso di variabili non inizializzate). Il risultato finale di queste trasformazioni è SIL "canonico".
-\item Ottimizzazioni SIL: Questa fase esegue ulteriori ottimizzazioni specifiche di alto livello, quali Automatic Reference Counting per la gestione della memoria, devirtualizzazione e specializzazione dei tipi generics.
+\item Trasformazioni SIL: questo strumento esegue ulteriori diagnostiche che influenzano la correttezza del programma (come ad esempio l'uso di variabili non inizializzate). Il risultato finale di queste trasformazioni è SIL "canonico".
+\item Ottimizzazioni SIL: questa fase esegue ulteriori ottimizzazioni specifiche di alto livello, quali Automatic Reference Counting per la gestione della memoria, devirtualizzazione e specializzazione dei tipi generics.
 \item Generazione IR LLVM: IR significa Intermediate Representation, o rappresentazione intermedia. Questa fase trasforma il SIL in LLVM IR e, giunti a questa fase, LLVM procede ad ottimizzare il codice e genera il codice macchina.
 \end{itemize}
 \subsubsection{Libreria standard Swift}
@@ -410,7 +411,7 @@ questi è un set di files Swift, ed ognuno viene compilato in una singola unità
             \vspace{0.8cm}
             \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione per ogni singolo file}}
 \end{figure}
-Questa compilazione singola limita le ottimizzazioni inter funzione (come l'inlining o la specializzazione dei generics) alle le funzioni chiamate all'interno dello stesso file. Come esempio, assumiamo che un file di un modulo, chiamato utils.swift, contenga una struttura dati generica chiamata Container<T>, con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
+Questa compilazione singola limita le ottimizzazioni inter funzione (come l'inlining o la specializzazione dei generics) alle funzioni chiamate all'interno dello stesso file. Come esempio, assumiamo che un file di un modulo  (chiamato utils.swift), contenga una struttura dati generica (chiamata Container<T>), con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
 \begin{lstlisting}
 //main.swift:
 
@@ -439,7 +440,8 @@ Con l'ottimizzazione per l'intero modulo (WMO), invece, il compilatore ottimizza
             \vspace{0.8cm}
             \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione whole module optimization}}
 \end{figure}
-Questo porta due notevoli vantaggi: il compilatore vede le implementazioni di tutte le funzioni del modulo, e può quindi procedere con le ottimizzazioni specifiche; specializzare una funzione significa che il compilatore crea una nuova versione del metodo specifica per il contesto della chiamata. Ad esempio, il compilatore può ottimizzare le funzioni di tipo generics per i tipi concreti.\\
+Questo porta due notevoli vantaggi:\\
+Il compilatore vede le implementazioni di tutte le funzioni del modulo, e può quindi procedere con le ottimizzazioni specifiche; specializzare una funzione significa che il compilatore crea una nuova versione del metodo specifica per il contesto della chiamata. Ad esempio, il compilatore può ottimizzare le funzioni di tipo generics per i tipi concreti.\\
 Nell'esempio, il compilatore crea una versione della struct Container specifica per i tipi Int: 
 \begin{lstlisting}
 struct Container {
@@ -456,16 +458,17 @@ func add (c1: Container<Int>, c2: Container<Int>) -> Int {
   return c1.element + c2.element
 }
 \end{lstlisting}
-Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'inlining tra più file sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio WMO; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di reference counting ridondanti. Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, può eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come side-effect derivante dalle altre ottimizzazioni. Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'inlining della funzione getElement, la funzione non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore decide di non procedere con l'inlining della funzione, può comunque rimuovere la versione generica di getElement, poichè la funzione add utilizza solamente la versione specializzata.
+Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'inlining tra più file sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio WMO; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di reference counting ridondanti.\\
+Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come side-effect derivante dalle altre ottimizzazioni. Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'inlining della funzione getElement, questa non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore dovesse decidere di non procedere con l'inlining della funzione, potrebbe comunque rimuovere la versione generica di getElement, poichè la funzione add utlizzerebbe solamente la versione specializzata.
 \subsubsection{Tempo di compilazione}
 Con l'ottimizzazione a file singolo il driver del compilatore inizia la compilazione per ogni file in un processo separato, che può essere eseguito in parallelo. Inoltre files non modificati dall'ultima compilazione possono essere riutilizzati senza ricompilare (compilazione incrementale); tutto ciò porta ad un tempo di compilazione notevolmente rapido.\\
 Come visto precedentemente la compilazione si divide in più fasi: parsing, check dei tipi, ottimizzazioni del linguaggio intermedio (SIL), backend LLVM: il parsing ed il check di tipi sono i meno dispendiosi; l'ottimizzazione del SIL tipicamente richiede un terzo del tempo totale di compilazione, mentre gli altri due terzi sono impegnati dal backend LLVM che opera ottimizzazioni di basso livello e genera il codice.\\
 Con WMO, dopo aver effettuato le ottimizzazioni sull'intero modulo nella fase di ottimizzazione del linguaggio intermedio, il modulo è separato di nuovo in parti multiple. I processi di LLVM processano le parti in thread multipli e inoltre evitano il reprocessing delle parti che non sono cambiate rispetto all'ultima build.
 In conclusione WMO è un modo veloce ed efficace per ottenere ottime prestazioni, senza l'obbligo di gestire il codice Swift in vari file in un modulo. Se le ottimizzazioni, come descritto precedentemente, riescono ad essere efficaci per buona parte del codice, si ottengono incrementi prestazionali fino a cinque volte rispetto alla compilazione a file singolo. 
 \subsection{Utilizzo in iOS e frameworks Cocoa}
-Al momento l'utilizzo di Swift nei frameworks di supporto al sistema operativo e nell'SDK è molto limitato, poichè il linguaggio non ha ancora raggiunto una maturità tale da poter avere delle ABI stabili (Application Binary Interface), in quanto ogni singola versione pubblicata fino ad ora ha modificato interfacce, dipendenze e sintassi rendendo necessaria una revisione del codice già scritto per la versione precedente.\\
+Al momento l'utilizzo di Swift nei frameworks di supporto al sistema operativo e nell'SDK è molto limitato, poichè il linguaggio non ha ancora raggiunto una maturità tale da poter avere delle ABI (Application Binary Interface) stabili, in quanto ogni singola versione pubblicata fino ad ora ha modificato interfacce, dipendenze e sintassi, rendendo necessaria una revisione del codice già scritto per la versione precedente.\\
 A runtime, i binari Swift interagiscono con le altre librerie e gli altri componenti attraverso le ABI, ovvero le specifiche alle quali i binari compilati indipendentemente devono conformarsi per per essere collegati ed eseguiti: queste entità devono conformarsi su come chiamare le funzioni, come i dati sono rapppresentati in memoria, dove sono salvati i metadata e come vanno acceduti.\\
-Le ABI sono specifiche per ogni piattaforma, e sono influenzate sia dall'architettura che dal sistema operativo.\\La maggior parte dei creatori di piattaforme definisce uno standard di ABI usate per il linguaggio C e basate su linguaggi della famiglia dello stesso. Swift, per sua natura è molto differente dal C e quindi c'è la necessità di creare ABI speficiche.\\
+Le ABI sono specifiche per ogni piattaforma, e sono influenzate sia dall'architettura che dal sistema operativo.\\La maggior parte dei creatori di piattaforme definiscono uno standard di ABI usate per il linguaggio C e basate su linguaggi della famiglia dello stesso. Swift, per sua natura è molto differente dal C e quindi si rende necessario creare ABI speficiche.\\
 Avere delle ABI stabili significa bloccarle per far si che future versioni del compilatore possano produrre binari che si conformino alla versione stabile delle stesse, e la loro chiusura tende ad essere definitiva per tutta la vita della piattaforma.\\
 Avere ABI stabili ha effetti solamente sulle interfacce pubblicamente visibili e sui simboli; simboli usati iternamente, convenzioni e interfacce possono continuare ad essere modificati senza effetti distruttivi, per esempio una versione futura del compilatore è libera di modificare le convenzioni per le chiamate di funzione interne, purchè le interfacce pubbliche non vengano modificate\\
 Le decisioni sulle ABI avranno effetti ramificati ed a lungo termine e quindi potrebbero limitare i modi in cui il linguaggio evolverà in futuro, perciò la comunità open source sta prendendo tempo per definire nel modo migliore possibile la struttura delle stesse per Swift; si prevede che la versione 4 porterà la dichiarazione di stabilità per le ABI rendendolo di fatto un linguaggio maturo.

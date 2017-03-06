@@ -1,7 +1,6 @@
 \chapter{Objective-C}
 Creato agli inizi degli anni '80, Objective-C ha guadagnato la sua popolarità come il linguaggio principale per il sistema operativo NEXTSTEP.\\
-Quando, nel 1996 Next venne acquisita da Apple, questo sistema operativo divenne la base del nuovo sistema operativo Mac OS, rendendo così questo linguaggio la chiave per lo sviluppo negli anni a venire.\\
-Per molti anni infatti Objective-C è rimasto l'unico linguaggio per lo sviluppo su piattaforme Mac ed iOS.\\
+Quando nel 1996 Next venne acquisita da Apple il loro sistema operativo divenne la base del nuovo Mac OS, rendendo così questo linguaggio la chiave per lo sviluppo negli anni a venire. Per molti anni Objective-C è rimasto l’unico linguaggio per lo sviluppo su piattaforme Mac ed iOS.\\
 La sua implementazione è basata sul linguaggio C con l'aggiunta di caratteristiche di programmazione orientata agli oggetti ed un runtime dinamico.
 \section{Caratteristiche del linguaggio}
 Questo capitolo descrive le funzionalità che il linguaggio aggiunge allo standard C. 
@@ -12,6 +11,7 @@ L'implementazione di una classe avviene attraverso due file distinti:
 \item Un file con estensione .h, che conterrà la dichiarazione dell'interfaccia di classe, i metodi e le properties pubbliche.
 \item Un file con estensione .m, che conterrà l'implementazione della classe, la definizione di metodi e properties private; in questo file inoltre saranno definiti i metodi e le variabili d'istanza private.
 \end{itemize}
+\newpage
 Esempio di file header (.h) di una classe:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -105,9 +105,7 @@ Attraverso la parola chiave @property è anche possibile dare direttiva al compi
 //con property diventa
 @property NSString * nome;
 \end{lstlisting}
-\bigskip
-\bigskip
-\bigskip
+\newpage
 Inoltre, attraverso la parola chiave @synthesize, è possibile indicare al compilatore di implementare i setter e i getter di una property che sia stata definita precedentemente:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -164,12 +162,13 @@ Definizione del metodo appena dichiarato:
 }
 \end{lstlisting}
 \subsubsection{Invio dei messaggi}
-In Objective-C, a differenza della maggior parte degli altri linguaggi, un metodo non viene chiamato direttamente, ma si "passa un messaggio" all'oggetto stesso: 
+In Objective-C, a differenza della maggior parte degli altri linguaggi, un metodo non viene chiamato direttamente, ma si invia un messaggio all'oggetto stesso: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 [persona calcolaEta:dataDiNascita];
 \end{lstlisting}
-Questo perchè il runtime del linguaggio mantiene traccia di tutti i metodi e delle funzioni che conosce in una lista; ed ogni suo componente ha due campi: il nome del metodo (conosciuto come il “selector” dello stesso) e la sua locazione in memoria.\\Quando un oggetto cerca di chiamare un metodo, il comportamento di questo linguaggio è il seguente: compilando il codice, il compilatore traduce il codice della chiamata (ad esempio: 
+Questo è reso possibile dal runtime del linguaggio che, tramite una lista, tiene traccia di tutti i metodi e funzioni che conosce. Ogni elemento della lista è composto da due campi: il nome del metodo (conosciuto come il selector dello stesso) e la sua locazione in memoria.
+\\Durante la fase di compilazione del codice sorgente, quando vi è la chiamata di un metodo, il compilatore sostituisce il frammento di codice nel seguente modo:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 [persona calcolaEta:dataDiNascita];
@@ -180,10 +179,10 @@ objc_msgSend(persona, @selector(calcolaEta:),dataDiNascita);
 \end{lstlisting}
 \bigskip
 \bigskip
-La funzione objc\_msgSend() opera tramite un lookup dinamico: conoscendo il nome del metodo da ricercare scorre la lista per verificare la sua effettiva presenza e, se presente, lo esegue.\\ 
+La funzione objc\_msgSend() opera tramite un lookup dinamico: conoscendo il nome del metodo da ricercare scorre la lista per verificare la sua effettiva presenza e, in caso affermativo, lo esegue.\\ 
 Questo comportamento ha caratteristiche particolari: potremmo far puntare un certo selettore A, che prima puntava al codice per A, ad un codice per un certo B.\\ 
-Lo svantaggio è che il tempo di esecuzione è leggermente minore di una chiamata diretta alla parte di codice; si tratta comunque di nano secondi di differenza.\\
-\\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che: \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
+Lo svantaggio è che il tempo di esecuzione è leggermente maggiore di una chiamata diretta alla parte di codice; si tratta comunque di nanosecondi di differenza.\\
+\\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che:\\ \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
 \subsection{Compilatore}
 L'IDE di Apple, Xcode, utilizza clang. Quest'ultimo è un compilatore front end per C, C++, Objective-C, Objective-C++, OpenMP, OpenCL e CUDA, basato sul compilatore LLVM (Low Level Virtual Machine).\\
 LLVM in origine doveva utilizzare il front end di GCC, ma dopo aver riscontrato problemi di integrazione e di sviluppo l'azienda ha deciso di crearne iternamente uno proprio, clang appunto, reso open-source nel Giugno 2007. 
