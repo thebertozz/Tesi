@@ -2,9 +2,9 @@
 Creato agli inizi degli anni '80, Objective-C ha guadagnato la sua popolarità come il linguaggio principale per il sistema operativo NEXTSTEP.\\
 Quando, nel 1996 Next venne acquisita da Apple, questo sistema operativo divenne la base del nuovo sistema operativo Mac OS, rendendo così questo linguaggio la chiave per lo sviluppo negli anni a venire.\\
 Per molti anni infatti Objective-C è rimasto l'unico linguaggio per lo sviluppo su piattaforme Mac ed iOS.\\
-La sua implementazione è basata sul linguaggio C con l'aggiunta di caratteristiche di programmazione orientata agli oggetti e un runtime dinamico.
+La sua implementazione è basata sul linguaggio C con l'aggiunta di caratteristiche di programmazione orientata agli oggetti ed un runtime dinamico.
 \section{Caratteristiche del linguaggio}
-Questo capitolo descrive tutte le funzionalità che il linguaggio aggiunge allo standard C. 
+Questo capitolo descrive le funzionalità che il linguaggio aggiunge allo standard C. 
 \subsection{Sintassi}
 \subsubsection{Implementazione di una classe, i file .h e .m}
 L'implementazione di una classe avviene attraverso due file distinti:
@@ -95,7 +95,7 @@ Esempio di file di implementazione (.m) di una classe:
 \bigskip
 \bigskip
 \bigskip
-Attraverso la parola chiave @property è anche possibile lasciare la definizione dei setter e dei getter al compilatore:
+Attraverso la parola chiave @property è anche possibile dare direttiva al compilatore di definire i setter e i getter:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //come dichiarati in Persona.h
@@ -108,7 +108,7 @@ Attraverso la parola chiave @property è anche possibile lasciare la definizione
 \bigskip
 \bigskip
 \bigskip
-Inoltre, attraverso la parola chiave @synthesize, è possibile lasciare al compilatore anche il compito di implementare i setter e i getter di una property che sia stata definita precedentemente:
+Inoltre, attraverso la parola chiave @synthesize, è possibile indicare al compilatore di implementare i setter e i getter di una property che sia stata definita precedentemente:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //come dichiarati in Persona.m
@@ -124,7 +124,7 @@ Inoltre, attraverso la parola chiave @synthesize, è possibile lasciare al compi
 
 @synthesize nome = _nome; 
 \end{lstlisting}
-Le properties permettono di accedere ai getter e ai setter utilizzando la notazione puntata, per maggiore leggibilità del codice:
+Le properties permettono di accedere ai getter e ai setter utilizzando la notazione puntata, per una maggiore leggibilità del codice:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //senza properties: 
@@ -164,12 +164,12 @@ Definizione del metodo appena dichiarato:
 }
 \end{lstlisting}
 \subsubsection{Invio dei messaggi}
-In Objective-C, a differenza della maggior parte degli altri linguaggi, non si chiama direttamente un metodo, ma si "passa un messaggio" all'oggetto stesso: 
+In Objective-C, a differenza della maggior parte degli altri linguaggi, un metodo non viene chiamato direttamente, ma si "passa un messaggio" all'oggetto stesso: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 [persona calcolaEta:dataDiNascita];
 \end{lstlisting}
-Questo perchè il runtime del linguaggio mantiene traccia di tutti i metodi e delle funzioni che conosce; Ogni componente della lista ha due campi: il nome del metodo (conosciuto come il “selector” dello stesso) e la sua locazione in memoria.\\Quando un oggetto cerca di chiamare un metodo, il comportamento di questo linguaggio è il seguente: compilando il codice, il compilatore ha tradotto il codice della chiamata (ad esempio: 
+Questo perchè il runtime del linguaggio mantiene traccia di tutti i metodi e delle funzioni che conosce in una lista; ed ogni suo componente ha due campi: il nome del metodo (conosciuto come il “selector” dello stesso) e la sua locazione in memoria.\\Quando un oggetto cerca di chiamare un metodo, il comportamento di questo linguaggio è il seguente: compilando il codice, il compilatore traduce il codice della chiamata (ad esempio: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 [persona calcolaEta:dataDiNascita];
@@ -182,10 +182,10 @@ objc_msgSend(persona, @selector(calcolaEta:),dataDiNascita);
 \bigskip
 La funzione objc\_msgSend() opera tramite un lookup dinamico: conoscendo il nome del metodo da ricercare scorre la lista per verificare la sua effettiva presenza e, se presente, lo esegue.\\ 
 Questo comportamento ha caratteristiche particolari: potremmo far puntare un certo selettore A, che prima puntava al codice per A, ad un codice per un certo B.\\ 
-Lo svantaggio è che il tempo di esecuzione è leggermente minore di una chiamata diretta alla parte di codice; si parla comunque di nano secondi di differenza.\\
+Lo svantaggio è che il tempo di esecuzione è leggermente minore di una chiamata diretta alla parte di codice; si tratta comunque di nano secondi di differenza.\\
 \\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che: \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
 \subsection{Compilatore}
 L'IDE di Apple, Xcode, utilizza clang. Quest'ultimo è un compilatore front end per C, C++, Objective-C, Objective-C++, OpenMP, OpenCL e CUDA, basato sul compilatore LLVM (Low Level Virtual Machine).\\
-LLVM in origine doveva utilizzare il front end di GCC, ma dopo aver riscontrato problemi di integrazione e di sviluppo l'azienda ha deciso di crearne uno proprio (clang) reso open-source nel Giugno 2007. 
+LLVM in origine doveva utilizzare il front end di GCC, ma dopo aver riscontrato problemi di integrazione e di sviluppo l'azienda ha deciso di crearne iternamente uno proprio, clang appunto, reso open-source nel Giugno 2007. 
 \subsection{Utilizzo in iOS e frameworks Cocoa}
 Il linguaggio principale di tutti i frameworks (quali CoreOS, Foundation, CocoaTouch) di iOS e MacOS è ancora Objective-C come dal principio, in quanto Swift non ha ancora raggiunto un livello di maturità tale per essere impiegato per questi scopi (la versione 3 del linguaggio non ha ancora ABI stabili e la sintassi è ancora in corso di modifiche).L'intenzione di Apple è quella di mantenere e migliorare i due linguaggi parallelamente per ancora molto tempo.
