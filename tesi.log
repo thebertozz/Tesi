@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  6 MAR 2017 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  10 MAR 2017 23:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1297,68 +1297,62 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 15--18
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-[31] <immagini/ARC.jpg, id=760, 753.81625pt x 477.785pt>
+<immagini/ARC.jpg, id=756, 753.81625pt x 477.785pt>
 File: immagini/ARC.jpg Graphic file (type jpg)
-
-<use immagini/ARC.jpg>
-Package pdftex.def Info: immagini/ARC.jpg used on input line 34.
+ <use immagini/ARC.jpg>
+Package pdftex.def Info: immagini/ARC.jpg used on input line 32.
 (pdftex.def)             Requested size: 301.52116pt x 191.11061pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--37
+Underfull \hbox (badness 10000) in paragraph at lines 27--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--37
-
- []
-
-
-Overfull \hbox (16.25348pt too wide) in paragraph at lines 29--37
+Overfull \hbox (16.25348pt too wide) in paragraph at lines 27--35
 \T1/lmr/m/n/12 E' l'ap-proc-cio mo-der-no e più uti-liz-za-to del-la ge-stio-ne
  del-la me-mo-ria in Objective-
  []
 
-[32] <immagini/array_add.png, id=765, 803.0pt x 540.0175pt>
-File: immagini/array_add.png Graphic file (type png)
-
-<use immagini/array_add.png>
-Package pdftex.def Info: immagini/array_add.png used on input line 46.
-(pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
-
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 46--50
- [][] 
- []
-
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-}) has been already used, duplicate ignored
+[31] [32pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.52 \subsubsection
-                   {Rimozione di un elemento in un array} <./immagini/ARC.jpg>]
-<immagini/array_delete.png, id=771, 803.0pt x 540.0175pt>
+l.41 \subsubsection
+                   {Aggiunta di un elemento ad un array} <./immagini/ARC.jpg>]
+<immagini/array_add.png, id=766, 803.0pt x 540.0175pt>
+File: immagini/array_add.png Graphic file (type png)
+
+<use immagini/array_add.png>
+Package pdftex.def Info: immagini/array_add.png used on input line 44.
+(pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
+
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 44--47
+ [][] 
+ []
+
+[33] <immagini/array_delete.png, id=771, 803.0pt x 540.0175pt>
 File: immagini/array_delete.png Graphic file (type png)
 
 <use immagini/array_delete.png>
-Package pdftex.def Info: immagini/array_delete.png used on input line 55.
+Package pdftex.def Info: immagini/array_delete.png used on input line 52.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 55--57
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 52--54
  [][] 
  []
 
@@ -1367,16 +1361,16 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 55--57
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.59 \subsubsection
+l.56 \subsubsection
                    {Lettura di un elemento in un array} <./immagini/array_add.p
 ng>] <immagini/array_read.png, id=778, 803.0pt x 540.0175pt>
 File: immagini/array_read.png Graphic file (type png)
 
 <use immagini/array_read.png>
-Package pdftex.def Info: immagini/array_read.png used on input line 62.
+Package pdftex.def Info: immagini/array_read.png used on input line 59.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 62--64
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 59--61
  [][] 
  []
 
@@ -1385,16 +1379,16 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 62--64
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.66 \subsubsection
+l.63 \subsubsection
                    {Ricerca di un elemento in un array} <./immagini/array_delet
 e.png>] <immagini/array_contains.png, id=785, 803.0pt x 540.0175pt>
 File: immagini/array_contains.png Graphic file (type png)
 
 <use immagini/array_contains.png>
-Package pdftex.def Info: immagini/array_contains.png used on input line 69.
+Package pdftex.def Info: immagini/array_contains.png used on input line 66.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 69--71
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 66--68
  [][] 
  []
 
@@ -1403,16 +1397,16 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 69--71
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.73 \subsubsection
+l.70 \subsubsection
                    {Aggiornamento di un elemento in un array} <./immagini/array
 _read.png>] <immagini/array_update.png, id=793, 803.0pt x 540.0175pt>
 File: immagini/array_update.png Graphic file (type png)
 
 <use immagini/array_update.png>
-Package pdftex.def Info: immagini/array_update.png used on input line 76.
+Package pdftex.def Info: immagini/array_update.png used on input line 73.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 76--78
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 73--75
  [][] 
  []
 
@@ -1421,16 +1415,16 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 76--78
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.80 \subsubsection
+l.77 \subsubsection
                    {Aggiunta di un elemento ad un dizionario} <./immagini/array
 _contains.png>] <immagini/dictionary_add.png, id=800, 803.0pt x 540.0175pt>
 File: immagini/dictionary_add.png Graphic file (type png)
 
 <use immagini/dictionary_add.png>
-Package pdftex.def Info: immagini/dictionary_add.png used on input line 83.
+Package pdftex.def Info: immagini/dictionary_add.png used on input line 80.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 83--85
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 80--82
  [][] 
  []
 
@@ -1439,17 +1433,17 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 83--85
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.87 \subsubsection
+l.84 \subsubsection
                    {Ricerca di un elemento in un dizionario} <./immagini/array_
 update.png>] <immagini/dictionary_contains.png, id=808, 803.0pt x 540.0175pt>
 File: immagini/dictionary_contains.png Graphic file (type png)
 
 <use immagini/dictionary_contains.png>
-Package pdftex.def Info: immagini/dictionary_contains.png used on input line 90
+Package pdftex.def Info: immagini/dictionary_contains.png used on input line 87
 .
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 90--92
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 87--89
  [][] 
  []
 
@@ -1458,17 +1452,17 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 90--92
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 \subsubsection
+l.91 \subsubsection
                    {Rimozione di un elemento da un dizionario} <./immagini/dict
 ionary_add.png>]
 <immagini/dictionary_delete.png, id=815, 803.0pt x 540.0175pt>
 File: immagini/dictionary_delete.png Graphic file (type png)
 
 <use immagini/dictionary_delete.png>
-Package pdftex.def Info: immagini/dictionary_delete.png used on input line 97.
+Package pdftex.def Info: immagini/dictionary_delete.png used on input line 94.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 97--99
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 94--96
  [][] 
  []
 
@@ -1477,17 +1471,17 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 97--99
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.101 \subsubsection
-                    {Lettura di un elemento da un dizionario} <./immagini/dicti
-onary_contains.png>]
+l.98 \subsubsection
+                   {Lettura di un elemento da un dizionario} <./immagini/dictio
+nary_contains.png>]
 <immagini/dictionary_read.png, id=822, 803.0pt x 540.0175pt>
 File: immagini/dictionary_read.png Graphic file (type png)
 
 <use immagini/dictionary_read.png>
-Package pdftex.def Info: immagini/dictionary_read.png used on input line 104.
+Package pdftex.def Info: immagini/dictionary_read.png used on input line 101.
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 104--106
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 101--103
  [][] 
  []
 
@@ -1496,18 +1490,18 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 104--106
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.108 \subsubsection
+l.105 \subsubsection
                     {Aggiornamento di un elemento di un dizionario} <./immagini
 /dictionary_delete.png>]
 <immagini/dictionary_update.png, id=829, 803.0pt x 540.0175pt>
 File: immagini/dictionary_update.png Graphic file (type png)
 
 <use immagini/dictionary_update.png>
-Package pdftex.def Info: immagini/dictionary_update.png used on input line 111.
+Package pdftex.def Info: immagini/dictionary_update.png used on input line 108.
 
 (pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
 
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 111--113
+Overfull \hbox (11.49902pt too wide) in paragraph at lines 108--110
  [][] 
  []
 
@@ -1516,88 +1510,34 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 111--113
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.115 \subsubsection
-                    {Aggiunta di un elemento ad un set} <./immagini/dictionary_
-read.png>] <immagini/set_add.png, id=837, 803.0pt x 540.0175pt>
-File: immagini/set_add.png Graphic file (type png)
-
-<use immagini/set_add.png>
-Package pdftex.def Info: immagini/set_add.png used on input line 118.
-(pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
-
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 118--120
- [][] 
- []
-
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-1}) has been already used, duplicate ignored
+l.112 \subsubsection
+                    {Conclusioni sulle performance} <./immagini/dictionary_read
+.png>] [43pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.3.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.122 \subsubsection
-                    {Ricerca di un elemento in un set} <./immagini/dictionary_u
-pdate.png>] <immagini/set_contains.png, id=844, 803.0pt x 523.9575pt>
-File: immagini/set_contains.png Graphic file (type png)
-
-<use immagini/set_contains.png>
-Package pdftex.def Info: immagini/set_contains.png used on input line 125.
-(pdftex.def)             Requested size: 401.49902pt x 261.9781pt.
-
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 125--127
- [][] 
- []
-
-[44pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.129 \subsubsection
-                    {Rimozione di un elemento da un set} <./immagini/set_add.pn
-g>] <immagini/set_delete.png, id=851, 803.0pt x 540.0175pt>
-File: immagini/set_delete.png Graphic file (type png)
-
-<use immagini/set_delete.png>
-Package pdftex.def Info: immagini/set_delete.png used on input line 132.
-(pdftex.def)             Requested size: 401.49902pt x 270.00809pt.
-
-Overfull \hbox (11.49902pt too wide) in paragraph at lines 132--134
- [][] 
- []
-
-[45pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.136 \subsubsection
-                    {Conclusioni sulle performance} <./immagini/set_contains.pn
-g>] [46pdfTeX warning (ext4): destination with the same identifier (name{figure
-.3.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.140 
-       <./immagini/set_delete.png>]) [47]
+l.116 
+       <./immagini/dictionary_update.png>]) [44]
 \openout2 = `capitolo4.aux'.
 
  (./capitolo4.tex
 Capitolo 4.
-) [48
+) [45
 
 
 
 ]
 \openout2 = `conclusioni.aux'.
 
- (./conclusioni.tex) [49
+ (./conclusioni.tex) [46
 
 
 
 ]
 \openout2 = `ringraziamenti.aux'.
 
- (./ringraziamenti.tex) [50
+ (./ringraziamenti.tex) [47
 
 
 
@@ -1614,7 +1554,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-) [51
+) [48
 
 
 
@@ -1628,16 +1568,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 5F8FFB8426A98555427FB9C9621F4B9C;2027.
+(rerunfilecheck)             Checksum: BC61492BD800C4453F87E38DCD8B5FFC;2027.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21058 strings out of 493014
- 310257 string characters out of 6133350
+ 21034 strings out of 493014
+ 309800 string characters out of 6133350
  772806 words of memory out of 5000000
- 23661 multiletter control sequences out of 15000+600000
+ 23649 multiletter control sequences out of 15000+600000
  74373 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,12n,60p,1773b,3441s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1651,10 +1591,10 @@ pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
 local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on tesi.pdf (52 pages, 1434935 bytes).
+Output written on tesi.pdf (49 pages, 1226290 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
- 957 compressed objects within 10 object streams
- 577 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1024 PDF objects out of 1200 (max. 8388607)
+ 939 compressed objects within 10 object streams
+ 568 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 

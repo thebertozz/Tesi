@@ -5,7 +5,7 @@ Quest'ultimo elimina inoltre alcune delle convenzioni utilizzate nei linguaggi d
 Un'altra differenza sostanziale rispetto ad Objective-C è la sintassi usata per le chiamate di funzione: punto per identificare la funzione e virgole per separare gli argomenti della stessa.
 \subsection{Manutenzione del codice sorgente}
 Objective-C non può evolvere senza attendere l'evoluzione del linguaggio C sottostante; quest'ultimo richiede al programmatore il mantenimento di due files separati per migliorare il tempo di compilazione e l'efficienza di esecuzione, problema che si ripercuote su Obj-C.\\
-In Swift questo problema non si presenta ed il compilatore è in grado di riconoscere automaticamente le dipendenze tra i file costituenti di un progetto, utilizzando inoltre il meccanismo di \tetxit{build} incrementali.
+In Swift questo problema non si presenta ed il compilatore è in grado di riconoscere automaticamente le dipendenze tra i file costituenti di un progetto, utilizzando inoltre il meccanismo di \textit{build} incrementali.
 \subsection{Tooling}
 I meccanismi ausiliari di aiuto alla programmazione, quali evidenziazione della sintassi ed i suggerimenti di Swift non sono ancora alla pari di quelli Objective-C, fatto che si rende evidente confrontando due files scritti nei due linguaggi in XCode. Inoltre, gli strumenti di refactoring non sono ancora disponibili per Swift.
 \subsection{Runtime}
@@ -36,15 +36,14 @@ In iOS; è possibile utilizzare due approci differenti alla gestione della memor
 Il comportamento di ARC è però differente tra i due linguaggi:\\
 In Swift il supporto è completo rispetto ai percorsi di codice procedurali ed object oriented; Objective-C invece supporta ARC solamente nell'utilizzo delle API Cocoa ed il codice object-oriented; questo significa che sarà ancora compito del programmatore gestire la memoria quando si utilizzano API come Core Graphics e altre di basso livello disponibili in iOS, creando il rischio di memory leaks.
 \section{Performance}
-Tester indipendenti hanno confrontato le performance dei due linguaggi su strutture dati standard quali Array/NSArray, Dictionary/NSDictionary e Set.\\
-L'approcio utilizzato prevede la preinizializzazione delle strutture dati con un numero fisso di elementi; è stata effettuata solamente una operazione sulla struttura dati, quindi è stata creata una nuova struttura con un nuovo stato iniziale ed è stata eseguita nuovamente l'operazione.\\ Sono stati considerati 500 stati differenti per ogni struttura dati, e le performance sono state calcolate su 10 iterazioni.\\L'asse X mostra il numero di elementi nella struttura dati, l'asse Y il tempo medio di esecuzione dell'operazione.
+Tester indipendenti hanno confrontato le performance dei due linguaggi su strutture dati standard: Array/NSArray e Dictionary/NSDictionary\\
+L'approcio utilizzato prevede la preinizializzazione delle strutture dati con un numero fisso di elementi; è stata effettuata solamente una operazione sulla struttura dati, quindi è stata creata una nuova struttura con un nuovo stato iniziale ed è stata eseguita nuovamente l'operazione.\\ Sono stati considerati 500 stati differenti per ogni struttura dati, e le performance sono state calcolate su 10 iterazioni.\\L'asse delle ascisse mostra il numero di elementi nella struttura dati, l'asse delle ordinate il tempo medio di esecuzione dell'operazione.
 \subsubsection{Aggiunta di un elemento ad un array}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/array_add.png}
             \vspace{0.8cm}
-            \caption{\textit{L'aggiunta del primo elemento all'array dinamico in Swift è quattro volte più veloce rispetto ad Objective-C.
-L'operazione è effettuata in tempo costante per entrambi i linguaggi
+            \caption{\textit{Complessità: costante per entrambi i linguaggi. L'aggiunta del primo elemento all'array dinamico in Swift è quattro volte più veloce rispetto ad Objective-C.
 Per gli array contenenti già elementi l'operazione in Objective-C è più veloce di due volte rispetto a Swift}}
 \end{figure}
 \subsubsection{Rimozione di un elemento in un array}
@@ -52,84 +51,63 @@ Per gli array contenenti già elementi l'operazione in Objective-C è più veloc
       \centering
       \includegraphics[scale=0.50]{immagini/array_delete.png}
             \vspace{0.8cm}
-            \caption{\textit{Esiste un significativo margine tra le performance dei due linguaggi per questa operazione: in Objective-C è inizialmente lineare, per poi passare a tempo costante alla fine; in Swift la complessità è lineare nell'intero intervallo}}
+            \caption{\textit{Complessità: lineare per Swift, lineare inizialmente per poi passare a tempo costante per Objective-C}}
 \end{figure}
 \subsubsection{Lettura di un elemento in un array}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/array_read.png}
             \vspace{0.8cm}
-            \caption{\textit{Swift è 4-6 volte più veloce, entrambi i linguaggi performano in tempo costante, ma Swift risulta molto più stabile}}
+            \caption{\textit{Complessità: costante per entrambi i linguaggi. Swift risulta dalle 4 alle 6 volte più rapido}}
 \end{figure}
 \subsubsection{Ricerca di un elemento in un array}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/array_contains.png}
             \vspace{0.8cm}
-            \caption{\textit{I risultati per questa operazione vedono Swift leggermente più veloce. Complessità lineare per entrambi}}
+            \caption{\textit{Complessità: lineare per entrambi i linguaggi. I risultati per questa operazione vedono Swift leggermente più veloce}}
 \end{figure}
 \subsubsection{Aggiornamento di un elemento in un array}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/array_update.png}
             \vspace{0.8cm}
-            \caption{\textit{Swift è 3-4 volte più veloce, ed ha complessità costante; Objective-C invece utilizza una funzione polinomiale e diventa costante solamente alla fine}}
+            \caption{\textit{Complessità: costante per Swift, lineare inizialmente per per poi passare a tempo costante per Objective-C. Swift risulta dalle 3 alle 4 volte più veloce}}
 \end{figure}
 \subsubsection{Aggiunta di un elemento ad un dizionario}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/dictionary_add.png}
             \vspace{0.8cm}
-            \caption{\textit{Swift è 2-3 volte più veloce; si possono notare dei picchi regolari nel tempo di esecuzione, spiegabili con l'allocazione di memoria per i nuovi elementi, in quanto il dizionario aumenta di 2 volte e non linearmente}}
+            \caption{\textit{Complessità: costante per entrambi; si possono notare dei picchi regolari nel tempo di esecuzione, spiegabili con l'allocazione di memoria per i nuovi elementi, in quanto il dizionario aumenta di 2 volte e non linearmente; Swift risulta dalle 2 alle 3 volte più veloce.}}
 \end{figure} 
 \subsubsection{Ricerca di un elemento in un dizionario}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/dictionary_contains.png}
             \vspace{0.8cm}
-            \caption{\textit{I risultati sono simili alla ricerca in un Array: entrambi hanno complessità lineare, ma Swift ha performance minori}}
+            \caption{\textit{Complessità: lineare per entrambi i linguaggi; Swift risulta avere performance leggermente inferiori.}}
 \end{figure}
 \subsubsection{Rimozione di un elemento da un dizionario}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/dictionary_delete.png}
             \vspace{0.8cm}
-            \caption{\textit{Objective-C è 3-4 volte più veloce in questa operazione; con Swift otteniamo una curva con andamento ondulatorio, correlata al cambiamento dinamico della dimensione dell'array; entrambi hanno complessità costante}}
+            \caption{\textit{Complessità: costante per entrambi i linguaggi; Objective-C risulta dalle 3 alle 4 volte più veloce in questa operazione; Swift produce una curva con andamento ondulatorio, correlata al cambiamento dinamico della dimensione dell'array.}}
 \end{figure}
 \subsubsection{Lettura di un elemento da un dizionario}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/dictionary_read.png}
             \vspace{0.8cm}
-            \caption{\textit{Objective-C è due volte più veloce; la complessità è costante per entrambi i linguaggi}}
+            \caption{\textit{Complessità: costante per entrambi i linguaggi; Objective-C risulta due volte più rapido.}}
 \end{figure}
 \subsubsection{Aggiornamento di un elemento di un dizionario}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/dictionary_update.png}
             \vspace{0.8cm}
-            \caption{\textit{Swift è due volte più veloce e la sua complessità è costante, mentre per Objective-C è lineare}}
-\end{figure}
-\subsubsection{Aggiunta di un elemento ad un set}
-    \begin{figure}[H]
-      \centering
-      \includegraphics[scale=0.50]{immagini/set_add.png}
-            \vspace{0.8cm}
-            \caption{\textit{Swift è due volte più veloce per questa operazione}}
-\end{figure}
-\subsubsection{Ricerca di un elemento in un set}
-\begin{figure}[H]
-      \centering
-      \includegraphics[scale=0.50]{immagini/set_contains.png}
-            \vspace{0.8cm}
-            \caption{\textit{Quando si considerano intervalli relativamente lunghi con 2500 elementi i grafici sono quasi conincidenti}}
-\end{figure}
-\subsubsection{Rimozione di un elemento da un set}
-\begin{figure}[H]
-      \centering
-      \includegraphics[scale=0.50]{immagini/set_delete.png}
-            \vspace{0.8cm}
-            \caption{\textit{Objective-C è 2-3 volte più veloce; entrambi i grafici mostrano complessità costante, ma Swift è più prono a fluttuazioni randomiche}}
+            \caption{\textit{Complessità: costante per Swift, lineare per Objective-C. Swift risulta 2 volte più rapido.}}
 \end{figure}
 \subsubsection{Conclusioni sulle performance}
 Le operazioni sugli Array sono dalle due alle quattro volte più performanti in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero preinizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo. Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario e in un Set in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C.\\
