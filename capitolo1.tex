@@ -198,7 +198,8 @@ un protocollo è una lista di metodi che una classe può implementare; i metodi 
 
 @end
 \end{lstlisting}
-Una classe deve conformarsi al protocollo prima di implementare i suoi metodi:
+\newpage
+Una classe deve conformarsi al protocollo prima di implementare i metodi in esso contenuti:\\
 File .h: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -244,7 +245,13 @@ Una categoria raccoglie implementazioni di metodi in file separati. La particola
 \subsubsection{La direttiva import}
 Permette di inserire un file prima dell'inizio della compilazione, ed evita di includere il file qualora sia già stato incluso in precedenza.\\Viene comunemente utilizzata per includere i file \textit{header} delle classi nei file .m contenenti le implementazioni delle interfacce in esso contenute.
 \subsection{Compilatore}
-L'IDE di Apple, Xcode, utilizza clang. Quest'ultimo è un compilatore front end per C, C++, Objective-C, Objective-C++, OpenMP, OpenCL e CUDA, basato sul compilatore LLVM (Low Level Virtual Machine).\\
-LLVM in origine doveva utilizzare il front end di GCC, ma dopo aver riscontrato problemi di integrazione e di sviluppo l'azienda ha deciso di crearne iternamente uno proprio, clang appunto, reso open-source nel Giugno 2007. 
+L'IDE di Apple, Xcode, utilizza clang. Quest'ultimo è un compilatore \textit{front-end} per C, C++, Objective-C, Objective-C++, OpenMP, OpenCL e CUDA, basato sul compilatore LLVM (Low Level Virtual Machine).\\E' stato creato in quanto si era reso necessario un compilatore che avesse migliori strumenti di diagnostica, migliore integrazione con gli strumenti di sviluppo, una licenza che permettesse di utilizzarlo in programmi commerciali ed infine, che fosse semplice da sviluppare e mantenere. GCC (GNU Compiler Collection), che inizialmente doveva essere utilizzato, era considerato lento e di difficile utilizzo.\\Gli obiettivi principali di clang sono quattro:
+\begin{itemize} 
+\item Avere un parser unificato per i linguaggi basati su C, fornendo al contempo buoni strumenti di diagnostica.
+\item Avere un'architettura basata su una libreria di API scritte in C++, con la possibilità di estensioni.
+\item Essere polivalente, includendo strumenti di indicizzazione, analisi statica del codice e \textit{refactoring}
+\item Avere ottime \textit{performance}, garantendo un utilizzo parsimonioso della memoria, con tempi di compilazione rapidi.
+\end{itemize}
+Attualmente viene considerato un compilatore solido e stabile per codice C, Objective-C, C++ e Objective-C++, se utilizzato per le piattaforme X86-32, X86-64, ed ARM.  
 \subsection{Utilizzo in iOS e frameworks Cocoa}
 Il linguaggio principale di tutti i frameworks (quali CoreOS, Foundation, CocoaTouch) di iOS e MacOS è ancora Objective-C come dal principio, in quanto Swift non ha ancora raggiunto un livello di maturità tale per essere impiegato per questi scopi (la versione 3 del linguaggio non ha ancora ABI stabili e la sintassi è ancora in corso di modifiche).L'intenzione di Apple è quella di mantenere e migliorare i due linguaggi parallelamente per ancora molto tempo.

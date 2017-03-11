@@ -1,6 +1,6 @@
 \chapter{Swift}
 Swift è stato introdotto nel Giugno 2014 durante l'annuale conferenza per gli sviluppatori di Apple, e reso open source nel Dicembre 2015.\\
-Questo linguaggio è una combinazione delle migliori caratteristiche di C ed Objective-C in aggiunta a features che lo rendono un linguaggio moderno e sicuro, rendendo lo sviluppo più rapido ed efficiente.\\La sintassi semplificata rispetto ad Objective-C ed il completo supporto alle API di Cocoa e Cocoa Touch lo rendono fruibile anche agli sviluppatori alla prime armi con le piattaforme di Apple.
+Questo linguaggio è una combinazione delle migliori caratteristiche di C ed Objective-C in aggiunta a \textit{features} che lo rendono un linguaggio moderno e sicuro, rendendo lo sviluppo più rapido ed efficiente.\\La sintassi semplificata rispetto ad Objective-C ed il completo supporto alle API di Cocoa e Cocoa Touch lo rendono fruibile anche agli sviluppatori alla prime armi con le piattaforme di Apple.
 \section{Caratteristiche}
 \subsection{Sintassi}
 \subsubsection{Implementazione di una classe}
@@ -144,16 +144,14 @@ enum TipologieDiCase {
 			return "Attico"
 		default: 
 			return String(self.rawValue)
-		
 		}
 	}
 }
-
 let villa = TipologieDiCase.villa
 let descrizioneVilla = villa.descrizione()
 \end{lstlisting}
 \subsubsection{Protocolli ed estensioni}
-Un protocollo definisce un'interfaccia di metodi, variabili ed altri eventuali requisiti che definiscono una particolare funzionalità. Quest'ultimo può essere quindi adottato da una classe, struct o enum che ne forniranno l'implementazione:
+Un protocollo definisce un'interfaccia di metodi ed altri eventuali requisiti che definiscono una particolare funzionalità. Quest'ultimo può essere quindi adottato da una classe e, a differenza di Objective-C, anche da struct o enum che ne forniranno l'implementazione:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 protocol ProtocolloDiNavigazioni {
@@ -169,9 +167,7 @@ class MenuPrincipale: UICollectionViewController, UICollectionViewDelegateFlowLa
 		collectionView?.delegate = self
 		collectionView?.dataSource = self
 	}
-	
 	...
-	
 	//MARK: CollectionViewDelegate 
 	
 	override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -198,7 +194,7 @@ class MenuPrincipale: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 }
 \end{lstlisting}
-Le estensioni sono invece un modo per aggiungere funzionalità ad un tipo esistente, come nuovi metodi e \textit{computed properties}:
+Le estensioni, come le categories di Objective-C, sono invece un modo per aggiungere funzionalità ad un tipo esistente, come nuovi metodi e \textit{computed properties}:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Estensione che aggiunge un effetto di blur ad una imageView
@@ -219,7 +215,7 @@ containerImmagine.image = UIImage(named: "beer2beerlogo.jpg")
 containerImmagine.aggiungiBlur()
 \end{lstlisting}
 \subsubsection{Gestione degli errori}
-Gli errori vengono rappresentati utilizzando un qualsiasi tipo che si conformi al protocollo Error; la parola chiave throws viene utilizzata per indicare che una funzione può ritornare un errore, utilizzando la parola chiave throw. Se un errore viene lanciato dall'interno di una funzione, quest'ultima ritorna immediatamente e l'errore viene gestito dalla funzione chiamante:
+Gli errori vengono rappresentati utilizzando un qualsiasi tipo che si conformi al protocollo \textit{Error}; la parola chiave \textit{throws} viene utilizzata per indicare che una funzione può ritornare un errore, utilizzando la parola chiave \textit{throw}. Se un errore viene lanciato dall'interno di una funzione, quest'ultima ritorna immediatamente e l'errore viene gestito dalla funzione chiamante:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 enum ErroriStampante: Error {
@@ -251,7 +247,7 @@ func invia(lavoro: Int, allaStampante nomeStampante: Stringa) throws -> String {
 	}
 	
 \end{lstlisting}
-Si possono inoltre utilizzare più blocchi catch per gestire errori specifici:
+Si possono inoltre utilizzare più blocchi \textit{catch} per gestire errori specifici:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 	do {
@@ -265,14 +261,14 @@ Si possono inoltre utilizzare più blocchi catch per gestire errori specifici:
 			print("Aprire il cassetto")
 		}
 \end{lstlisting}
-Un altra modalità per la gestione degli errori è l'utilizzo della la parola chiave try? per convertire il risultato in un tipo optional: se la funzione lancia un errore, questo specifico errore è ignorato e la funzione ritorna nil; alternativamente il risultato è un optional contenente il valore ritornato dalla funzione:
+Un altra modalità per la gestione degli errori è l'utilizzo della la parola chiave \textit{try?} per convertire il risultato in un tipo \textit{optional}: se la funzione lancia un errore, questo specifico errore è ignorato e la funzione ritorna nil; alternativamente il risultato è un optional contenente il valore ritornato dalla funzione:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 let foglioStampato = try? invia(lavoro: 1984, allaStampante: "Sala meeting")
 let erroreDiStampa = try? invia(lavoro: 1948, allaStampante: "Rusty old printer")
 \end{lstlisting}
 \subsubsection{Generics}
-Una funzione generica, più comunemente chiamata template, è così dichiarata:
+Una funzione generica, più comunemente chiamata \textit{template}, è così dichiarata:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines} 
 \begin{lstlisting}
 func creaArray<Elemento>(ripeti	elemento: Elemento, numeroDiVolte: Int) -> [Elemento] {
@@ -291,7 +287,7 @@ func creaArray<Elemento>(ripeti	elemento: Elemento, numeroDiVolte: Int) -> [Elem
 
 creaArray(ripeti: "Tick tock", numeroDiVolte: 3)
 \end{lstlisting}
-Si possono implementare generics di funzioni o di classi, enumerazioni e struct:
+Si possono implementare \textit{generics} di funzioni o di classi, enumerazioni e struct:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Reimplementazione del tipo optional della libreria standard di Swift
@@ -305,7 +301,7 @@ enum OptionalValue<Wrapped> {
 var possibileIntero: OptionalValue<Int> = .none
 possibileIntero = .some(100)
 \end{lstlisting}
-Si utilizza la parola chiave where prima del corpo per indicare una lista di requisiti, per esempio per indicare che il tipo deve conformarsi ad un protocol, per richiedere che due tipi siano uguali o per indicare che una classe deve avere una particolare superclasse: 
+Si utilizza la parola chiave \textit{where} prima del corpo per indicare una lista di requisiti, per esempio per indicare che il tipo deve conformarsi ad un \textit{protocol}, per richiedere che due tipi siano uguali o per indicare che una classe deve avere una particolare superclasse: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 func elementiComuni<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool {
@@ -332,18 +328,6 @@ func elementiComuni<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool {
 
 elementiComuni([1,2,3], [3])
 \end{lstlisting}
-\subsubsection{Tuples}
-Feature non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo status code 404 dell'HTTP con una tupla in questo modo:
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-let errore404http = (404, "Not found")
-\end{lstlisting}
-La tupla (404, "Not found") raggruppa insieme un tipo Int e uno String; si può creare qualsiasi permutazione di tipi. Per ottenere i singoli valori da una tupla, quest'ultima deve essere scomposta:
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-let (statusCode, statusMessage) = errore404http
-\end{lstlisting}
-Questo particolare tipo è utile come valore di ritorno dalle funzioni, per esempio una funzione che ha il compito di caricare una pagina web potrebbe usare la tupla sopra descritta per indicare il successo o il fallimento del caricamento, fornendo più informazioni rispetto ad un valore di ritorno singolo di un singolo tipo. 
 \subsubsection{Optionals}
 Questo tipo è un pilastro portante di Swift, in quanto viene utilizzato in tutti i casi in cui il valore di ritorno potrebbe essere nullo (nil). La logica di funzionamento è la seguente: o esiste un tipo di ritorno, e quindi si utilizza l'unwrapping per accedere al valore, o non c'è valore alcuno.\\
 Il concetto di optional non esiste in C o Objective-C. Ciò che ci si avvicina maggiormente è l'abilità di ritornare nil da un metodo che altrimenti ritornerebbe un oggetto, con nil a significare l'assenza di un oggetto valido.\\Quanto appena descritto vale solamente per gli oggetti (non structs, tipi C  o enumerativi); per questi i metodi Objective-C ritornano solamente un valore speciale (come per esempio NSNotFound). Ciò implica che il chiamante dei metodi sappia che c'è uno speciale valore da verificare, mentre l'approccio di Swift permette di indicare l'assenza di qualsiasi valore in assoluto, senza la necessità per speciali costanti.\\
@@ -381,6 +365,18 @@ if let numero = Int(possibileNumero) {
 \end{lstlisting}
 Il codice può essere interpretato in questo modo: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, allora assegna alla nuova costante chiamata numero il valore contenuto nell'optional. Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore. In uno statement si possono concatenare più optional binding separati da virgola e, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
 Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard. 
+\subsubsection{Tuples}
+Caratteristica non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo \textit{status-code} 404 dell'HTTP con una tupla in questo modo:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let errore404http = (404, "Not found")
+\end{lstlisting}
+La tupla (404, "Not found") raggruppa insieme un tipo Int e uno String; si può creare qualsiasi permutazione di tipi. Per ottenere i singoli valori da una tupla, quest'ultima deve essere scomposta:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let (statusCode, statusMessage) = errore404http
+\end{lstlisting}
+Questo particolare tipo è utile come valore di ritorno dalle funzioni, per esempio una funzione che ha il compito di caricare una pagina web potrebbe usare la tupla sopra descritta per indicare il successo o il fallimento del caricamento, fornendo più informazioni rispetto ad un valore di ritorno singolo di un singolo tipo. 
 \subsection{Compilatore e libreria standard}
 \subsubsection{Architettura del compilatore}
 Il compilatore di Swift è composto dai seguenti componenti principali:

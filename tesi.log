@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  11 MAR 2017 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  11 MAR 2017 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -971,7 +971,14 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotereset=\count312
 (./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux) (./capitolo1.aux
 ) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux) (./conclusioni.aux)
-(./ringraziamenti.aux) (./biblio.aux))
+(./ringraziamenti.aux) (./biblio.aux
+
+LaTeX Warning: Label `history' multiply defined.
+
+
+LaTeX Warning: Label `history' multiply defined.
+
+))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -991,8 +998,7 @@ LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 24.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Info: Redefining \it@ocap on input line 24.
@@ -1217,7 +1223,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
-[9] [10] [11]) [12]
+[9] [10] [11] [12]) [13]
 \openout2 = `capitolo2.aux'.
 
  (./capitolo2.tex
@@ -1227,11 +1233,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[13
+[14
 
 
 
-] [14]
+] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
@@ -1241,49 +1247,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[15] [16] [17] [18] [19] [20] [21] [22] [23]
-Overfull \hbox (2.449pt too wide) in paragraph at lines 402--403
+[16] [17] [18] [19] [20] [21] [22] [23] [24]
+Overfull \hbox (2.449pt too wide) in paragraph at lines 398--399
 \T1/lmr/m/n/12 sco-no mo-di-fi-che ed ag-giun-te spe-ci-fi-che per Swift ai fra
 -mework Objective-
  []
 
-<immagini/single-file.png, id=735, 321.2pt x 334.24875pt>
+<immagini/single-file.png, id=736, 321.2pt x 334.24875pt>
 File: immagini/single-file.png Graphic file (type png)
 
 <use immagini/single-file.png>
-Package pdftex.def Info: immagini/single-file.png used on input line 410.
+Package pdftex.def Info: immagini/single-file.png used on input line 406.
 (pdftex.def)             Requested size: 256.96034pt x 267.39935pt.
 
-Underfull \hbox (badness 1038) in paragraph at lines 412--412
+Underfull \hbox (badness 1038) in paragraph at lines 408--408
 []\T1/lmr/m/n/12 Figura 2.1: []\T1/lmr/m/it/12 Visualizzazione del la-vo-ro del
  com-pi-la-to-re in mo-da-li-tà di
  []
 
-[24] [25pdfTeX warning (ext4): destination with the same identifier (name{figur
+[25] [26pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.431 }
+l.427 }
         <./immagini/single-file.png>]
 <immagini/wmo.png, id=761, 321.2pt x 216.81pt>
 File: immagini/wmo.png Graphic file (type png)
  <use immagini/wmo.png>
-Package pdftex.def Info: immagini/wmo.png used on input line 439.
+Package pdftex.def Info: immagini/wmo.png used on input line 435.
 (pdftex.def)             Requested size: 256.96034pt x 173.44823pt.
 
-Underfull \hbox (badness 1038) in paragraph at lines 441--441
+Underfull \hbox (badness 1038) in paragraph at lines 437--437
 []\T1/lmr/m/n/12 Figura 2.2: []\T1/lmr/m/it/12 Visualizzazione del la-vo-ro del
  com-pi-la-to-re in mo-da-li-tà di
  []
 
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.446 \begin{lstlisting}
-                         <./immagini/wmo.png>] [27]) [28] [29]
+l.442 \begin{lstlisting}
+                         <./immagini/wmo.png>] [28]) [29] [30]
 \openout2 = `capitolo3.aux'.
 
  (./capitolo3.tex
@@ -1292,7 +1298,7 @@ Capitolo 3.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
-[30
+[31
 
 
 
@@ -1306,7 +1312,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
 
-[31]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
@@ -1327,7 +1333,7 @@ Overfull \hbox (16.25348pt too wide) in paragraph at lines 27--35
  del-la me-mo-ria in Objective-
  []
 
-[32] [33pdfTeX warning (ext4): destination with the same identifier (name{figur
+[33] [34pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1345,7 +1351,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 44--47
  [][] 
  []
 
-[34] <immagini/array_delete.png, id=820, 803.0pt x 540.0175pt>
+[35] <immagini/array_delete.png, id=820, 803.0pt x 540.0175pt>
 File: immagini/array_delete.png Graphic file (type png)
 
 <use immagini/array_delete.png>
@@ -1356,14 +1362,14 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 52--54
  [][] 
  []
 
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.56 \subsubsection
                    {Lettura di un elemento in un array} <./immagini/array_add.p
-ng>] <immagini/array_read.png, id=827, 803.0pt x 540.0175pt>
+ng>] <immagini/array_read.png, id=828, 803.0pt x 540.0175pt>
 File: immagini/array_read.png Graphic file (type png)
 
 <use immagini/array_read.png>
@@ -1374,7 +1380,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 59--61
  [][] 
  []
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1392,7 +1398,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 66--68
  [][] 
  []
 
-[37pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1410,7 +1416,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 73--75
  [][] 
  []
 
-[38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1428,7 +1434,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 80--82
  [][] 
  []
 
-[39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1447,7 +1453,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 87--89
  [][] 
  []
 
-[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1466,7 +1472,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 94--96
  [][] 
  []
 
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1474,7 +1480,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 94--96
 l.98 \subsubsection
                    {Lettura di un elemento da un dizionario} <./immagini/dictio
 nary_contains.png>]
-<immagini/dictionary_read.png, id=870, 803.0pt x 540.0175pt>
+<immagini/dictionary_read.png, id=871, 803.0pt x 540.0175pt>
 File: immagini/dictionary_read.png Graphic file (type png)
 
 <use immagini/dictionary_read.png>
@@ -1485,7 +1491,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 101--103
  [][] 
  []
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1505,39 +1511,39 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 108--110
  [][] 
  []
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 0}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.112 \subsubsection
                     {Conclusioni sulle performance} <./immagini/dictionary_read
-.png>] [44pdfTeX warning (ext4): destination with the same identifier (name{fig
+.png>] [45pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.3.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.116 
-       <./immagini/dictionary_update.png>]) [45]
+       <./immagini/dictionary_update.png>]) [46]
 \openout2 = `capitolo4.aux'.
 
  (./capitolo4.tex
 Capitolo 4.
-) [46
+) [47
 
 
 
 ]
 \openout2 = `conclusioni.aux'.
 
- (./conclusioni.tex) [47
+ (./conclusioni.tex) [48
 
 
 
 ]
 \openout2 = `ringraziamenti.aux'.
 
- (./ringraziamenti.tex) [48
+ (./ringraziamenti.tex) [49
 
 
 
@@ -1554,47 +1560,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-) [49
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+) [50
 
 
 
 
-]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.history}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.38 \include{biblio}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{cite.history}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.38 \include{biblio}
+                     ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
- (./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux)
-(./capitolo1.aux) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux)
-(./conclusioni.aux) (./ringraziamenti.aux) (./biblio.aux))
+ (./tesi.aux (./titolo.aux) (./dedica.aux)
+(./introduzione.aux) (./capitolo1.aux) (./capitolo2.aux) (./capitolo3.aux)
+(./capitolo4.aux) (./conclusioni.aux) (./ringraziamenti.aux) (./biblio.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 958E33A9673D6D3E8F7FED01EEDCE776;2027.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21098 strings out of 493014
- 310791 string characters out of 6133350
- 772806 words of memory out of 5000000
- 23668 multiletter control sequences out of 15000+600000
- 74373 words of font info for 73 fonts, out of 8000000 for 9000
+ 21097 strings out of 493014
+ 310757 string characters out of 6133350
+ 772845 words of memory out of 5000000
+ 23669 multiletter control sequences out of 15000+600000
+ 78636 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,12n,60p,1773b,3441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,60p,1773b,3441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
 c/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on tesi.pdf (50 pages, 1232302 bytes).
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmtt10.pfb>
+Output written on tesi.pdf (51 pages, 1253992 bytes).
 PDF statistics:
- 1082 PDF objects out of 1200 (max. 8388607)
- 996 compressed objects within 10 object streams
- 613 named destinations out of 1000 (max. 500000)
+ 1086 PDF objects out of 1200 (max. 8388607)
+ 998 compressed objects within 10 object streams
+ 610 named destinations out of 1000 (max. 500000)
  295 words of extra memory for PDF output out of 10000 (max. 10000000)
 
