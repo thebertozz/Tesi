@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  12 MAR 2017 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  13 MAR 2017 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -971,7 +971,7 @@ Package biblatex Info: Reference segment=0 on input line 24.
 
 (./titolo.tex
 Package hyperref Info: Option `pageanchor' set `false' on input line 2.
- <logouni.png, id=116, 830.10126pt x 751.80875pt>
+ <logouni.png, id=241, 830.10126pt x 751.80875pt>
 File: logouni.png Graphic file (type png)
 
 <use logouni.png>
@@ -1156,7 +1156,7 @@ Overfull \hbox (2.449pt too wide) in paragraph at lines 398--399
 -mework Objective-
  []
 
-<immagini/single-file.png, id=736, 321.2pt x 334.24875pt>
+<immagini/single-file.png, id=875, 321.2pt x 334.24875pt>
 File: immagini/single-file.png Graphic file (type png)
 
 <use immagini/single-file.png>
@@ -1175,7 +1175,7 @@ e.2.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.427 }
         <./immagini/single-file.png>]
-<immagini/wmo.png, id=761, 321.2pt x 216.81pt>
+<immagini/wmo.png, id=898, 321.2pt x 216.81pt>
 File: immagini/wmo.png Graphic file (type png)
  <use immagini/wmo.png>
 Package pdftex.def Info: immagini/wmo.png used on input line 435.
@@ -1220,7 +1220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-<immagini/ARC.jpg, id=805, 753.81625pt x 477.785pt>
+<immagini/ARC.jpg, id=940, 753.81625pt x 477.785pt>
 File: immagini/ARC.jpg Graphic file (type jpg)
  <use immagini/ARC.jpg>
 Package pdftex.def Info: immagini/ARC.jpg used on input line 32.
@@ -1243,7 +1243,11 @@ e.3.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.41 \subsubsection
                    {Aggiunta di un elemento ad un array} <./immagini/ARC.jpg>]
-<immagini/array_add.png, id=815, 803.0pt x 540.0175pt>
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 41.
+
+<immagini/array_add.png, id=951, 803.0pt x 540.0175pt>
 File: immagini/array_add.png Graphic file (type png)
 
 <use immagini/array_add.png>
@@ -1254,7 +1258,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 44--47
  [][] 
  []
 
-[35] <immagini/array_delete.png, id=820, 803.0pt x 540.0175pt>
+[35] <immagini/array_delete.png, id=956, 803.0pt x 540.0175pt>
 File: immagini/array_delete.png Graphic file (type png)
 
 <use immagini/array_delete.png>
@@ -1272,7 +1276,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 52--54
                                                   \fi \fi 
 l.56 \subsubsection
                    {Lettura di un elemento in un array} <./immagini/array_add.p
-ng>] <immagini/array_read.png, id=828, 803.0pt x 540.0175pt>
+ng>] <immagini/array_read.png, id=963, 803.0pt x 540.0175pt>
 File: immagini/array_read.png Graphic file (type png)
 
 <use immagini/array_read.png>
@@ -1290,7 +1294,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 59--61
                                                   \fi \fi 
 l.63 \subsubsection
                    {Ricerca di un elemento in un array} <./immagini/array_delet
-e.png>] <immagini/array_contains.png, id=835, 803.0pt x 540.0175pt>
+e.png>] <immagini/array_contains.png, id=969, 803.0pt x 540.0175pt>
 File: immagini/array_contains.png Graphic file (type png)
 
 <use immagini/array_contains.png>
@@ -1308,7 +1312,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 66--68
                                                   \fi \fi 
 l.70 \subsubsection
                    {Aggiornamento di un elemento in un array} <./immagini/array
-_read.png>] <immagini/array_update.png, id=842, 803.0pt x 540.0175pt>
+_read.png>] <immagini/array_update.png, id=975, 803.0pt x 540.0175pt>
 File: immagini/array_update.png Graphic file (type png)
 
 <use immagini/array_update.png>
@@ -1326,7 +1330,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 73--75
                                                   \fi \fi 
 l.77 \subsubsection
                    {Aggiunta di un elemento ad un dizionario} <./immagini/array
-_contains.png>] <immagini/dictionary_add.png, id=849, 803.0pt x 540.0175pt>
+_contains.png>] <immagini/dictionary_add.png, id=981, 803.0pt x 540.0175pt>
 File: immagini/dictionary_add.png Graphic file (type png)
 
 <use immagini/dictionary_add.png>
@@ -1344,7 +1348,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 80--82
                                                   \fi \fi 
 l.84 \subsubsection
                    {Ricerca di un elemento in un dizionario} <./immagini/array_
-update.png>] <immagini/dictionary_contains.png, id=856, 803.0pt x 540.0175pt>
+update.png>] <immagini/dictionary_contains.png, id=987, 803.0pt x 540.0175pt>
 File: immagini/dictionary_contains.png Graphic file (type png)
 
 <use immagini/dictionary_contains.png>
@@ -1364,7 +1368,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 87--89
 l.91 \subsubsection
                    {Rimozione di un elemento da un dizionario} <./immagini/dict
 ionary_add.png>]
-<immagini/dictionary_delete.png, id=863, 803.0pt x 540.0175pt>
+<immagini/dictionary_delete.png, id=993, 803.0pt x 540.0175pt>
 File: immagini/dictionary_delete.png Graphic file (type png)
 
 <use immagini/dictionary_delete.png>
@@ -1383,7 +1387,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 94--96
 l.98 \subsubsection
                    {Lettura di un elemento da un dizionario} <./immagini/dictio
 nary_contains.png>]
-<immagini/dictionary_read.png, id=871, 803.0pt x 540.0175pt>
+<immagini/dictionary_read.png, id=1000, 803.0pt x 540.0175pt>
 File: immagini/dictionary_read.png Graphic file (type png)
 
 <use immagini/dictionary_read.png>
@@ -1402,7 +1406,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 101--103
 l.105 \subsubsection
                     {Aggiornamento di un elemento di un dizionario} <./immagini
 /dictionary_delete.png>]
-<immagini/dictionary_update.png, id=878, 803.0pt x 540.0175pt>
+<immagini/dictionary_update.png, id=1006, 803.0pt x 540.0175pt>
 File: immagini/dictionary_update.png Graphic file (type png)
 
 <use immagini/dictionary_update.png>
@@ -1499,7 +1503,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 1B41D5829CED593EA5A6729498F67818;2030.
+(rerunfilecheck)             Checksum: 236FFF4434D3F01E29B0A32A2524F04B;4762.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1509,10 +1513,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20229 strings out of 493117
- 293850 string characters out of 6135433
- 736865 words of memory out of 5000000
- 22724 multiletter control sequences out of 15000+600000
+ 20260 strings out of 493117
+ 294247 string characters out of 6135433
+ 736882 words of memory out of 5000000
+ 22755 multiletter control sequences out of 15000+600000
  78636 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,60p,1773b,3442s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1527,10 +1531,10 @@ local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/public/lm/lmtt10.pfb>
-Output written on tesi.pdf (51 pages, 1254629 bytes).
+Output written on tesi.pdf (51 pages, 1258289 bytes).
 PDF statistics:
- 1086 PDF objects out of 1200 (max. 8388607)
- 998 compressed objects within 10 object streams
+ 1212 PDF objects out of 1440 (max. 8388607)
+ 1122 compressed objects within 12 object streams
  610 named destinations out of 1000 (max. 500000)
- 295 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 543 words of extra memory for PDF output out of 10000 (max. 10000000)
 
