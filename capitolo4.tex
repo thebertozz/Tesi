@@ -1,6 +1,12 @@
-\chapter{Il futuro della piattaforma iOS}
-\section{Quale futuro per i due linguaggi?}
-Swift poco utilizzato al momento, persino da Apple
-Da intervista Lattner i due linguaggi andranno di pari passo per molto tempo
-Swift non ha ABI stabili 
-Aggiungere foto o comunque menzionare l'apple tv, il watch, carplay
+\chapter{L'applicazione}
+Durante il tirocinio è stata sviluppata un'applicazione scritta in Swift, con le seguenti funzionalità:
+\begin{itemize}
+\item La connessione ad un web server esterno inserendo username e password per accedere ad una libreria di dati multimediali
+\item La visualizzazione delle immagini della libreria ed il salvataggio in una memoria cache, con tempo relativo alla singola sessione per una visualizzazione successiva
+\item La riproduzione di file audio tramite il player di sistema, anche in background con lo schermo spento, e l'acceso ai controlli sulla schermata di blocco
+\item La riproduzione di video della libreria tramite il player di sistema, anche in modalità Picture-in-Picture (PiP) se l'applicazione viene installata su iPad con il sistema operativo iOS 9.0 o successivi
+\end{itemize}
+\section{Implementazione}
+L'applicazione è stata scritta in Swift 2.0 utilizzando XCode versione 7.0; per la parte web server è stato utilizzato un Raspberry Pi versione 1 con installato Debian 7 (denominato Wheezy) ed il server Apache 2.4. Per l'accesso ai dati dall'esterno è stato configurato sul server un client no-ip.\\
+Sono stati inoltre utilizzati \textit{frameworks} esterni installati tramite il gestore di dipendenze CocoaPods ed una libreria scritta in Objective-C integrata tramite un \textit{bridging-header}.\\
+Questi è un file .h che permette l'importazione di file interfaccia scritti in Objective-C per l'utilizzo in files scritti in linguaggio Swift, utilizzando la direttiva import del suddetto linguaggio.

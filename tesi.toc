@@ -112,12 +112,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Conclusioni sulle performance}{45}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Il futuro della piattaforma iOS}{47}{chapter.4}
+\contentsline {chapter}{\numberline {4}L'applicazione}{47}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Quale futuro per i due linguaggi?}{47}{section.4.1}
+\contentsline {section}{\numberline {4.1}Implementazione}{47}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{48}{section*.35}
+\contentsline {chapter}{\numberline {5}Il futuro della piattaforma iOS}{49}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ringraziamenti}{49}{section*.37}
+\contentsline {section}{\numberline {5.1}Quale futuro per i due linguaggi?}{49}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{50}{section*.39}
+\contentsline {chapter}{Conclusioni}{50}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Ringraziamenti}{51}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{52}{section*.39}
