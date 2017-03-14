@@ -22,22 +22,22 @@ Swift supporta i namespaces permettendo quindi l'esistenza dello stesso file in 
 \subsection{Librerie dinamiche}
 Un aspetto che ha suscitato poco clamore ma che può apportare benefici notevoli nel lungo periodo sono le librerie dinamiche di Swift: queste sono pezzi di codice eseguibile che possono essere collegati da un'applicazione. Questa caratteristica permette alle applicazioni già pubblicate di avere aggiornamenti delle librerie col susseguirsi delle versioni del linguaggio.\\Lo sviluppatore invia sullo store l'applicazione insieme alle librerie, digitalmente firmate per assicurarne l'integrità.\\Ciò significa che Swift può evolvere più velocemente di iOS stesso, poichè gli aggiornamenti della libreria possono essere inclusi direttamente in un aggiornamento dell'applicazione.\\
 \subsection{Open Sourcing}
-Swift è stato reso open source nel Dicembre del 2015, permettendo agli sviluppatori di influenzare il futuro del linguaggio; questo ha già portato a notevoli cambiamenti nella struttura dello stesso nel passaggio dalla versione 2.3 alla 3.0. Attualmente è in sviluppo la versione 4.0, con il suo rilascio previsto per la fine del 2017. 
+Swift è stato reso open source nel Dicembre del 2015, permettendo agli sviluppatori di influenzare il futuro del linguaggio; questo ha già portato a notevoli cambiamenti nella struttura dello stesso nel passaggio dalla versione 2.3 alla 3.0. Attualmente è in sviluppo la versione 4.0, con il suo rilascio previsto per la fine del 2017.\newpage
 \section{Gestione della memoria}
-In iOS è possibile utilizzare due approci differenti alla gestione della memoria:
+In iOS è possibile utilizzare due approci differenti alla gestione della memoria:\\
 \\-MMR (Manual Retain Release): lo sviluppatore gestisce esplicitamente la memoria, tenendo traccia degli oggetti instanziati. E' implementato tramite un modello chiamato Reference Counting, fornito dalla classe NSObject in congiunzione all'ambiente esecuzione; è il metodo più obsoleto e più dispendioso in termini di tempo di sviluppo in quanto prettamente manuale.\\
 \\-ARC (Automatic Reference Counting): utilizza lo stesso sistema di tracciamento degli oggetti di MMR, ma aggiunge automaticamente chiamate ai metodi di gestione della memoria a tempo di compilazione. Questo sistema permette di assicurare che gli oggetti abbiano vita il tempo necessario per il loro utilizzo e non oltre, poiché il compilatore genera in automatico anche i metodi di deallocazione appropriati.\\E' l'approccio moderno e più utilizzato della gestione della memoria in Objective-C e Swift.
 \begin{figure}[H]
       \centering
-      \includegraphics[scale=0.40]{immagini/ARC.jpg}
+      \includegraphics[scale=0.50]{immagini/ARC.jpg}
             \vspace{0.8cm}
             \caption{\textit{Confronto tra MMC ed ARC relativo al tempo di creazione dei cicli di retain-release degli oggetti}}
     \end{figure}
 Il comportamento di ARC è però differente tra i due linguaggi:\\
 In Swift il supporto è completo rispetto ai percorsi di codice procedurali ed \textit{object- oriented}; Objective-C invece supporta ARC solamente nell'utilizzo delle API Cocoa ed il codice object-oriented; questo significa che sarà ancora compito del programmatore gestire la memoria quando si utilizzano API come Core Graphics e altre di basso livello disponibili in iOS, creando il rischio di \textit{memory-leaks}.
 \section{Performance}
-Tester indipendenti hanno confrontato le performance dei due linguaggi su strutture dati standard: Array/NSArray e Dictionary/NSDictionary\\
-L'approcio utilizzato prevede la preinizializzazione delle strutture dati con un numero fisso di elementi; è stata effettuata solamente una operazione sulla struttura dati, quindi è stata creata una nuova struttura con un nuovo stato iniziale ed è stata eseguita nuovamente l'operazione.\\ Sono stati considerati 500 stati differenti per ogni struttura dati, e le performance sono state calcolate su 10 iterazioni.\\L'asse delle ascisse mostra il numero di elementi nella struttura dati, l'asse delle ordinate il tempo medio di esecuzione dell'operazione.
+Tester indipendenti hanno confrontato le performance dei due linguaggi su strutture dati standard: Array/NSArray e Dictionary/NSDictionary.\\\\
+L'approccio utilizzato prevede la preinizializzazione delle strutture dati con un numero fisso di elementi; è stata effettuata solamente una operazione sulla struttura dati, quindi è stata creata una nuova struttura con un nuovo stato iniziale ed è stata eseguita nuovamente l'operazione.\\\\ Sono stati considerati 500 stati differenti per ogni struttura dati, e le performance sono state calcolate su 10 iterazioni.\\\\L'asse delle ascisse mostra il numero di elementi nella struttura dati, l'asse delle ordinate il tempo medio di esecuzione dell'operazione.
 \subsubsection{Aggiunta di un elemento ad un array}
 \begin{figure}[H]
       \centering
@@ -110,8 +110,8 @@ Per gli array contenenti già elementi l'operazione in Swift è più veloce di d
             \caption{\textit{Complessità: costante per Swift, lineare per Objective-C. Swift risulta 2 volte più rapido.}}
 \end{figure}
 \subsubsection{Conclusioni sulle performance}
-Le operazioni sugli Array sono dalle due alle quattro volte più performanti in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero preinizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo. Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario e in un Set in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C.\\
-Gli Array risultano la struttura dati da preferire in Swift per tutte le operazioni (eccetto la ricerca) se si ha un gran numero di elementi; in questo caso un Set è preferibile.\\
+Le operazioni sugli Array sono dalle due alle quattro volte più performanti in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero preinizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo.\\\\Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario e in un Set in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C.\\
+\\Gli Array risultano la struttura dati da preferire in Swift per tutte le operazioni (eccetto la ricerca) se si ha un gran numero di elementi; in questo caso un Set è preferibile.\\\\
 Come si può notare, i grafici delle funzioni risultano particolari per un array in stile C, questo perché a livello implementativo non è un vero array C: Objective-C utilizza un complesso insieme di strutture dati che non sono Array nativi ma che espongono funzionalità da tale.
     
     

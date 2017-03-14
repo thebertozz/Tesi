@@ -329,8 +329,8 @@ func elementiComuni<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool {
 elementiComuni([1,2,3], [3])
 \end{lstlisting}
 \subsubsection{Optionals}
-Questo tipo è un pilastro portante di Swift, in quanto viene utilizzato in tutti i casi in cui il valore di ritorno potrebbe essere nullo (nil). La logica di funzionamento è la seguente: o esiste un tipo di ritorno, e quindi si utilizza l'unwrapping per accedere al valore, o non c'è valore alcuno.\\
-Il concetto di optional non esiste in C o Objective-C. Ciò che ci si avvicina maggiormente è l'abilità di ritornare nil da un metodo che altrimenti ritornerebbe un oggetto, con nil a significare l'assenza di un oggetto valido.\\Quanto appena descritto vale solamente per gli oggetti (non structs, tipi C  o enumerativi); per questi i metodi Objective-C ritornano solamente un valore speciale (come per esempio NSNotFound). Ciò implica che il chiamante dei metodi sappia che c'è uno speciale valore da verificare, mentre l'approccio di Swift permette di indicare l'assenza di qualsiasi valore in assoluto, senza la necessità per speciali costanti.\\
+Questo tipo è un pilastro portante di Swift, in quanto viene utilizzato in tutti i casi in cui il valore di ritorno potrebbe essere nullo (nil). La logica di funzionamento è la seguente: o esiste un tipo di ritorno, e quindi si utilizza l'unwrapping per accedere al valore, o non c'è valore alcuno.\\\\
+Il concetto di optional non esiste in C o Objective-C. Ciò che ci si avvicina maggiormente è l'abilità di ritornare nil da un metodo che altrimenti ritornerebbe un oggetto, con nil a significare l'assenza di un oggetto valido.\\\\Quanto appena descritto vale solamente per gli oggetti (non structs, tipi C  o enumerativi); per questi i metodi Objective-C ritornano solamente un valore speciale (come per esempio NSNotFound).\\Ciò implica che il chiamante dei metodi sappia che c'è uno speciale valore da verificare, mentre l'approccio di Swift permette di indicare l'assenza di qualsiasi valore in assoluto, senza la necessità per speciali costanti.\\\\
 In questo esempio vediamo come gli optional possano essere utilizzati per gestire il caso di assenza di valore. Il tipo Int di Swift ha un costruttore che converte un tipo String in un valore di tipo Int; questa conversione può fallire, perciò viene utilizzato un tipo optional:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -344,7 +344,7 @@ Utilizzando la speciale parola chiave nil, si indica che un tipo optional non ha
 \begin{lstlisting}
 var codiceRispostaServer: Int? = nil
 \end{lstlisting}
-Se viene creata una variabile optional, alla quale non si assegna alcun valore, a quest'ultima viene automaticamente assegnato nil.\\Il nil di Swift non è però equivalente a quello di Objective-C: in quest ultimo, nil è un puntatore ad un oggetto non esistente, in Swift non è invece un puntatore, ma l'assenza di valore alcuno. Optionals di qualunque tipo possono essere settati a nil, non solamente oggetti.\\
+Se viene creata una variabile optional, alla quale non si assegna alcun valore, a quest'ultima viene automaticamente assegnato nil.\\\\Il nil di Swift non è però equivalente a quello di Objective-C: in quest ultimo, nil è un puntatore ad un oggetto non esistente, in Swift non è invece un puntatore, ma l'assenza di valore alcuno. Optionals di qualunque tipo possono essere settati a nil, non solamente oggetti.\\
 Per verificare la presenza di valore in un tipo optional è possibile usare lo statement if in questo modo: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -354,7 +354,7 @@ if numeroConvertito != nil {
 }
 \end{lstlisting}
 Alternativamente è possibile utilizzare il simbolo !, indicato come \textit{forced unwrapping} del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime.
-Viene utilizzata molto più frequentemente la sintassi dell'optional binding, per verificare se una certa variabile optional contiene un valore e, se presente, assegnarlo ad una costante o variabile temporanea. Viene utilizzato con gli statement if e while:
+\\\\Viene utilizzata molto più frequentemente la sintassi dell'optional binding, per verificare se una certa variabile optional contiene un valore e, se presente, assegnarlo ad una costante o variabile temporanea. Viene utilizzato con gli statement if e while:
 \begin{lstlisting}
 if let numero = Int(possibileNumero) {
 	//se entro nel blocco significa che possibileNumero 
@@ -363,7 +363,7 @@ if let numero = Int(possibileNumero) {
 	//possibileNumero non e' stato convertito ad Int
 }
 \end{lstlisting}
-Il codice può essere interpretato in questo modo: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, allora assegna alla nuova costante chiamata numero il valore contenuto nell'optional. Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore. In uno statement si possono concatenare più optional binding separati da virgola e, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
+Il codice può essere interpretato in questo modo: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, allora assegna alla nuova costante chiamata numero il valore contenuto nell'optional. \\Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore.\\In uno statement si possono concatenare più optional binding separati da virgola e, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
 Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard. 
 \subsubsection{Tuples}
 Caratteristica non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo \textit{status-code} 404 dell'HTTP con una tupla in questo modo:
@@ -407,7 +407,7 @@ questi è un set di files Swift, ed ognuno viene compilato in una singola unità
             \vspace{0.8cm}
             \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione per ogni singolo file}}
 \end{figure}
-Questa compilazione singola limita le ottimizzazioni inter funzione (come l'inlining o la specializzazione dei generics) alle funzioni chiamate all'interno dello stesso file. Come esempio, assumiamo che un file di un modulo  (chiamato utils.swift), contenga una struttura dati generica (chiamata Container<T>), con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
+Questa compilazione singola limita le ottimizzazioni inter funzione (come l'inlining o la specializzazione dei generics) alle funzioni chiamate all'interno dello stesso file.\\Come esempio, assumiamo che un file di un modulo  (chiamato utils.swift), contenga una struttura dati generica (chiamata Container<T>), con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
 \begin{lstlisting}
 //main.swift:
 
@@ -428,7 +428,7 @@ struct Container<T> {
 \end{lstlisting}
 Quando il compilatore ottimizza il file main.swift non conosce come la funzione getElement sia implementata, conosce solo il fatto che è presente; viene quindi generata una chiamata al suddetto metodo.\\
 Analogamente, quando il compilatore ottimizza il file utils.swift non conosce per quale tipo concreto il metodo viene chiamato, quindi può generare solamente una versione generica della funzione, rendendo il codice più lento rispetto ad uno ottimizzato per un tipo concreto.\\
-Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.\\
+Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.\\\\
 Con l'ottimizzazione per l'intero modulo (WMO), invece, il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
 \begin{figure}[H]
       \centering
@@ -455,7 +455,7 @@ func add (c1: Container<Int>, c2: Container<Int>) -> Int {
 }
 \end{lstlisting}
 Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'inlining tra più file sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio WMO; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di reference counting ridondanti.\\
-Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come side-effect derivante dalle altre ottimizzazioni. Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'inlining della funzione getElement, questa non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore dovesse decidere di non procedere con l'inlining della funzione, potrebbe comunque rimuovere la versione generica di getElement, poichè la funzione add utlizzerebbe solamente la versione specializzata.
+Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come side-effect derivante dalle altre ottimizzazioni.\\\\Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'inlining della funzione getElement, questa non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore dovesse decidere di non procedere con l'inlining della funzione, potrebbe comunque rimuovere la versione generica di getElement, poichè la funzione add utlizzerebbe solamente la versione specializzata.
 \subsubsection{Tempo di compilazione}
 Con l'ottimizzazione a file singolo il driver del compilatore inizia la compilazione per ogni file in un processo separato, che può essere eseguito in parallelo. Inoltre files non modificati dall'ultima compilazione possono essere riutilizzati senza ricompilare (compilazione incrementale); tutto ciò porta ad un tempo di compilazione notevolmente rapido.\\
 Come visto precedentemente la compilazione si divide in più fasi: parsing, check dei tipi, ottimizzazioni del linguaggio intermedio (SIL), backend LLVM: il parsing ed il check di tipi sono i meno dispendiosi; l'ottimizzazione del SIL tipicamente richiede un terzo del tempo totale di compilazione, mentre gli altri due terzi sono impegnati dal backend LLVM che opera ottimizzazioni di basso livello e genera il codice.\\
