@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  14 MAR 2017 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  15 MAR 2017 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -881,6 +881,9 @@ LaTeX Warning: Label `history' multiply defined.
 
 LaTeX Warning: Label `history' multiply defined.
 
+
+LaTeX Warning: Label `history' multiply defined.
+
 ))
 \openout1 = `tesi.aux'.
 
@@ -977,44 +980,44 @@ File: logouni.png Graphic file (type png)
 <use logouni.png>
 Package pdftex.def Info: logouni.png used on input line 7.
 (pdftex.def)             Requested size: 166.0173pt x 150.35909pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 34.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 21.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 34.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 34.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 21.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 34.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 21.
+(Font)              <17.28> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 21.
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+(Font)              <10> on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 21.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 34.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1186,7 +1189,7 @@ Overfull \hbox (2.449pt too wide) in paragraph at lines 398--399
 -mework Objective-
  []
 
-<immagini/single-file.png, id=885, 321.2pt x 334.24875pt>
+<immagini/single-file.png, id=884, 321.2pt x 334.24875pt>
 File: immagini/single-file.png Graphic file (type png)
 
 <use immagini/single-file.png>
@@ -1205,7 +1208,7 @@ e.2.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.421 struct 
              Container<T> { <./immagini/single-file.png>]
-<immagini/wmo.png, id=901, 321.2pt x 216.81pt>
+<immagini/wmo.png, id=900, 321.2pt x 216.81pt>
 File: immagini/wmo.png Graphic file (type png)
  <use immagini/wmo.png>
 Package pdftex.def Info: immagini/wmo.png used on input line 435.
@@ -1260,7 +1263,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[33] <immagini/ARC.jpg, id=955, 753.81625pt x 477.785pt>
+[33] <immagini/ARC.jpg, id=954, 753.81625pt x 477.785pt>
 File: immagini/ARC.jpg Graphic file (type jpg)
 
 <use immagini/ARC.jpg>
@@ -1307,7 +1310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 41.
 
-<immagini/array_add.png, id=961, 803.0pt x 540.0175pt>
+<immagini/array_add.png, id=960, 803.0pt x 540.0175pt>
 File: immagini/array_add.png Graphic file (type png)
 
 <use immagini/array_add.png>
@@ -1318,7 +1321,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 44--47
  [][] 
  []
 
-[35] <immagini/array_delete.png, id=966, 803.0pt x 540.0175pt>
+[35] <immagini/array_delete.png, id=965, 803.0pt x 540.0175pt>
 File: immagini/array_delete.png Graphic file (type png)
 
 <use immagini/array_delete.png>
@@ -1336,7 +1339,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 52--54
                                                   \fi \fi 
 l.56 \subsubsection
                    {Lettura di un elemento in un array} <./immagini/array_add.p
-ng>] <immagini/array_read.png, id=973, 803.0pt x 540.0175pt>
+ng>] <immagini/array_read.png, id=972, 803.0pt x 540.0175pt>
 File: immagini/array_read.png Graphic file (type png)
 
 <use immagini/array_read.png>
@@ -1354,7 +1357,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 59--61
                                                   \fi \fi 
 l.63 \subsubsection
                    {Ricerca di un elemento in un array} <./immagini/array_delet
-e.png>] <immagini/array_contains.png, id=979, 803.0pt x 540.0175pt>
+e.png>] <immagini/array_contains.png, id=978, 803.0pt x 540.0175pt>
 File: immagini/array_contains.png Graphic file (type png)
 
 <use immagini/array_contains.png>
@@ -1372,7 +1375,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 66--68
                                                   \fi \fi 
 l.70 \subsubsection
                    {Aggiornamento di un elemento in un array} <./immagini/array
-_read.png>] <immagini/array_update.png, id=985, 803.0pt x 540.0175pt>
+_read.png>] <immagini/array_update.png, id=984, 803.0pt x 540.0175pt>
 File: immagini/array_update.png Graphic file (type png)
 
 <use immagini/array_update.png>
@@ -1390,7 +1393,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 73--75
                                                   \fi \fi 
 l.77 \subsubsection
                    {Aggiunta di un elemento ad un dizionario} <./immagini/array
-_contains.png>] <immagini/dictionary_add.png, id=991, 803.0pt x 540.0175pt>
+_contains.png>] <immagini/dictionary_add.png, id=990, 803.0pt x 540.0175pt>
 File: immagini/dictionary_add.png Graphic file (type png)
 
 <use immagini/dictionary_add.png>
@@ -1408,7 +1411,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 80--82
                                                   \fi \fi 
 l.84 \subsubsection
                    {Ricerca di un elemento in un dizionario} <./immagini/array_
-update.png>] <immagini/dictionary_contains.png, id=997, 803.0pt x 540.0175pt>
+update.png>] <immagini/dictionary_contains.png, id=996, 803.0pt x 540.0175pt>
 File: immagini/dictionary_contains.png Graphic file (type png)
 
 <use immagini/dictionary_contains.png>
@@ -1428,7 +1431,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 87--89
 l.91 \subsubsection
                    {Rimozione di un elemento da un dizionario} <./immagini/dict
 ionary_add.png>]
-<immagini/dictionary_delete.png, id=1003, 803.0pt x 540.0175pt>
+<immagini/dictionary_delete.png, id=1002, 803.0pt x 540.0175pt>
 File: immagini/dictionary_delete.png Graphic file (type png)
 
 <use immagini/dictionary_delete.png>
@@ -1447,7 +1450,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 94--96
 l.98 \subsubsection
                    {Lettura di un elemento da un dizionario} <./immagini/dictio
 nary_contains.png>]
-<immagini/dictionary_read.png, id=1010, 803.0pt x 540.0175pt>
+<immagini/dictionary_read.png, id=1009, 803.0pt x 540.0175pt>
 File: immagini/dictionary_read.png Graphic file (type png)
 
 <use immagini/dictionary_read.png>
@@ -1466,7 +1469,7 @@ Overfull \hbox (11.49902pt too wide) in paragraph at lines 101--103
 l.105 \subsubsection
                     {Aggiornamento di un elemento di un dizionario} <./immagini
 /dictionary_delete.png>]
-<immagini/dictionary_update.png, id=1016, 803.0pt x 540.0175pt>
+<immagini/dictionary_update.png, id=1015, 803.0pt x 540.0175pt>
 File: immagini/dictionary_update.png Graphic file (type png)
 
 <use immagini/dictionary_update.png>
@@ -1511,7 +1514,7 @@ l.116
 
  (./capitolo4.tex
 Capitolo 4.
-<immagini/app_views.jpg, id=1031, 452.69125pt x 523.9575pt>
+<immagini/app_views.jpg, id=1030, 452.69125pt x 523.9575pt>
 File: immagini/app_views.jpg Graphic file (type jpg)
 
 <use immagini/app_views.jpg>
@@ -1548,7 +1551,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--20
                                                   \fi \fi 
 l.21 \newpage
               <./immagini/app_views.jpg>]
-<immagini/app_login.jpg, id=1042, 539.01375pt x 710.655pt>
+<immagini/app_login.jpg, id=1041, 539.01375pt x 710.655pt>
 File: immagini/app_login.jpg Graphic file (type jpg)
 
 <use immagini/app_login.jpg>
@@ -1559,14 +1562,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--28
 
  []
 
-<immagini/app_foto.jpg, id=1043, 534.99875pt x 709.65125pt>
+<immagini/app_foto.jpg, id=1042, 534.99875pt x 709.65125pt>
 File: immagini/app_foto.jpg Graphic file (type jpg)
 
 <use immagini/app_foto.jpg>
 Package pdftex.def Info: immagini/app_foto.jpg used on input line 31.
 (pdftex.def)             Requested size: 374.49657pt x 496.75249pt.
 
-<immagini/app_audio.jpg, id=1044, 536.0025pt x 712.6625pt>
+<immagini/app_audio.jpg, id=1043, 536.0025pt x 712.6625pt>
 File: immagini/app_audio.jpg Graphic file (type jpg)
 
 <use immagini/app_audio.jpg>
@@ -1579,7 +1582,7 @@ Package pdftex.def Info: immagini/app_audio.jpg used on input line 37.
                                                   \fi \fi 
 l.40 \end{figure}
                   <./immagini/app_login.jpg>]
-<immagini/app_video.jpg, id=1050, 537.00626pt x 710.655pt>
+<immagini/app_video.jpg, id=1049, 537.00626pt x 710.655pt>
 File: immagini/app_video.jpg Graphic file (type jpg)
 
 <use immagini/app_video.jpg>
@@ -1705,28 +1708,27 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20308 strings out of 493117
- 295083 string characters out of 6135433
+ 20305 strings out of 493117
+ 295041 string characters out of 6135433
  739208 words of memory out of 5000000
- 22778 multiletter control sequences out of 15000+600000
- 78636 words of font info for 74 fonts, out of 8000000 for 9000
+ 22776 multiletter control sequences out of 15000+600000
+ 72651 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,60p,1773b,3442s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/lm/lmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/lm/lmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr17.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/lm/lmtt10.pfb>
-Output written on tesi.pdf (57 pages, 1997594 bytes).
+14/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/lm/lmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/lm/lmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri10.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on tesi.pdf (57 pages, 1975962 bytes).
 PDF statistics:
- 1262 PDF objects out of 1440 (max. 8388607)
- 1161 compressed objects within 12 object streams
+ 1258 PDF objects out of 1440 (max. 8388607)
+ 1158 compressed objects within 12 object streams
  623 named destinations out of 1000 (max. 500000)
  584 words of extra memory for PDF output out of 10000 (max. 10000000)
 
