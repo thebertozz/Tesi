@@ -364,7 +364,7 @@ if let numero = Int(possibileNumero) {
 }
 \end{lstlisting}
 Il codice può essere interpretato in questo modo: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, allora assegna alla nuova costante chiamata numero il valore contenuto nell'optional. \\Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore.\\In uno statement si possono concatenare più optional binding separati da virgola e, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
-Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard. 
+Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard.\newpage
 \subsubsection{Tuples}
 Caratteristica non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo \textit{status-code} 404 dell'HTTP con una tupla in questo modo:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
@@ -428,8 +428,8 @@ struct Container<T> {
 \end{lstlisting}
 Quando il compilatore ottimizza il file main.swift non conosce come la funzione getElement sia implementata, conosce solo il fatto che è presente; viene quindi generata una chiamata al suddetto metodo.\\
 Analogamente, quando il compilatore ottimizza il file utils.swift non conosce per quale tipo concreto il metodo viene chiamato, quindi può generare solamente una versione generica della funzione, rendendo il codice più lento rispetto ad uno ottimizzato per un tipo concreto.\\
-Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.\\\\
-Con l'ottimizzazione per l'intero modulo (WMO), invece, il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
+Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.\newpage
+Attraverso l'ottimizzazione per l'intero modulo (WMO), invece, il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.80]{immagini/wmo.png}

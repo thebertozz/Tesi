@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  15 MAR 2017 00:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  15 MAR 2017 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -884,6 +884,15 @@ LaTeX Warning: Label `history' multiply defined.
 
 LaTeX Warning: Label `history' multiply defined.
 
+
+LaTeX Warning: Label `history' multiply defined.
+
+
+LaTeX Warning: Label `history' multiply defined.
+
+
+LaTeX Warning: Label `history' multiply defined.
+
 ))
 \openout1 = `tesi.aux'.
 
@@ -1130,7 +1139,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--186
  []
 
 [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
@@ -1206,11 +1215,12 @@ e.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.421 struct 
-             Container<T> { <./immagini/single-file.png>]
-<immagini/wmo.png, id=900, 321.2pt x 216.81pt>
+l.414 func 
+           add (c1: Container<Int>, c2: Container<Int>) -> Int { <./immagini/si
+ngle-file.png>] [27] <immagini/wmo.png, id=914, 321.2pt x 216.81pt>
 File: immagini/wmo.png Graphic file (type png)
- <use immagini/wmo.png>
+
+<use immagini/wmo.png>
 Package pdftex.def Info: immagini/wmo.png used on input line 435.
 (pdftex.def)             Requested size: 256.96034pt x 173.44823pt.
 
@@ -1220,22 +1230,18 @@ Underfull \hbox (badness 1038) in paragraph at lines 437--437
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--438
-
- []
-
-[27pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.442 \begin{lstlisting}
-                         <./immagini/wmo.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 457--459
 
  []
 
-[28]) [29] [30]
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.459 \subsubsection
+                    {Tempo di compilazione} <./immagini/wmo.png>]) [29]
+[30]
 \openout2 = `capitolo3.aux'.
 
  (./capitolo3.tex
@@ -1555,10 +1561,10 @@ l.21 \newpage
 File: immagini/app_login.jpg Graphic file (type jpg)
 
 <use immagini/app_login.jpg>
-Package pdftex.def Info: immagini/app_login.jpg used on input line 25.
-(pdftex.def)             Requested size: 377.30704pt x 497.45511pt.
+Package pdftex.def Info: immagini/app_login.jpg used on input line 26.
+(pdftex.def)             Requested size: 355.75017pt x 469.03375pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--28
+Underfull \hbox (badness 10000) in paragraph at lines 23--29
 
  []
 
@@ -1566,34 +1572,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--28
 File: immagini/app_foto.jpg Graphic file (type jpg)
 
 <use immagini/app_foto.jpg>
-Package pdftex.def Info: immagini/app_foto.jpg used on input line 31.
+Package pdftex.def Info: immagini/app_foto.jpg used on input line 32.
 (pdftex.def)             Requested size: 374.49657pt x 496.75249pt.
 
 <immagini/app_audio.jpg, id=1043, 536.0025pt x 712.6625pt>
 File: immagini/app_audio.jpg Graphic file (type jpg)
 
 <use immagini/app_audio.jpg>
-Package pdftex.def Info: immagini/app_audio.jpg used on input line 37.
+Package pdftex.def Info: immagini/app_audio.jpg used on input line 38.
 (pdftex.def)             Requested size: 375.19919pt x 498.86035pt.
  [49pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.40 \end{figure}
+l.41 \end{figure}
                   <./immagini/app_login.jpg>]
 <immagini/app_video.jpg, id=1049, 537.00626pt x 710.655pt>
 File: immagini/app_video.jpg Graphic file (type jpg)
 
 <use immagini/app_video.jpg>
-Package pdftex.def Info: immagini/app_video.jpg used on input line 43.
+Package pdftex.def Info: immagini/app_video.jpg used on input line 44.
 (pdftex.def)             Requested size: 375.90181pt x 497.45511pt.
  [50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.46 \end{figure}
+l.47 \end{figure}
                   <./immagini/app_foto.jpg>]) [51pdfTeX warning (ext4): destina
 tion with the same identifier (name{figure.4.4}) has been already used, duplica
 te ignored
@@ -1613,7 +1619,17 @@ l.35 \include{capitolo4}
 
  (./capitolo5.tex
 Capitolo 5.
-) [53
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--36
+
+ []
+
+[53
 
 
 
@@ -1655,13 +1671,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--18
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
 []$\T1/lmtt/m/n/10 https : / / developer . apple . com / library / prerelease /
  content / documentation /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--37
+[]$\T1/lmtt/m/n/10 https : / / yalantis . com / blog / is-[]swift-[]faster-[]th
+an-[]objective-[]c/$[] []$https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--37
+\T1/lmtt/m/n/10 / / github . com / Yalantis / DataBenchmarkObjc$[] []$https : /
+ / github . com / Yalantis /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--37
+
+ []
+
+
+Overfull \hbox (76.40161pt too wide) in paragraph at lines 38--42
+[]$\T1/lmtt/m/n/10 https : / / www . apple . com / pr / library / 2016 / 01 / 2
+6Apple-[]Reports-[]Record-[]First-[]Quarter-[]Results .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--42
 
  []
 
@@ -1688,6 +1732,24 @@ r (name{cite.history}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.39 \include{biblio}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{cite.history}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.39 \include{biblio}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{cite.history}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.39 \include{biblio}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{cite.history}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.39 \include{biblio}
                      ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
@@ -1698,7 +1760,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 44F6EE19D4BAA4EAD699C1BEB6F7CC1D;4874.
+(rerunfilecheck)             Checksum: 53938596C6912D1A545B965C66B91052;4835.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1710,7 +1772,7 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 Here is how much of TeX's memory you used:
  20305 strings out of 493117
  295041 string characters out of 6135433
- 739208 words of memory out of 5000000
+ 739205 words of memory out of 5000000
  22776 multiletter control sequences out of 15000+600000
  72651 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1725,10 +1787,10 @@ pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on tesi.pdf (57 pages, 1975962 bytes).
+Output written on tesi.pdf (57 pages, 1983168 bytes).
 PDF statistics:
- 1258 PDF objects out of 1440 (max. 8388607)
- 1158 compressed objects within 12 object streams
+ 1266 PDF objects out of 1440 (max. 8388607)
+ 1166 compressed objects within 12 object streams
  623 named destinations out of 1000 (max. 500000)
  584 words of extra memory for PDF output out of 10000 (max. 10000000)
 

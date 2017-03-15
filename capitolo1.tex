@@ -184,8 +184,7 @@ Questo comportamento ha caratteristiche particolari: potremmo far puntare un cer
 Lo svantaggio è che il tempo di esecuzione è leggermente maggiore di una chiamata diretta alla parte di codice; si tratta comunque di nanosecondi di differenza.\\
 \\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che:\\ \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
 \subsubsection{Protocolli}
-Permettono di implementare il concetto di ereditarietà multipla di specifica:\\
-un protocollo è una lista di metodi che una classe può implementare; i metodi possono essere resi opzionali grazie all'utilizzo della parola chiave \textit{@optional} prima della loro dichiarazione: 
+Un protocollo è una lista di metodi che una classe può implementare; i metodi possono essere resi opzionali grazie all'utilizzo della parola chiave \textit{@optional} prima della loro dichiarazione: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 @protocol AlarmProtocol <NSObject>
@@ -232,7 +231,7 @@ File .m:
 \subsubsection{Tipizzazione dinamica}
 Objective-C permette di inviare ad un oggetto un messaggio non specificato nella sua interfaccia ; quest'ultimo può a sua volta inviarlo ad un altro oggetto, che può rispondere correttamente o inviarlo a sua volta; questo concetto è chiamato \textit{forwarding}, ovvero inoltro o delega del messaggio.\\Per verificare se un dato oggetto può rispondere viene utilizzato il metodo di NSObject \textit{- (BOOL)respondsToSelector:(SEL)aSelector;}, che indica con un valore booleano se il ricevente implementa o eredita un metodo che può rispondere al messaggio.\\Alternativamente, è possibile usare un gestore degli errori nel caso il messaggio non possa essere inoltrato. Se l'oggetto non inoltra, non gestisce l'errore o non risponde viene generato un errore di run-time. 
 \subsubsection{Categories}
-Una categoria raccoglie implementazioni di metodi in file separati. La particolarità è che questi metodi sono aggiunti ad una data classe a run-time; ciò permette di aggiungere metodi ad una classe esistente senza doverla ricompilare o senza avere a disposizione il suo codice sorgente.\\I metodi inseriti nelle categorie diventano indistinguibili da quelli originari della classe quando il programma è in esecuzione.\\ Una categoria ha pieno accesso a tutte le variabili d'istanza della classe, incluse quelle private. 
+Una categoria raccoglie implementazioni di metodi in file separati. La particolarità è che questi metodi sono aggiunti ad una data classe a run-time; ciò permette di aggiungere metodi ad una classe esistente senza doverla ricompilare o senza avere a disposizione il suo codice sorgente.\\I metodi inseriti nelle categorie diventano indistinguibili da quelli originari della classe quando il programma è in esecuzione.\\ Una categoria ha pieno accesso a tutte le variabili d'istanza della classe, anche quelle private. 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //interfaccia della category che estende la classe NSString
