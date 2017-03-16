@@ -125,3 +125,5 @@
 \contentsline {chapter}{Ringraziamenti}{55}{section*.37}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Riferimenti bibliografici}{56}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendice}{57}{section*.41}
