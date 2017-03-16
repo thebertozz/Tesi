@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  15 MAR 2017 23:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  16 MAR 2017 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1646,6 +1646,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--37
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--37
+
+ []
+
 [54
 
 
@@ -1810,7 +1820,7 @@ Here is how much of TeX's memory you used:
  22776 multiletter control sequences out of 15000+600000
  72651 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,60p,1773b,3442s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,60p,1913b,3442s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/20
 14/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014/texmf-d
@@ -1821,7 +1831,7 @@ pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on tesi.pdf (57 pages, 1985482 bytes).
+Output written on tesi.pdf (57 pages, 1986078 bytes).
 PDF statistics:
  1266 PDF objects out of 1440 (max. 8388607)
  1166 compressed objects within 12 object streams
