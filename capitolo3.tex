@@ -5,7 +5,7 @@ Quest'ultimo elimina inoltre alcune delle convenzioni utilizzate nei linguaggi d
 Un'altra differenza sostanziale rispetto ad Objective-C è la sintassi usata per le chiamate di funzione: viene utilizzato il punto per identificare la funzione e le virgole per separare gli argomenti della stessa.
 \subsection{Manutenzione del codice sorgente}
 Objective-C non può evolvere senza attendere l'evoluzione del linguaggio C sottostante; quest'ultimo richiede al programmatore il mantenimento di due files separati per migliorare il tempo di compilazione e l'efficienza di esecuzione, problema che si ripercuote su Obj-C.\\
-In Swift questo problema non si presenta ed il compilatore è in grado di riconoscere automaticamente le dipendenze tra i file costituenti di un progetto, utilizzando inoltre il meccanismo di \textit{build} incrementali.
+In Swift questo problema non si presenta ed il compilatore è in grado di riconoscere automaticamente le dipendenze tra i files costituenti di un progetto, utilizzando inoltre il meccanismo di \textit{build} incrementali.
 \subsection{Tooling}
 I meccanismi ausiliari di aiuto alla programmazione, quali evidenziazione della sintassi, i suggerimenti ed il \textit{debugger} di Swift non sono ancora alla pari di quelli Objective-C, fatto che si rende evidente confrontando due files scritti nei due linguaggi all'interno di XCode. Inoltre, gli strumenti di \textit{refactoring} non sono ancora disponibili per Swift.
 \subsection{Runtime}
@@ -110,9 +110,7 @@ Per gli array contenenti già elementi l'operazione in Swift è più veloce di d
             \caption{\textit{Complessità: costante per Swift, lineare per Objective-C. Swift risulta 2 volte più rapido.}}
 \end{figure}
 \subsubsection{Conclusioni sulle performance}
-Le operazioni sugli Array sono dalle due alle quattro volte più rapide in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero pre-inizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo.\\\\Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C.\\
-\\Gli Array risultano la struttura dati da preferire in Swift per tutte le operazioni (eccetto la ricerca) se si ha un gran numero di elementi\\\\
-I grafici delle funzioni risultano particolari per un array in stile C, questo perché a livello implementativo non è un vero array C: Objective-C utilizza un complesso insieme di strutture dati che non sono Array nativi ma che espongono funzionalità da tale.
+Le operazioni sugli Array sono dalle due alle quattro volte più rapide in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero pre-inizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo. Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C. Gli Array risultano la struttura dati da preferire in Swift per tutte le operazioni (eccetto la ricerca) se si ha un gran numero di elementi. I grafici delle funzioni risultano particolari per un array in stile C, questo perché a livello implementativo non è un vero array C: Objective-C utilizza un complesso insieme di strutture dati che non sono Array nativi ma che espongono funzionalità da tale.
     
     
     

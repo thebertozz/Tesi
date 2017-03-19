@@ -3,13 +3,13 @@ Durante il tirocinio è stata sviluppata un'applicazione scritta in Swift, con l
 \begin{itemize}
 \item La connessione ad un web server esterno inserendo username e password per accedere ad una libreria di dati multimediali
 \item La visualizzazione delle immagini della libreria ed il salvataggio in una memoria cache, con tempo relativo alla singola sessione per una visualizzazione successiva
-\item La riproduzione di file audio tramite il player di sistema, anche in background con lo schermo spento, e l'acceso ai controlli sulla schermata di blocco
+\item La riproduzione di files audio tramite il player di sistema, anche in background con lo schermo spento, e l'acceso ai controlli sulla schermata di blocco
 \item La riproduzione di video della libreria tramite il player di sistema, anche in modalità Picture-in-Picture (PiP) se l'applicazione viene installata su iPad con il sistema operativo iOS 9.0 o successivi
 \end{itemize}
 \section{Implementazione}
 L'applicazione è stata scritta in Swift 2.0 utilizzando XCode versione 7.0; per la parte web server è stato utilizzato un Raspberry Pi versione 1 con installato Debian 7 (denominato Wheezy) ed il server Apache 2.4. Per l'accesso ai dati dall'esterno è stato configurato sul server un client no-ip.\\\\
 Sono stati inoltre utilizzati \textit{frameworks} esterni installati tramite il gestore di dipendenze CocoaPods ed una libreria scritta in Objective-C integrata tramite un \textit{bridging-header}.\\\\
-Questi è un file .h che permette l'importazione di file interfaccia scritti in Objective-C per l'utilizzo in files scritti in linguaggio Swift, utilizzando la direttiva import del suddetto linguaggio.\\\\
+Questi è un file .h che permette l'importazione di files interfaccia scritti in Objective-C per l'utilizzo in files scritti in linguaggio Swift, utilizzando la direttiva import del suddetto linguaggio.\\\\
 L'interfaccia è stata implementata tramite un \textit{TabViewController}, contenente i tre \textit{UITableViewController} per le rispettive funzionalità denominate Immagini, Musica e Video.\\\\
 Per la gestione della navigazione è stata utilizzata la modalità di \textit{segue} delle viste di iOS: fornendo un identificativo per la connessione tra un \textit{ViewController} ed un altro. Ciò permette, tramite la funzione \textit{prepare(for segue: UIStoryboardSegue, sender: Any?)} di intercettare l'instanziazione della nuova vista, e passare dati utili alla sua implementazione.\ 
 \begin{figure}[H]

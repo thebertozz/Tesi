@@ -4,7 +4,7 @@ Questo linguaggio è una combinazione delle migliori caratteristiche di C ed Obj
 \section{Caratteristiche}
 \subsection{Sintassi}
 \subsubsection{Implementazione di una classe}
-In Swift, al contrario di Objective-C, non esistono due file distinti per l'interfaccia e l'implementazione, ma uno solo caratterizzato dall'estensione .swift.\\
+In Swift, al contrario di Objective-C, non esistono due files distinti per l'interfaccia e l'implementazione, ma uno solo caratterizzato dall'estensione .swift.\\
 Esempio di creazione di una nuova classe:\\
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -350,33 +350,7 @@ enum OptionalValue<Wrapped> {
 var possibileIntero: OptionalValue<Int> = .none
 possibileIntero = .some(100)
 \end{lstlisting}
-Si utilizza la parola chiave \textit{where} prima del corpo per indicare una lista di requisiti, per esempio per indicare che il tipo deve conformarsi ad un \textit{protocol}, per richiedere che due tipi siano uguali o per indicare che una classe deve avere una particolare superclasse: 
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-func elementiComuni<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool {
-	
-	where T.Iterator.Element: Equatable,
-		  T.Iterator.Element == U.Iterator.Element {
-		  
-		  	for lhsItem in lhs {
-		  	
-		  		for rhsItem in rhs {
-		  		
-		  			if lhsItem == rhsItem {
-		  				
-		  				return true
-		  			}
-		  		}
-		  	}
-		  }
-		  
-		  return false
-}
-
-//chiamata alla funzione 
-
-elementiComuni([1,2,3], [3])
-\end{lstlisting}
+Viene utilizzata la parola chiave \textit{where} prima del corpo per indicare una lista di requisiti, per esempio per indicare che il tipo deve conformarsi ad un \textit{protocol}, per richiedere che due tipi siano uguali o per indicare che una classe deve avere una particolare superclasse.
 \subsection{Compilatore e libreria standard}
 \subsubsection{Architettura del compilatore}
 Il compilatore di Swift è composto dai seguenti componenti principali:
@@ -388,7 +362,7 @@ Il compilatore di Swift è composto dai seguenti componenti principali:
 \item Trasformazioni SIL: questo strumento esegue ulteriori diagnostiche che influenzano la correttezza del programma (come ad esempio l'uso di variabili non inizializzate). Il risultato finale di queste trasformazioni è SIL "canonico".
 \item Ottimizzazioni SIL: questa fase esegue ulteriori ottimizzazioni specifiche di alto livello, quali ARC (\textit{Automatic Reference Counting}) per la gestione della memoria, de-virtualizzazione e specializzazione dei tipi \textit{generics}.
 \item Generazione IR LLVM: IR significa \textit{Intermediate Representation}, o rappresentazione intermedia. Questa fase trasforma il SIL in LLVM IR e, giunti a questa fase, LLVM procede ad ottimizzare il codice e genera il codice macchina.
-\end{itemize}
+\end{itemize}\newpage
 \subsubsection{Libreria standard Swift}
 La libreria standard Swift comprende un certo numero di tipi di dati, protocolli e funzioni, compresi i tipi fondamentali (ad esempio, Int, Double), collezioni (Array, Dizionario) insieme ai protocolli che li descrivono e gli algoritmi che operano su di essi, i caratteri, le stringhe e le primitive di basso livello (ad esempio, UnsafeMutablePointer).\\
 Il \textit{repository} della libreria standard viene ulteriormente suddiviso:
@@ -429,7 +403,7 @@ struct Container<T> {
 Quando il compilatore ottimizza il file main.swift non conosce come la funzione getElement sia implementata, conosce solo il fatto che è presente; viene quindi generata una chiamata al suddetto metodo.\\
 Analogamente, quando il compilatore ottimizza il file utils.swift non conosce per quale tipo concreto il metodo viene chiamato, quindi può generare solamente una versione generica della funzione, rendendo il codice più lento rispetto ad uno ottimizzato per un tipo concreto.\\
 Anche solamente uno statement \textit{return} in getElement necessita di un \textit{lookup} di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di \textit{reference counting}.\newpage
-Attraverso l'ottimizzazione per l'intero modulo (\textit{WMO}), invece, il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
+Attraverso l'ottimizzazione per l'intero modulo (\textit{WMO}), invece, il compilatore ottimizza tutti i files di un modulo nella loro interezza: 
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.80]{immagini/wmo.png}
@@ -454,13 +428,13 @@ func add (c1: Container<Int>, c2: Container<Int>) -> Int {
   return c1.element + c2.element
 }
 \end{lstlisting}
-Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'\textit{inlining} tra più file sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio \textit{WMO}; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di \textit{reference counting} ridondanti.\\
+Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'\textit{inlining} tra più files sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio \textit{WMO}; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di \textit{reference counting} ridondanti.\\
 Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come effetto collaterale derivante dalle altre ottimizzazioni.\\\\Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'\textit{inlining} della funzione getElement, questa non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore dovesse decidere di non procedere con l'\textit{inlining} della funzione, potrebbe comunque rimuovere la versione generica di getElement, poichè la funzione add utlizzerebbe solamente la versione specializzata.
 \subsubsection{Tempo di compilazione}
 Con l'ottimizzazione a file singolo il \textit{driver} del compilatore inizia la compilazione per ogni file in un processo separato, che può essere eseguito in parallelo. Inoltre files non modificati dall'ultima compilazione possono essere riutilizzati senza ricompilare (compilazione incrementale); tutto ciò porta ad un tempo di compilazione notevolmente rapido.\\
 Come visto precedentemente la compilazione si divide in più fasi: \textit{parsing}, check dei tipi, ottimizzazioni del linguaggio intermedio (SIL), \textit{backend} LLVM: il \textit{parsing} ed il controllo di tipi sono i meno dispendiosi; l'ottimizzazione del SIL tipicamente richiede un terzo del tempo totale di compilazione, mentre gli altri due terzi sono impegnati dal \textit{backend} LLVM che opera ottimizzazioni di basso livello e genera il codice.\\
 Con \textit{WMO}, dopo aver effettuato le ottimizzazioni sull'intero modulo nella fase di ottimizzazione del linguaggio intermedio, il modulo è separato di nuovo in parti multiple. I processi di LLVM processano le parti in \textit{thread} multipli e inoltre evitano di riprocessare le parti che non sono cambiate rispetto all'ultima compilazione.
-In conclusione \textit{WMO} è un modo veloce ed efficace per ottenere ottime prestazioni, senza l'obbligo di gestire il codice Swift in vari file in un modulo. Se le ottimizzazioni, come descritto precedentemente, riescono ad essere efficaci per buona parte del codice, si ottengono incrementi prestazionali fino a cinque volte rispetto alla compilazione a file singolo. 
+In conclusione \textit{WMO} è un modo veloce ed efficace per ottenere ottime prestazioni, senza l'obbligo di gestire il codice Swift in vari files in un modulo. Se le ottimizzazioni, come descritto precedentemente, riescono ad essere efficaci per buona parte del codice, si ottengono incrementi prestazionali fino a cinque volte rispetto alla compilazione a file singolo. 
 \subsection{Utilizzo in iOS e frameworks Cocoa}
 Al momento l'utilizzo di Swift nei \textit{frameworks} di supporto al sistema operativo e nell'SDK è molto limitato, poichè il linguaggio non ha ancora raggiunto una maturità tale da poter avere delle ABI (\textit{Application Binary Interface}) stabili, in quanto ogni singola versione pubblicata fino ad ora ha modificato interfacce, dipendenze e sintassi, rendendo necessaria una revisione del codice già scritto per la versione precedente.\\
 A tempo di esecuzione, i binari Swift interagiscono con le altre librerie e gli altri componenti attraverso le \textit{ABI}, ovvero le specifiche alle quali i binari compilati indipendentemente devono conformarsi per per essere collegati ed eseguiti: queste entità devono conformarsi su come chiamare le funzioni, come i dati sono rapppresentati in memoria, dove sono salvati i metadati e come vanno acceduti.\\
