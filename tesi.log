@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  16 MAR 2017 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  19 MAR 2017 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1624,13 +1624,18 @@ l.36 \include{capitolo4}
 
  (./capitolo5.tex
 Capitolo 5.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 2--37
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--37
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
@@ -1639,6 +1644,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--37
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+) [54]
 \openout2 = `conclusioni.aux'.
 
  (./conclusioni.tex)
@@ -1661,7 +1676,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--38
 
  []
 
-[54
+[55
 
 
 
@@ -1693,7 +1708,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--39
 
  []
 
-[55
+[56
 
 
 
@@ -1758,7 +1773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--42
 
  []
 
-) [56
+) [57
 
 
 
@@ -1802,7 +1817,7 @@ l.40 \include{biblio}
                      ]
 \openout2 = `appendice.aux'.
 
- (./appendice.tex) [57
+ (./appendice.tex) [58
 
 
 
@@ -1826,9 +1841,9 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20411 strings out of 493117
- 296572 string characters out of 6135433
- 742947 words of memory out of 5000000
+ 20412 strings out of 493117
+ 296579 string characters out of 6135433
+ 743487 words of memory out of 5000000
  22868 multiletter control sequences out of 15000+600000
  72969 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1844,10 +1859,10 @@ local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (58 pages, 2008139 bytes).
+Output written on tesi.pdf (59 pages, 2009599 bytes).
 PDF statistics:
- 1282 PDF objects out of 1440 (max. 8388607)
- 1180 compressed objects within 12 object streams
- 626 named destinations out of 1000 (max. 500000)
+ 1286 PDF objects out of 1440 (max. 8388607)
+ 1183 compressed objects within 12 object streams
+ 627 named destinations out of 1000 (max. 500000)
  592 words of extra memory for PDF output out of 10000 (max. 10000000)
 

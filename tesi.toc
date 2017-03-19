@@ -120,10 +120,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Il futuro della piattaforma iOS}{53}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{54}{section*.35}
+\contentsline {chapter}{Conclusioni}{55}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Ringraziamenti}{55}{section*.37}
+\contentsline {chapter}{Ringraziamenti}{56}{section*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{56}{section*.39}
+\contentsline {chapter}{Riferimenti bibliografici}{57}{section*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendice}{57}{section*.41}
+\contentsline {chapter}{Appendice}{58}{section*.41}
