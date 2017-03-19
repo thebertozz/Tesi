@@ -4,7 +4,7 @@ Questo linguaggio è una combinazione delle migliori caratteristiche di C ed Obj
 \section{Caratteristiche}
 \subsection{Sintassi}
 \subsubsection{Implementazione di una classe}
-In Swift, al contrario di Objective-C, non esistono due file distinti per l'interfaccia e l'implementazione, ma uno solo con l'estensione .swift\\
+In Swift, al contrario di Objective-C, non esistono due file distinti per l'interfaccia e l'implementazione, ma uno solo caratterizzato dall'estensione .swift.\\
 Esempio di creazione di una nuova classe:\\
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -58,7 +58,7 @@ class Persona {
 }
 \end{lstlisting}
 \subsubsection{Dichiarazione e definizione dei metodi}
-Una dichiarazione di funzione (metodo) ha la seguente sintassi: 
+Una dichiarazione di metodo ha la seguente sintassi: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Nell'ordine: func nomeMetodo(nomeArg1:tipoArg1) -> tipoDiRitorno
@@ -81,7 +81,7 @@ func calcolaEta(dataDiNascita: NSDate) -> Int
 	return eta;
 }
 \end{lstlisting}
-Le funzioni in Swift sono trattate come oggetti, ciò significa che una funzione può ritornare un'altra funzione: 
+I metodi in Swift sono trattati come oggetti, ciò significa che un metodo può ritornare un metodo a sua volta: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 func creaIncrementatore() -> ((Int) -> Int) {
@@ -99,7 +99,7 @@ var incrementatore = creaIncrementatore()
 incrementatore(7)
 \end{lstlisting}
 \subsubsection{Closures}
-Le funzioni sono un caso speciale di "\textit{closure}": il codice in una \textit{closure} ha accesso a variabili e funzioni che sono disponibili nel suo scope, anche se viene eseguita in uno scope diverso. Una \textit{closure} viene definita dalla sintassi \{ \}, utilizzando il separatore \textit{in} per gli argomenti e il tipo di ritorno dal corpo:\\\\ 
+I metodi sono un caso speciale di "\textit{closure}": il codice in una \textit{closure} ha accesso a variabili e funzioni che sono disponibili nel suo scope, anche se viene eseguita in uno scope diverso. Una \textit{closure} viene definita dalla sintassi \{ \}, utilizzando il separatore \textit{in} per gli argomenti e il tipo di ritorno dal corpo:\\\\ 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 var numeri = [2,25,21,89,90]
@@ -115,7 +115,7 @@ Esistono varie modalità per scrivere le \textit{closure}: quando il tipo è gi�
 \begin{lstlisting}
 let numeriInMap = numeri.map({ numero in 3 * numero })
 \end{lstlisting}
-Ci si può riferire ai parametri per numero invece che per nome, approccio utile specialmente in closure che richiedono poco codice; una closure passata come ultimo argomento di una funzione può essere scritta immediatamente dopo le parentesi e, se quest'ultima è l'unico argomento della funzione stessa, si possono omettere le parentesi tonde: 
+Ci si può riferire ai parametri per numero invece che per nome, approccio utile specialmente in \textit{closure} che richiedono poco codice; una \textit{closure} passata come ultimo argomento di una funzione può essere scritta immediatamente dopo le parentesi e, se quest'ultima è l'unico argomento della funzione stessa, si possono omettere le parentesi tonde: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //ordino i numeri in modo crescente
@@ -123,7 +123,7 @@ Ci si può riferire ai parametri per numero invece che per nome, approccio utile
 let numeriOrdinati = numeri.sorted { $0 > $1 }
 \end{lstlisting}
 \subsubsection{Enumerazioni}
-La sintassi enum è utilizzata per dichiarare le enumerazioni in Swift. La particolarità rispetto ad Objective-C è che queste possono contenere metodi:
+La sintassi \textit{enum} è utilizzata per dichiarare le enumerazioni in Swift. La particolarità rispetto ad Objective-C è che queste possono contenere metodi:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 enum TipologieDiCase {
@@ -150,8 +150,57 @@ enum TipologieDiCase {
 let villa = TipologieDiCase.villa
 let descrizioneVilla = villa.descrizione()
 \end{lstlisting}
+\subsubsection{Optionals}
+Questo tipo è un pilastro portante di Swift, in quanto viene utilizzato in tutti i casi in cui il valore di ritorno potrebbe essere nullo (\textit{nil}). La logica di funzionamento è la seguente: o esiste un tipo di ritorno, e quindi si utilizza l'\textit{unwrapping} per accedere al valore, o non c'è valore alcuno.\\\\
+Il concetto di \textit{optional} non esiste in C o Objective-C. Ciò che ci si avvicina maggiormente è l'abilità di ritornare \textit{nil} da un metodo che altrimenti ritornerebbe un oggetto, con \textit{nil} a significare l'assenza di un oggetto valido.\\\\Quanto appena descritto vale solamente per gli oggetti (non \textit{structs}, tipi C  o \textit{enum}); per questi i metodi Objective-C ritornano solamente un valore speciale (come per esempio NSNotFound).\\Ciò implica che il chiamante dei metodi sappia che c'è uno speciale valore da verificare, mentre l'approccio di Swift permette di indicare l'assenza di qualsiasi valore in assoluto, senza la necessità per speciali costanti.\\\\
+In questo esempio vediamo come gli \textit{optional} possano essere utilizzati per gestire il caso di assenza di valore. Il tipo Int di Swift ha un costruttore che converte un tipo String in un valore di tipo Int; questa conversione può fallire, perciò viene utilizzato un tipo \textit{optional}:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let possibileNumero = "123"
+let numeroConvertito = Int(possibileNumero)
+//numeroConvertito e' di tipo Int?, che si legge come "optional Int"
+\end{lstlisting} 
+Poichè il costruttore può fallire, questi ritorna un tipo \textit{optional} Int, indicato da Int?. Il punto di domanda indica che il valore contiene un tipo \textit{optional}, a significare che potrebbe contenere un valore Int o nessun valore.\\
+Utilizzando la speciale parola chiave \textit{nil}, si indica che un tipo optional non ha valore alcuno. \textit{nil} non può essere utilizzato con constanti e variabili non \textit{optional}.
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+var codiceRispostaServer: Int? = nil
+\end{lstlisting}
+Se viene creata una variabile \textit{optional}, alla quale non si assegna alcun valore, a quest'ultima viene automaticamente assegnato \textit{nil}.\\\\Il \textit{nil} di Swift non è però equivalente a quello di Objective-C: in quest ultimo, \textit{nil} è un puntatore ad un oggetto non esistente, in Swift non è invece un puntatore, ma l'assenza di valore alcuno. \textit{Optionals} di qualunque tipo possono essere settati a \textit{nil}, non solamente oggetti.\\
+Per verificare la presenza di valore in un tipo \textit{optional} è possibile usare lo statement \textit{if} in questo modo: 
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+if numeroConvertito != nil {
+
+	//numero convertito contiene un valore
+}
+\end{lstlisting}
+Alternativamente è possibile utilizzare il simbolo !, indicato come \textit{forced unwrapping} del tipo \textit{optional}; questo approccio è rischioso e porta spesso ad errori a \textit{runtime}.
+\\\\Viene utilizzata molto più frequentemente la sintassi dell'\textit{optional binding}, per verificare se una certa variabile \textit{optional} contiene un valore e, se presente, assegnarlo ad una costante o variabile temporanea. Viene utilizzato con gli statement \textit{if} e \textit{while}:
+\begin{lstlisting}
+if let numero = Int(possibileNumero) {
+	//se entro nel blocco significa che possibileNumero 
+	//contiene un intero poiche' la conversione ad Int va a buon fine
+} else {
+	//possibileNumero non e' stato convertito ad Int
+}
+\end{lstlisting}
+Il codice può essere interpretato in questo modo: se l'\textit{optional} Int ritornato da Int(possibileNumero) contiene un valore, allora viene assegnato alla nuova costante chiamata numero il valore contenuto nell'\textit{optional}. \\Questa costante è già stata inizializzata con il valore contenuto all'interno dell'\textit{optional}, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore.\\In uno statement si possono concatenare più \textit{optional binding} separati da virgola e, se almeno uno di questi valori è \textit{nil} o una condizione booleana valuta a \textit{false}, l'intera condizione dello statement viene considerata falsa.\\
+Le costanti e le variabili create tramite l'\textit{optional binding} in uno statement \textit{if} sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement \textit{guard}.\newpage
+\subsubsection{Tuples}
+Caratteristica non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo \textit{status-code} 404 dell'HTTP con una tupla in questo modo:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let errore404http = (404, "Not found")
+\end{lstlisting}
+La tupla (404, "Not found") raggruppa insieme un tipo Int e uno String; si può creare qualsiasi permutazione di tipi. Per ottenere i singoli valori da una tupla, quest'ultima deve essere scomposta:
+\lstset{language=[Objective]C, breakindent=40pt, breaklines}
+\begin{lstlisting}
+let (statusCode, statusMessage) = errore404http
+\end{lstlisting}
+Questo particolare tipo è utile come valore di ritorno dalle funzioni, per esempio una funzione che ha il compito di caricare una pagina web potrebbe usare la tupla sopra descritta per indicare il successo o il fallimento del caricamento, fornendo più informazioni rispetto ad un valore di ritorno singolo di un singolo tipo.
 \subsubsection{Protocolli ed estensioni}
-Un protocollo definisce un'interfaccia di metodi ed altri eventuali requisiti che definiscono una particolare funzionalità. Quest'ultimo può essere quindi adottato da una classe e, a differenza di Objective-C, anche da struct o enum che ne forniranno l'implementazione:
+Un protocollo definisce un'interfaccia di metodi ed altri eventuali requisiti che definiscono una particolare funzionalità. Quest'ultimo può essere quindi adottato da una classe e, a differenza di Objective-C, anche da \textit{struct} o \textit{enum} che ne forniranno l'implementazione:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 protocol ProtocolloDiNavigazioni {
@@ -194,7 +243,7 @@ class MenuPrincipale: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 }
 \end{lstlisting}
-Le estensioni, come le categories di Objective-C, sono invece un modo per aggiungere funzionalità ad un tipo esistente, come nuovi metodi e \textit{computed properties}:
+Le estensioni, come le \textit{categories} di Objective-C, sono invece un modo per aggiungere funzionalità ad un tipo esistente, come nuovi metodi e \textit{computed properties}:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Estensione che aggiunge un effetto di blur ad una imageView
@@ -213,7 +262,7 @@ extension UIImageView
 let containerImmagine = UIImageView()
 containerImmagine.image = UIImage(named: "beer2beerlogo.jpg")
 containerImmagine.aggiungiBlur()
-\end{lstlisting}
+\end{lstlisting}\newpage
 \subsubsection{Gestione degli errori}
 Gli errori vengono rappresentati utilizzando un qualsiasi tipo che si conformi al protocollo \textit{Error}; la parola chiave \textit{throws} viene utilizzata per indicare che una funzione può ritornare un errore, utilizzando la parola chiave \textit{throw}. Se un errore viene lanciato dall'interno di una funzione, quest'ultima ritorna immediatamente e l'errore viene gestito dalla funzione chiamante:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
@@ -261,7 +310,7 @@ Si possono inoltre utilizzare più blocchi \textit{catch} per gestire errori spe
 			print("Aprire il cassetto")
 		}
 \end{lstlisting}
-Un altra modalità per la gestione degli errori è l'utilizzo della la parola chiave \textit{try?} per convertire il risultato in un tipo \textit{optional}: se la funzione lancia un errore, questo specifico errore è ignorato e la funzione ritorna nil; alternativamente il risultato è un optional contenente il valore ritornato dalla funzione:
+Un altra modalità per la gestione degli errori è l'utilizzo della la parola chiave \textit{try?} per convertire il risultato in un tipo \textit{optional}: se la funzione lancia un errore, questo specifico errore è ignorato e la funzione ritorna \textit{nil}; alternativamente il risultato è un \textit{optional} contenente il valore ritornato dalla funzione:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 let foglioStampato = try? invia(lavoro: 1984, allaStampante: "Sala meeting")
@@ -287,7 +336,7 @@ func creaArray<Elemento>(ripeti	elemento: Elemento, numeroDiVolte: Int) -> [Elem
 
 creaArray(ripeti: "Tick tock", numeroDiVolte: 3)
 \end{lstlisting}
-Si possono implementare \textit{generics} di funzioni o di classi, enumerazioni e struct:
+Si possono implementare \textit{generics} di funzioni o di classi, \textit{enum} e \textit{struct}:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Reimplementazione del tipo optional della libreria standard di Swift
@@ -328,86 +377,37 @@ func elementiComuni<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool {
 
 elementiComuni([1,2,3], [3])
 \end{lstlisting}
-\subsubsection{Optionals}
-Questo tipo è un pilastro portante di Swift, in quanto viene utilizzato in tutti i casi in cui il valore di ritorno potrebbe essere nullo (nil). La logica di funzionamento è la seguente: o esiste un tipo di ritorno, e quindi si utilizza l'unwrapping per accedere al valore, o non c'è valore alcuno.\\\\
-Il concetto di optional non esiste in C o Objective-C. Ciò che ci si avvicina maggiormente è l'abilità di ritornare nil da un metodo che altrimenti ritornerebbe un oggetto, con nil a significare l'assenza di un oggetto valido.\\\\Quanto appena descritto vale solamente per gli oggetti (non structs, tipi C  o enumerativi); per questi i metodi Objective-C ritornano solamente un valore speciale (come per esempio NSNotFound).\\Ciò implica che il chiamante dei metodi sappia che c'è uno speciale valore da verificare, mentre l'approccio di Swift permette di indicare l'assenza di qualsiasi valore in assoluto, senza la necessità per speciali costanti.\\\\
-In questo esempio vediamo come gli optional possano essere utilizzati per gestire il caso di assenza di valore. Il tipo Int di Swift ha un costruttore che converte un tipo String in un valore di tipo Int; questa conversione può fallire, perciò viene utilizzato un tipo optional:
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-let possibileNumero = "123"
-let numeroConvertito = Int(possibileNumero)
-//numeroConvertito e' di tipo Int?, che si legge come "optional Int"
-\end{lstlisting} 
-Poichè il costruttore può fallire, questi ritorna un tipo optional Int, indicato da Int?. Il punto di domanda indica che il valore contiene un tipo optional, a significare che potrebbe contenere un valore Int o nessun valore.\\
-Utilizzando la speciale parola chiave nil, si indica che un tipo optional non ha valore alcuno. nil non può essere utilizzato con constanti e variabili non optional.
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-var codiceRispostaServer: Int? = nil
-\end{lstlisting}
-Se viene creata una variabile optional, alla quale non si assegna alcun valore, a quest'ultima viene automaticamente assegnato nil.\\\\Il nil di Swift non è però equivalente a quello di Objective-C: in quest ultimo, nil è un puntatore ad un oggetto non esistente, in Swift non è invece un puntatore, ma l'assenza di valore alcuno. Optionals di qualunque tipo possono essere settati a nil, non solamente oggetti.\\
-Per verificare la presenza di valore in un tipo optional è possibile usare lo statement if in questo modo: 
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-if numeroConvertito != nil {
-
-	//numero convertito contiene un valore
-}
-\end{lstlisting}
-Alternativamente è possibile utilizzare il simbolo !, indicato come \textit{forced unwrapping} del tipo optional; questo approccio è rischioso e porta spesso ad errori in runtime.
-\\\\Viene utilizzata molto più frequentemente la sintassi dell'optional binding, per verificare se una certa variabile optional contiene un valore e, se presente, assegnarlo ad una costante o variabile temporanea. Viene utilizzato con gli statement if e while:
-\begin{lstlisting}
-if let numero = Int(possibileNumero) {
-	//se entro nel blocco significa che possibileNumero 
-	//contiene un intero poiche' la conversione ad Int va a buon fine
-} else {
-	//possibileNumero non e' stato convertito ad Int
-}
-\end{lstlisting}
-Il codice può essere interpretato in questo modo: se l'optional Int ritornato da Int(possibileNumero) contiene un valore, allora assegna alla nuova costante chiamata numero il valore contenuto nell'optional. \\Questa costante è già stata inizializzata con il valore contenuto all'interno dell'optional, quindi non è necessario utilizzare la sintassi ! per forzare l'accesso al valore.\\In uno statement si possono concatenare più optional binding separati da virgola e, se almeno uno di questi valori è nil o una condizione booleana valuta a false, l'intera condizione dello statement viene considerata falsa.\\
-Le costanti e le variabili create tramite l'optional binding in uno statement if sono accessibili solamente all'interno dello statement stesso; per permettere l'accesso anche alle linee di codice che seguono lo statement, è necessario utilizzare lo statement guard.\newpage
-\subsubsection{Tuples}
-Caratteristica non presente in Objective-C, le tuple raggruppano più valori (di un tipo qualsiasi o tipi differenti) in un singolo valore composto. Per esempio, potremmo descrivere lo \textit{status-code} 404 dell'HTTP con una tupla in questo modo:
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-let errore404http = (404, "Not found")
-\end{lstlisting}
-La tupla (404, "Not found") raggruppa insieme un tipo Int e uno String; si può creare qualsiasi permutazione di tipi. Per ottenere i singoli valori da una tupla, quest'ultima deve essere scomposta:
-\lstset{language=[Objective]C, breakindent=40pt, breaklines}
-\begin{lstlisting}
-let (statusCode, statusMessage) = errore404http
-\end{lstlisting}
-Questo particolare tipo è utile come valore di ritorno dalle funzioni, per esempio una funzione che ha il compito di caricare una pagina web potrebbe usare la tupla sopra descritta per indicare il successo o il fallimento del caricamento, fornendo più informazioni rispetto ad un valore di ritorno singolo di un singolo tipo. 
 \subsection{Compilatore e libreria standard}
 \subsubsection{Architettura del compilatore}
 Il compilatore di Swift è composto dai seguenti componenti principali:
 \begin{itemize}
 \item Parser: è il componente responsabile della generazione dell'albero di sintassi astratta senza alcuna informazione semantica o di tipo, e genera errori in caso di problemi grammaticali nel sorgente.
-\item Analizzatore semantico: trasforma l'albero generato dal parser in un albero ben formato e con controllo sui tipi. Questa analisi include la type inference e, in caso di successo, indica che è sicuro generare il codice dall'albero appena creato.
+\item Analizzatore semantico: trasforma l'albero generato dal \textit{parser} in un albero ben formato e con controllo sui tipi. Questa analisi include la \textit{type inference} e, in caso di successo, indica che è sicuro generare il codice dall'albero appena creato.
 \item Clang importer: importa i moduli di Clang e mappa le API C o Objective-C nelle rispettive API Swift. Gli alberi risultanti vengono utilizzati dall'analizzatore semantico.
-\item Generatore SIL: SIL è l'acronimo di Swift Intermediate Language, ovvero un linguaggio intermedio di alto livello, specifico per l'analisi e l'ottimizzazione del codice. Questa fase trasforma l'albero di sintassi astratta creato dall'analizzatore in un cosiddetto SIL "grezzo".
+\item Generatore SIL: SIL è l'acronimo di \textit{Swift Intermediate Language}, ovvero un linguaggio intermedio di alto livello, specifico per l'analisi e l'ottimizzazione del codice. Questa fase trasforma l'albero di sintassi astratta creato dall'analizzatore in un cosiddetto SIL "grezzo".
 \item Trasformazioni SIL: questo strumento esegue ulteriori diagnostiche che influenzano la correttezza del programma (come ad esempio l'uso di variabili non inizializzate). Il risultato finale di queste trasformazioni è SIL "canonico".
-\item Ottimizzazioni SIL: questa fase esegue ulteriori ottimizzazioni specifiche di alto livello, quali Automatic Reference Counting per la gestione della memoria, devirtualizzazione e specializzazione dei tipi generics.
-\item Generazione IR LLVM: IR significa Intermediate Representation, o rappresentazione intermedia. Questa fase trasforma il SIL in LLVM IR e, giunti a questa fase, LLVM procede ad ottimizzare il codice e genera il codice macchina.
+\item Ottimizzazioni SIL: questa fase esegue ulteriori ottimizzazioni specifiche di alto livello, quali ARC (\textit{Automatic Reference Counting}) per la gestione della memoria, de-virtualizzazione e specializzazione dei tipi \textit{generics}.
+\item Generazione IR LLVM: IR significa \textit{Intermediate Representation}, o rappresentazione intermedia. Questa fase trasforma il SIL in LLVM IR e, giunti a questa fase, LLVM procede ad ottimizzare il codice e genera il codice macchina.
 \end{itemize}
 \subsubsection{Libreria standard Swift}
 La libreria standard Swift comprende un certo numero di tipi di dati, protocolli e funzioni, compresi i tipi fondamentali (ad esempio, Int, Double), collezioni (Array, Dizionario) insieme ai protocolli che li descrivono e gli algoritmi che operano su di essi, i caratteri, le stringhe e le primitive di basso livello (ad esempio, UnsafeMutablePointer).\\
-Il repository della libreria standard viene ulteriormente suddiviso:
+Il \textit{repository} della libreria standard viene ulteriormente suddiviso:
 \begin{itemize}
 \item Nucleo principale: include la definizione di tutti i tipi, protocolli e funzioni.
-\item Runtime: Il runtime di supporto è il componente che risiede nel mezzo tra il compilatore ed il nucleo della libreria standard. E' il responsabile dell'implementazione delle features dinamiche del linguaggio, come il casting  (ad esempio per gli operatori as! ed as?), i metadata dei tipi (per supportare i generics e la reflection) e la gestione della memoria (allocazione degli oggetti, reference counting). Differentemente dalle altre librerie di alto livello, il runtime è scritto quasi esclusivamente in linguaggio C++ o Objective-C.
-\item Overlays per SDK: componenti specifici per le piattaforme Apple, forniscono modifiche ed aggiunte specifiche per Swift ai framework Objective-C, per migliorarne la loro interoperabilità. 
+\item Runtime: Il \textit{runtime} di supporto è il componente che risiede nel mezzo tra il compilatore ed il nucleo della libreria standard. E' il responsabile dell'implementazione delle caratteristiche dinamiche del linguaggio, come il \textit{casting}  (ad esempio per gli operatori as! ed as?), i metadata dei tipi (per supportare i \textit{generics} e la \textit{reflection}) e la gestione della memoria (allocazione degli oggetti, \textit{reference counting}). Differentemente dalle altre librerie di alto livello, il \textit{runtime} è scritto quasi esclusivamente in linguaggio C++ o Objective-C.
+\item Overlays per SDK: componenti specifici per le piattaforme Apple, forniscono modifiche ed aggiunte specifiche per Swift ai \textit{framework} Objective-C, per migliorarne la loro interoperabilità. 
 \end{itemize}
 \subsubsection{Whole module optimization}
 Con la versione 3.0 di Swift è stata introdotta una modalità di ottimizzazione del compilatore che, dipendentemente dal progetto, permette miglioramenti delle performance significativi.\\
-Senza WMO viene effettuata una compilazione a singolo modulo:
-questi è un set di files Swift, ed ognuno viene compilato in una singola unità di distribuzione (un framework o un eseguibile). Nella compilazione a file singolo il compilatore è invocato separatamente per ogni file nel modulo: dopo la lettura ed il parsing del singolo file, il compilatore ottimizza il codice, genera il codice macchina e scrive il file oggetto corrispondente. Successivamente il linker unisce i file oggetto e genera la libreria condivisa o l'eseguibile.
+Senza \textit{WMO} viene effettuata una compilazione a singolo modulo:
+questi è un set di files Swift, ed ognuno viene compilato in una singola unità di distribuzione (un \textit{framework} od un eseguibile). Nella compilazione a file singolo il compilatore è invocato separatamente per ogni file nel modulo: dopo la lettura ed il \textit{parsing} del singolo file, il compilatore ottimizza il codice, genera il codice macchina e scrive il file oggetto corrispondente. Successivamente il \textit{linker} unisce i file oggetto e genera la libreria condivisa o l'eseguibile.
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.80]{immagini/single-file.png}
             \vspace{0.8cm}
             \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione per ogni singolo file}}
 \end{figure}
-Questa compilazione singola limita le ottimizzazioni inter funzione (come l'inlining o la specializzazione dei generics) alle funzioni chiamate all'interno dello stesso file.\\Come esempio, assumiamo che un file di un modulo  (chiamato utils.swift), contenga una struttura dati generica (chiamata Container<T>), con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
+Questa compilazione singola limita le ottimizzazioni inter funzione (come l'\textit{inlining} o la specializzazione dei \textit{generics}) alle funzioni chiamate all'interno dello stesso file.\\Come esempio, assumiamo che un file di un modulo  (chiamato utils.swift), contenga una struttura dati generica (chiamata Container<T>), con un metodo chiamato getElement. Questo metodo è chiamato nel modulo, ad esempio nel file main.swift:
 \begin{lstlisting}
 //main.swift:
 
@@ -428,8 +428,8 @@ struct Container<T> {
 \end{lstlisting}
 Quando il compilatore ottimizza il file main.swift non conosce come la funzione getElement sia implementata, conosce solo il fatto che è presente; viene quindi generata una chiamata al suddetto metodo.\\
 Analogamente, quando il compilatore ottimizza il file utils.swift non conosce per quale tipo concreto il metodo viene chiamato, quindi può generare solamente una versione generica della funzione, rendendo il codice più lento rispetto ad uno ottimizzato per un tipo concreto.\\
-Anche solamente uno statement return in getElement necessita di un lookup di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di reference counting.\newpage
-Attraverso l'ottimizzazione per l'intero modulo (WMO), invece, il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
+Anche solamente uno statement \textit{return} in getElement necessita di un \textit{lookup} di tipo per verificare come copiare l'elemento; può trattarsi di un tipo Int o di un tipo più dispendioso in termini di risorse che richiede operazioni di \textit{reference counting}.\newpage
+Attraverso l'ottimizzazione per l'intero modulo (\textit{WMO}), invece, il compilatore ottimizza tutti i file di un modulo nella loro interezza: 
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.80]{immagini/wmo.png}
@@ -437,8 +437,8 @@ Attraverso l'ottimizzazione per l'intero modulo (WMO), invece, il compilatore ot
             \caption{\textit{Visualizzazione del lavoro del compilatore in modalità di compilazione whole module optimization}}
 \end{figure}
 Questo porta due notevoli vantaggi:\\
-Il compilatore vede le implementazioni di tutte le funzioni del modulo, e può quindi procedere con le ottimizzazioni specifiche; specializzare una funzione significa che il compilatore crea una nuova versione del metodo specifica per il contesto della chiamata. Ad esempio, il compilatore può ottimizzare le funzioni di tipo generics per i tipi concreti.\\
-Nell'esempio, il compilatore crea una versione della struct Container specifica per i tipi Int: 
+Il compilatore vede le implementazioni di tutte le funzioni del modulo, e può quindi procedere con le ottimizzazioni specifiche; specializzare una funzione significa che il compilatore crea una nuova versione del metodo specifica per il contesto della chiamata. Ad esempio, il compilatore può ottimizzare le funzioni di tipo \textit{generics} per i tipi concreti.\\
+Nell'esempio, il compilatore crea una versione della \textit{struct} Container specifica per i tipi Int: 
 \begin{lstlisting}
 struct Container {
   var element: Int
@@ -448,23 +448,22 @@ struct Container {
   }
 }
 \end{lstlisting}
-Può quindi procedere all'inlining del metodo specializzato getElement all'interno della funzione add:
+Può quindi procedere all'\textit{inlining} del metodo specializzato getElement all'interno della funzione add:
 \begin{lstlisting}
 func add (c1: Container<Int>, c2: Container<Int>) -> Int {
   return c1.element + c2.element
 }
 \end{lstlisting}
-Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'inlining tra più file sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio WMO; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di reference counting ridondanti.\\
-Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come side-effect derivante dalle altre ottimizzazioni.\\\\Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'inlining della funzione getElement, questa non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore dovesse decidere di non procedere con l'inlining della funzione, potrebbe comunque rimuovere la versione generica di getElement, poichè la funzione add utlizzerebbe solamente la versione specializzata.
+Contrariamente alla compilazione a file singolo, il lavoro viene eseguito in poche istruzioni macchina. La specializzazione di funzioni e l'\textit{inlining} tra più file sono solo esempi delle ottimizzazioni che il compilatore può apportare con l'approccio \textit{WMO}; un altro campo in cui può migliorare le performance è nella gestione della memoria, in quanto il compilatore può rimuovere operazioni di \textit{reference counting} ridondanti.\\
+Un altro beneficio è che il compilatore può valutare tutti gli usi di funzioni non pubbliche e, con questa informazione, eliminare le funzioni che non vengono mai utilizzate, rese in questo stato come effetto collaterale derivante dalle altre ottimizzazioni.\\\\Riprendendo il codice di esempio, possiamo assumere che la funzione add sia l'unica ad utilizzare Container.getElement. Dopo aver effettuato l'\textit{inlining} della funzione getElement, questa non viene più utilizzata e può quindi essere rimossa. Anche se il compilatore dovesse decidere di non procedere con l'\textit{inlining} della funzione, potrebbe comunque rimuovere la versione generica di getElement, poichè la funzione add utlizzerebbe solamente la versione specializzata.
 \subsubsection{Tempo di compilazione}
-Con l'ottimizzazione a file singolo il driver del compilatore inizia la compilazione per ogni file in un processo separato, che può essere eseguito in parallelo. Inoltre files non modificati dall'ultima compilazione possono essere riutilizzati senza ricompilare (compilazione incrementale); tutto ciò porta ad un tempo di compilazione notevolmente rapido.\\
-Come visto precedentemente la compilazione si divide in più fasi: parsing, check dei tipi, ottimizzazioni del linguaggio intermedio (SIL), backend LLVM: il parsing ed il check di tipi sono i meno dispendiosi; l'ottimizzazione del SIL tipicamente richiede un terzo del tempo totale di compilazione, mentre gli altri due terzi sono impegnati dal backend LLVM che opera ottimizzazioni di basso livello e genera il codice.\\
-Con WMO, dopo aver effettuato le ottimizzazioni sull'intero modulo nella fase di ottimizzazione del linguaggio intermedio, il modulo è separato di nuovo in parti multiple. I processi di LLVM processano le parti in thread multipli e inoltre evitano il reprocessing delle parti che non sono cambiate rispetto all'ultima build.
-In conclusione WMO è un modo veloce ed efficace per ottenere ottime prestazioni, senza l'obbligo di gestire il codice Swift in vari file in un modulo. Se le ottimizzazioni, come descritto precedentemente, riescono ad essere efficaci per buona parte del codice, si ottengono incrementi prestazionali fino a cinque volte rispetto alla compilazione a file singolo. 
+Con l'ottimizzazione a file singolo il \textit{driver} del compilatore inizia la compilazione per ogni file in un processo separato, che può essere eseguito in parallelo. Inoltre files non modificati dall'ultima compilazione possono essere riutilizzati senza ricompilare (compilazione incrementale); tutto ciò porta ad un tempo di compilazione notevolmente rapido.\\
+Come visto precedentemente la compilazione si divide in più fasi: \textit{parsing}, check dei tipi, ottimizzazioni del linguaggio intermedio (SIL), \textit{backend} LLVM: il \textit{parsing} ed il controllo di tipi sono i meno dispendiosi; l'ottimizzazione del SIL tipicamente richiede un terzo del tempo totale di compilazione, mentre gli altri due terzi sono impegnati dal \textit{backend} LLVM che opera ottimizzazioni di basso livello e genera il codice.\\
+Con \textit{WMO}, dopo aver effettuato le ottimizzazioni sull'intero modulo nella fase di ottimizzazione del linguaggio intermedio, il modulo è separato di nuovo in parti multiple. I processi di LLVM processano le parti in \textit{thread} multipli e inoltre evitano di riprocessare le parti che non sono cambiate rispetto all'ultima compilazione.
+In conclusione \textit{WMO} è un modo veloce ed efficace per ottenere ottime prestazioni, senza l'obbligo di gestire il codice Swift in vari file in un modulo. Se le ottimizzazioni, come descritto precedentemente, riescono ad essere efficaci per buona parte del codice, si ottengono incrementi prestazionali fino a cinque volte rispetto alla compilazione a file singolo. 
 \subsection{Utilizzo in iOS e frameworks Cocoa}
-Al momento l'utilizzo di Swift nei frameworks di supporto al sistema operativo e nell'SDK è molto limitato, poichè il linguaggio non ha ancora raggiunto una maturità tale da poter avere delle ABI (Application Binary Interface) stabili, in quanto ogni singola versione pubblicata fino ad ora ha modificato interfacce, dipendenze e sintassi, rendendo necessaria una revisione del codice già scritto per la versione precedente.\\
-A runtime, i binari Swift interagiscono con le altre librerie e gli altri componenti attraverso le ABI, ovvero le specifiche alle quali i binari compilati indipendentemente devono conformarsi per per essere collegati ed eseguiti: queste entità devono conformarsi su come chiamare le funzioni, come i dati sono rapppresentati in memoria, dove sono salvati i metadata e come vanno acceduti.\\
-Le ABI sono specifiche per ogni piattaforma, e sono influenzate sia dall'architettura che dal sistema operativo.\\La maggior parte dei creatori di piattaforme definiscono uno standard di ABI usate per il linguaggio C e basate su linguaggi della famiglia dello stesso. Swift, per sua natura è molto differente dal C e quindi si rende necessario creare ABI speficiche.\\
-Avere delle ABI stabili significa bloccarle per far si che future versioni del compilatore possano produrre binari che si conformino alla versione stabile delle stesse, e la loro chiusura tende ad essere definitiva per tutta la vita della piattaforma.\\
-Avere ABI stabili ha effetti solamente sulle interfacce pubblicamente visibili e sui simboli; simboli usati iternamente, convenzioni e interfacce possono continuare ad essere modificati senza effetti distruttivi, per esempio una versione futura del compilatore è libera di modificare le convenzioni per le chiamate di funzione interne, purchè le interfacce pubbliche non vengano modificate\\
-Le decisioni sulle ABI avranno effetti ramificati ed a lungo termine e quindi potrebbero limitare i modi in cui il linguaggio evolverà in futuro, perciò la comunità open source sta prendendo tempo per definire nel modo migliore possibile la struttura delle stesse per Swift; si prevede che la versione 4 porterà la dichiarazione di stabilità per le ABI rendendolo di fatto un linguaggio maturo.
+Al momento l'utilizzo di Swift nei \textit{frameworks} di supporto al sistema operativo e nell'SDK è molto limitato, poichè il linguaggio non ha ancora raggiunto una maturità tale da poter avere delle ABI (\textit{Application Binary Interface}) stabili, in quanto ogni singola versione pubblicata fino ad ora ha modificato interfacce, dipendenze e sintassi, rendendo necessaria una revisione del codice già scritto per la versione precedente.\\
+A tempo di esecuzione, i binari Swift interagiscono con le altre librerie e gli altri componenti attraverso le \textit{ABI}, ovvero le specifiche alle quali i binari compilati indipendentemente devono conformarsi per per essere collegati ed eseguiti: queste entità devono conformarsi su come chiamare le funzioni, come i dati sono rapppresentati in memoria, dove sono salvati i metadati e come vanno acceduti.\\
+Queste ultime sono specifiche per ogni piattaforma, e sono influenzate sia dall'architettura che dal sistema operativo.\\\\
+Avere \textit{ABI} stabili significa bloccarle per fare in modo che future versioni del compilatore possano produrre binari che si conformino alla versione stabile delle stesse, e la loro chiusura tende ad essere definitiva per tutta la vita della piattaforma.\\Ciò ha ad ogni modo effetti solamente sulle interfacce pubblicamente visibili e sui simboli; simboli usati internamente, convenzioni e interfacce possono continuare ad essere modificati senza effetti distruttivi, per esempio una versione futura del compilatore è libera di modificare le convenzioni per le chiamate di funzione interne, purché le interfacce pubbliche non vengano modificate\\
+Le decisioni sulle ABI avranno effetti ramificati ed a lungo termine e quindi potrebbero limitare i modi in cui il linguaggio evolverà in futuro, per questo motivo la comunità \textit{open source} sta prendendo tempo per definire nel modo migliore possibile la struttura delle stesse per Swift; si prevede che la versione 4 porterà la dichiarazione di stabilità per le \textit{ABI} rendendolo di fatto un linguaggio maturo.

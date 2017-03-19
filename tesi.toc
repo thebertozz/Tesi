@@ -44,15 +44,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Enumerazioni}{17}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Protocolli ed estensioni}{18}{section*.15}
+\contentsline {subsubsection}{Optionals}{18}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Gestione degli errori}{19}{section*.16}
+\contentsline {subsubsection}{Tuples}{20}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Generics}{20}{section*.17}
+\contentsline {subsubsection}{Protocolli ed estensioni}{20}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Optionals}{22}{section*.18}
+\contentsline {subsubsection}{Gestione degli errori}{22}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Tuples}{24}{section*.19}
+\contentsline {subsubsection}{Generics}{23}{section*.19}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.2}Compilatore e libreria standard}{24}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
@@ -60,7 +60,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Libreria standard Swift}{25}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Whole module optimization}{25}{section*.22}
+\contentsline {subsubsection}{Whole module optimization}{26}{section*.22}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Tempo di compilazione}{29}{section*.23}
 \defcounter {refsection}{0}\relax 

@@ -18,11 +18,11 @@
 \BOOKMARK [3][-]{section*.12}{Dichiarazione\040e\040definizione\040dei\040metodi}{subsection.2.1.1}% 18
 \BOOKMARK [3][-]{section*.13}{Closures}{subsection.2.1.1}% 19
 \BOOKMARK [3][-]{section*.14}{Enumerazioni}{subsection.2.1.1}% 20
-\BOOKMARK [3][-]{section*.15}{Protocolli\040ed\040estensioni}{subsection.2.1.1}% 21
-\BOOKMARK [3][-]{section*.16}{Gestione\040degli\040errori}{subsection.2.1.1}% 22
-\BOOKMARK [3][-]{section*.17}{Generics}{subsection.2.1.1}% 23
-\BOOKMARK [3][-]{section*.18}{Optionals}{subsection.2.1.1}% 24
-\BOOKMARK [3][-]{section*.19}{Tuples}{subsection.2.1.1}% 25
+\BOOKMARK [3][-]{section*.15}{Optionals}{subsection.2.1.1}% 21
+\BOOKMARK [3][-]{section*.16}{Tuples}{subsection.2.1.1}% 22
+\BOOKMARK [3][-]{section*.17}{Protocolli\040ed\040estensioni}{subsection.2.1.1}% 23
+\BOOKMARK [3][-]{section*.18}{Gestione\040degli\040errori}{subsection.2.1.1}% 24
+\BOOKMARK [3][-]{section*.19}{Generics}{subsection.2.1.1}% 25
 \BOOKMARK [2][-]{subsection.2.1.2}{Compilatore\040e\040libreria\040standard}{section.2.1}% 26
 \BOOKMARK [3][-]{section*.20}{Architettura\040del\040compilatore}{subsection.2.1.2}% 27
 \BOOKMARK [3][-]{section*.21}{Libreria\040standard\040Swift}{subsection.2.1.2}% 28

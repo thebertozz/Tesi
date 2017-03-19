@@ -8,8 +8,8 @@ Questo capitolo descrive le funzionalità che il linguaggio aggiunge allo standa
 \subsubsection{Implementazione di una classe, i file .h e .m}
 L'implementazione di una classe avviene attraverso due file distinti:
 \begin{itemize}
-\item Un file con estensione .h, che conterrà la dichiarazione dell'interfaccia di classe, i metodi e le properties pubbliche.
-\item Un file con estensione .m, che conterrà l'implementazione della classe, la definizione di metodi e properties private; in questo file inoltre saranno definiti i metodi e le variabili d'istanza private.
+\item Un file con estensione .h, contenente la dichiarazione dell'interfaccia di classe, i metodi e le \textit{properties} pubbliche.
+\item Un file con estensione .m, contenente l'implementazione della classe, la definizione di metodi e \textit{properties} private; in questo file inoltre sono definiti i metodi e le variabili d'istanza private.
 \end{itemize}
 \newpage
 Esempio di file header (.h) di una classe:
@@ -106,7 +106,7 @@ Attraverso la parola chiave @property è anche possibile dare direttiva al compi
 @property NSString * nome;
 \end{lstlisting}
 \newpage
-Inoltre, attraverso la parola chiave @synthesize, è possibile indicare al compilatore di implementare i setter e i getter di una property che sia stata definita precedentemente:
+Inoltre, attraverso la parola chiave \textit{@synthesize}, è possibile indicare al compilatore di implementare i \textit{setter} e i \textit{getter} di una \textit{property} che sia stata definita precedentemente:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //come dichiarati in Persona.m
@@ -122,7 +122,7 @@ Inoltre, attraverso la parola chiave @synthesize, è possibile indicare al compi
 
 @synthesize nome = _nome; 
 \end{lstlisting}
-Le properties permettono di accedere ai getter e ai setter utilizzando la notazione puntata, per una maggiore leggibilità del codice:
+Le \textit{properties} permettono di accedere ai \textit{getter} e ai \textit{setter} utilizzando la notazione puntata, per una maggiore leggibilità del codice:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //senza properties: 
@@ -137,7 +137,7 @@ persona.eta = 22;
 \end{lstlisting}
 \newpage
 \subsubsection{Dichiarazione e definizione dei metodi}
-Come visto per la definizione dei setter, una dichiarazione di funzione (metodo) ha la seguente sintassi: 
+Come visto per la definizione dei \textit{setter}, una dichiarazione di funzione (metodo) ha la seguente sintassi: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //Nell'ordine: (tipoDiRitorno) nomeMetodo:(tipoArg1)nomeArg1;
@@ -167,7 +167,7 @@ In Objective-C, a differenza della maggior parte degli altri linguaggi, un metod
 \begin{lstlisting}
 [persona calcolaEta:dataDiNascita];
 \end{lstlisting}
-Questo è reso possibile dal runtime del linguaggio che, tramite una lista, tiene traccia di tutti i metodi e funzioni che conosce. Ogni elemento della lista è composto da due campi: il nome del metodo (conosciuto come il selector dello stesso) e la sua locazione in memoria.
+Questo è reso possibile dal \textit{runtime} del linguaggio che, tramite una lista, tiene traccia di tutti i metodi e funzioni che conosce. Ogni elemento della lista è composto da due campi: il nome del metodo (conosciuto come il \textit{selector} dello stesso) e la sua locazione in memoria.
 \\Durante la fase di compilazione del codice sorgente, quando vi è la chiamata di un metodo, il compilatore sostituisce il frammento di codice nel seguente modo:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
@@ -179,10 +179,10 @@ objc_msgSend(persona, @selector(calcolaEta:),dataDiNascita);
 \end{lstlisting}
 \bigskip
 \bigskip
-La funzione objc\_msgSend() opera tramite un lookup dinamico: conoscendo il nome del metodo da ricercare scorre la lista per verificare la sua effettiva presenza e, in caso affermativo, lo esegue.\\ 
-Questo comportamento ha caratteristiche particolari: potremmo far puntare un certo selettore A, che prima puntava al codice per A, ad un codice per un certo B.\\ 
+La funzione \textit{objc\_msgSend()} opera tramite una ricerca dinamica: conoscendo il nome del metodo da ricercare scorre la lista per verificare la sua effettiva presenza e, in caso affermativo, lo esegue.\\ 
+Questo comportamento ha caratteristiche particolari: si potrebbe far puntare un certo selettore A, che prima puntava al codice per A, ad un codice per un certo B.\\ 
 Lo svantaggio è che il tempo di esecuzione è leggermente maggiore di una chiamata diretta alla parte di codice; si tratta comunque di nanosecondi di differenza.\\
-\\Inoltre il runtime, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che si possono inviare messaggi a nil), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che:\\ \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
+\\Inoltre l'ambiente di esecuzione, prima di inviare il messaggio, richiede all’oggetto se il metodo è riconosciuto dallo stesso. Questo significa che l’oggetto può decidere se accettare il messaggio (è anche per questo che è possibile inviare messaggi a \textit{nil}), inoltrarlo ad un oggetto differente, decidere di eseguire codice differente per un metodo specifico.\\Più in dettaglio, quando inviamo un messaggio ad un oggetto, non abbiamo garanzie sul fatto che:\\ \\-Il metodo che andiamo a chiamare non sia necessariamente quello che verrà effettivamente chiamato\\\\-L’oggetto che riceverà il messaggio non sarà necessariamente quello che vogliamo che risponda.
 \subsubsection{Protocolli}
 Un protocollo è una lista di metodi che una classe può implementare; i metodi possono essere resi opzionali grazie all'utilizzo della parola chiave \textit{@optional} prima della loro dichiarazione: 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
@@ -229,9 +229,9 @@ File .m:
 @end
 \end{lstlisting}
 \subsubsection{Tipizzazione dinamica}
-Objective-C permette di inviare ad un oggetto un messaggio non specificato nella sua interfaccia ; quest'ultimo può a sua volta inviarlo ad un altro oggetto, che può rispondere correttamente o inviarlo a sua volta; questo concetto è chiamato \textit{forwarding}, ovvero inoltro o delega del messaggio.\\Per verificare se un dato oggetto può rispondere viene utilizzato il metodo di NSObject \textit{- (BOOL)respondsToSelector:(SEL)aSelector;}, che indica con un valore booleano se il ricevente implementa o eredita un metodo che può rispondere al messaggio.\\Alternativamente, è possibile usare un gestore degli errori nel caso il messaggio non possa essere inoltrato. Se l'oggetto non inoltra, non gestisce l'errore o non risponde viene generato un errore di run-time. 
+Objective-C permette di inviare ad un oggetto un messaggio non specificato nella sua interfaccia; quest'ultimo può a sua volta inviarlo ad un altro oggetto, che può rispondere correttamente od inviarlo a sua volta; questo concetto è chiamato \textit{forwarding}, ovvero inoltro o delega del messaggio.\\Per verificare se un dato oggetto può rispondere viene utilizzato il metodo di NSObject \textit{- (BOOL)respondsToSelector:(SEL)aSelector;}, che indica con un valore booleano se il ricevente implementa o eredita un metodo che può rispondere al messaggio.\\Alternativamente, è possibile utilizzare un gestore degli errori nel caso il messaggio non possa essere inoltrato. Se l'oggetto non inoltra, non gestisce l'errore o non risponde viene generato un errore di \textit{runtime}. 
 \subsubsection{Categories}
-Una categoria raccoglie implementazioni di metodi in file separati. La particolarità è che questi metodi sono aggiunti ad una data classe a run-time; ciò permette di aggiungere metodi ad una classe esistente senza doverla ricompilare o senza avere a disposizione il suo codice sorgente.\\I metodi inseriti nelle categorie diventano indistinguibili da quelli originari della classe quando il programma è in esecuzione.\\ Una categoria ha pieno accesso a tutte le variabili d'istanza della classe, anche quelle private. 
+Una categoria raccoglie implementazioni di metodi in file separati. La particolarità è che questi metodi sono aggiunti ad una data classe a \textit{runtime}; ciò permette di aggiungere metodi ad una classe esistente senza doverla ricompilare o senza avere a disposizione il suo codice sorgente.\\I metodi inseriti nelle categorie diventano indistinguibili da quelli originari della classe quando il programma è in esecuzione.\\ Una categoria ha pieno accesso a tutte le variabili d'istanza della classe, anche quelle private. 
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
 //interfaccia della category che estende la classe NSString
@@ -246,11 +246,11 @@ Permette di inserire un file prima dell'inizio della compilazione, ed evita di i
 \subsection{Compilatore}
 L'IDE di Apple, Xcode, utilizza clang. Quest'ultimo è un compilatore \textit{front-end} per C, C++, Objective-C, Objective-C++, OpenMP, OpenCL e CUDA, basato sul compilatore LLVM (Low Level Virtual Machine).\\E' stato creato in quanto si era reso necessario un compilatore che avesse migliori strumenti di diagnostica, migliore integrazione con gli strumenti di sviluppo, una licenza che permettesse di utilizzarlo in programmi commerciali ed infine, che fosse semplice da sviluppare e mantenere. GCC (GNU Compiler Collection), che inizialmente doveva essere utilizzato, era considerato lento e di difficile utilizzo.\\\\Gli obiettivi principali di clang sono quattro:
 \begin{itemize} 
-\item Avere un parser unificato per i linguaggi basati su C, fornendo al contempo buoni strumenti di diagnostica.
+\item Avere un \textit{parser} unificato per i linguaggi basati su C, fornendo al contempo buoni strumenti di diagnostica.
 \item Avere un'architettura basata su una libreria di API scritte in C++, con la possibilità di estensioni.
 \item Essere polivalente, includendo strumenti di indicizzazione, analisi statica del codice e \textit{refactoring}
 \item Avere ottime \textit{performance}, garantendo un utilizzo parsimonioso della memoria, con tempi di compilazione rapidi.
 \end{itemize}
 Attualmente viene considerato un compilatore solido e stabile per codice C, Objective-C, C++ e Objective-C++, se utilizzato per le piattaforme X86-32, X86-64, ed ARM.  
 \subsection{Utilizzo in iOS e frameworks Cocoa}
-Il linguaggio principale di tutti i frameworks (quali CoreOS, Foundation, CocoaTouch) di iOS e MacOS è ancora Objective-C come dal principio, in quanto Swift non ha ancora raggiunto un livello di maturità tale per essere impiegato per questi scopi (la versione 3 del linguaggio non ha ancora ABI stabili e la sintassi è ancora in corso di modifiche).L'intenzione di Apple è quella di mantenere e migliorare i due linguaggi parallelamente per ancora molto tempo.
+Il linguaggio principale di tutti i frameworks (quali CoreOS, Foundation, CocoaTouch) di iOS e MacOS è ancora Objective-C come dal principio, in quanto Swift non ha ancora raggiunto un livello di maturità tale per essere impiegato per questi scopi (la versione 3 del linguaggio non ha ancora ABI stabili e la sintassi è ancora in corso di modifiche). L'intenzione di Apple è di mantenere e migliorare i due linguaggi parallelamente per ancora molto tempo.
