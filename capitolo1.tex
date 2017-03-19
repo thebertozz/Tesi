@@ -167,7 +167,7 @@ In Objective-C, a differenza della maggior parte degli altri linguaggi, un metod
 \begin{lstlisting}
 [persona calcolaEta:dataDiNascita];
 \end{lstlisting}
-Questo è reso possibile dal \textit{runtime} del linguaggio che, tramite una lista, tiene traccia di tutti i metodi e funzioni che conosce. Ogni elemento della lista è composto da due campi: il nome del metodo (conosciuto come il \textit{selector} dello stesso) e la sua locazione in memoria.
+Questo è reso possibile dal \textit{runtime} del linguaggio che, tramite una lista, mantiene traccia di tutti i metodi e funzioni che conosce. Ogni elemento della lista è composto da due campi: il nome del metodo (conosciuto come il \textit{selector} dello stesso) e la sua locazione in memoria.
 \\Durante la fase di compilazione del codice sorgente, quando vi è la chiamata di un metodo, il compilatore sostituisce il frammento di codice nel seguente modo:
 \lstset{language=[Objective]C, breakindent=40pt, breaklines}
 \begin{lstlisting}
