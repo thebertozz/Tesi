@@ -51,7 +51,7 @@ Per gli array contenenti già elementi l'operazione in Swift è più veloce di d
       \centering
       \includegraphics[scale=0.50]{immagini/array_delete.png}
             \vspace{0.8cm}
-            \caption{\textit{Complessità: lineare per Swift, lineare inizialmente per poi passare a tempo costante per Objective-C}}
+            \caption{\textit{Complessità: lineare per Swift; lineare inizialmente, poi a tempo costante per Objective-C}}
 \end{figure}
 \subsubsection{Lettura di un elemento in un array}
 \begin{figure}[H]
@@ -72,14 +72,14 @@ Per gli array contenenti già elementi l'operazione in Swift è più veloce di d
       \centering
       \includegraphics[scale=0.50]{immagini/array_update.png}
             \vspace{0.8cm}
-            \caption{\textit{Complessità: costante per Swift, lineare inizialmente per per poi passare a tempo costante per Objective-C. Swift risulta dalle 3 alle 4 volte più veloce}}
+            \caption{\textit{Complessità: costante per Swift; lineare inizialmente, poi a tempo costante per Objective-C. Swift risulta dalle 3 alle 4 volte più veloce}}
 \end{figure}
 \subsubsection{Aggiunta di un elemento ad un dizionario}
 \begin{figure}[H]
       \centering
       \includegraphics[scale=0.50]{immagini/dictionary_add.png}
             \vspace{0.8cm}
-            \caption{\textit{Complessità: costante per entrambi; si possono notare dei picchi regolari nel tempo di esecuzione, spiegabili con l'allocazione di memoria per i nuovi elementi, in quanto il dizionario aumenta di 2 volte e non linearmente; Swift risulta dalle 2 alle 3 volte più veloce.}}
+            \caption{\textit{Complessità: costante per entrambi; si possono notare dei picchi regolari nel tempo di esecuzione, spiegabili con l'allocazione di memoria per i nuovi elementi; Swift risulta dalle 2 alle 3 volte più veloce.}}
 \end{figure} 
 \subsubsection{Ricerca di un elemento in un dizionario}
 \begin{figure}[H]
@@ -110,7 +110,7 @@ Per gli array contenenti già elementi l'operazione in Swift è più veloce di d
             \caption{\textit{Complessità: costante per Swift, lineare per Objective-C. Swift risulta 2 volte più rapido.}}
 \end{figure}
 \subsubsection{Conclusioni sulle performance}
-Le operazioni sugli Array sono dalle due alle quattro volte più rapide in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero pre-inizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo. Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C. Gli Array risultano la struttura dati da preferire in Swift per tutte le operazioni (eccetto la ricerca) se si ha un gran numero di elementi. I grafici delle funzioni risultano particolari per un array in stile C, questo perché a livello implementativo non è un vero array C: Objective-C utilizza un complesso insieme di strutture dati che non sono Array nativi ma che espongono funzionalità da tale.
+Le operazioni sugli Array sono dalle due alle quattro volte più rapide in rispetto a quelle effettuate sugli NSArray; per migliorare le prestazioni si dovrebbero pre-inizializzare le strutture dati con il numero di elementi massimo conosciuto in anticipo. Tutte le operazioni tranne la ricerca (contains) vengono eseguite in tempo costante; nonostante Swift gestisca le operazioni di inserzione in un Dizionario in maniera più efficiente, le altre operazioni soffrono in prestazioni rispetto ad Objective-C. Gli Array risultano la struttura dati da preferire in Swift per tutte le operazioni (eccetto la ricerca) se sono presenti un gran numero di elementi. I grafici delle funzioni risultano particolari per un array in stile C, questo poiché a livello implementativo non è un vero array C: Objective-C utilizza un complesso insieme di strutture dati che non sono Array nativi ma che espongono funzionalità da tale.
     
     
     

@@ -68,23 +68,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Confronto tra i linguaggi}{31}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.4}Sintassi}{31}{subsection.3.0.4}
+\contentsline {subsection}{\numberline {3.0.1}Sintassi}{31}{subsection.3.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.5}Manutenzione del codice sorgente}{31}{subsection.3.0.5}
+\contentsline {subsection}{\numberline {3.0.2}Manutenzione del codice sorgente}{31}{subsection.3.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.6}Tooling}{31}{subsection.3.0.6}
+\contentsline {subsection}{\numberline {3.0.3}Tooling}{31}{subsection.3.0.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.7}Runtime}{32}{subsection.3.0.7}
+\contentsline {subsection}{\numberline {3.0.4}Runtime}{32}{subsection.3.0.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.8}Sicurezza}{32}{subsection.3.0.8}
+\contentsline {subsection}{\numberline {3.0.5}Sicurezza}{32}{subsection.3.0.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.9}Tempo di scrittura del codice}{32}{subsection.3.0.9}
+\contentsline {subsection}{\numberline {3.0.6}Tempo di scrittura del codice}{32}{subsection.3.0.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.10}Namespaces nei progetti open source}{33}{subsection.3.0.10}
+\contentsline {subsection}{\numberline {3.0.7}Namespaces nei progetti open source}{33}{subsection.3.0.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.11}Librerie dinamiche}{33}{subsection.3.0.11}
+\contentsline {subsection}{\numberline {3.0.8}Librerie dinamiche}{33}{subsection.3.0.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.12}Open Sourcing}{33}{subsection.3.0.12}
+\contentsline {subsection}{\numberline {3.0.9}Open Sourcing}{33}{subsection.3.0.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Gestione della memoria}{34}{section.3.1}
 \defcounter {refsection}{0}\relax 
