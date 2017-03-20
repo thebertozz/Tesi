@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  20 MAR 2017 14:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.23)  20 MAR 2017 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -976,8 +976,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count314
 \@quotereset=\count315
 (./tesi.aux (./titolo.aux) (./dedica.aux) (./introduzione.aux) (./capitolo1.aux
-) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux)
-No file capitolo5.aux.
+) (./capitolo2.aux) (./capitolo3.aux) (./capitolo4.aux) (./capitolo5.aux)
 (./conclusioni.aux) (./ringraziamenti.aux) (./biblio.aux
 
 LaTeX Warning: Label `history' multiply defined.
@@ -1927,10 +1926,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21224 strings out of 493014
- 312754 string characters out of 6133350
- 775099 words of memory out of 5000000
- 23784 multiletter control sequences out of 15000+600000
+ 21227 strings out of 493014
+ 312794 string characters out of 6133350
+ 777467 words of memory out of 5000000
+ 23785 multiletter control sequences out of 15000+600000
  72969 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,12n,60p,1918b,3441s stack positions out of 5000i,500n,10000p,200000b,80000s
